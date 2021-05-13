@@ -1,0 +1,8 @@
+{
+  "short_name": "Sauerteig",
+  "name": "Bake the best sour dough bread.",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
