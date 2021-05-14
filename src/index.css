@@ -6,7 +6,9 @@ body {
 }
 
 a,
-a:visited {
+a:visited,
+.navigation .previous span,
+.navigation .next span {
   color: #00f;
 }
 
@@ -26,12 +28,13 @@ li {
   margin: 20px;
 }
 
-.main h1 {
+.main h1,
+.navigation .previous,
+.navigation .next {
   cursor: pointer;
 }
 
 .time {
-  font-weight: bold;
   color: rgb(97, 97, 97);
   margin-bottom: 20px;
 }
@@ -47,6 +50,14 @@ li {
 
 .navigation {
   margin-top: 40px;
+}
+
+.navigation .next {
+  text-align: right;
+}
+
+.navigation .next.float {
+  float: right;
 }
 
 @media only screen and (min-width: 600px) {

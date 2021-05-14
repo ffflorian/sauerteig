@@ -19,7 +19,7 @@ export const Step: React.FC<StepProps> = ({index}) => {
       </div>
       {!!ingredients.length && (
         <>
-          Man nehme:
+          <h3>Zutaten</h3>
           <ul>
             {ingredients.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
@@ -27,6 +27,7 @@ export const Step: React.FC<StepProps> = ({index}) => {
           </ul>
         </>
       )}
+      <h3>Zubereitung</h3>
       <ol>
         {steps.map((step, index) => (
           <li key={index}>{step}</li>

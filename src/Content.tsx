@@ -43,21 +43,16 @@ export const Content = () => {
         {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
         <div className="navigation">
           {canGoBack && (
-            <>
+            <span className="previous" onClick={() => goBack()}>
               &larr;&nbsp;
-              <a href="#" onClick={() => goBack()}>
-                Vorheriger Schritt
-              </a>
-            </>
+              <span>Vorheriger Schritt</span>
+            </span>
           )}
-          {canGoBack && canGoForward && <>&nbsp;|&nbsp;</>}
           {canGoForward && (
-            <>
-              <a href="#" onClick={() => goForward()}>
-                Nächster Schritt
-              </a>
+            <div className={`next${canGoBack ? ' float' : ''}`} onClick={() => goForward()}>
+              <span>Nächster Schritt</span>
               &nbsp; &rarr;
-            </>
+            </div>
           )}
         </div>
         <div className="footer">
