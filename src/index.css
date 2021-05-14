@@ -28,10 +28,22 @@ li {
   margin: 20px;
 }
 
-.main h1,
+.main .pageTitle,
 .navigation .previous,
 .navigation .next {
   cursor: pointer;
+}
+
+.main .pageTitle {
+  text-align: center;
+  font-size: 23pt;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+}
+
+.main .pageTitle span {
+  vertical-align: top;
 }
 
 .time {

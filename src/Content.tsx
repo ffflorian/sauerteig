@@ -42,9 +42,9 @@ export const Content = () => {
 
   return (
     <div className="main" {...handlers}>
-      <h1 onClick={() => setCurrentStep(0)}>
-        <img src="img/sauerteig_32.png" /> Sauerteig
-      </h1>
+      <div className="pageTitle" onClick={() => setCurrentStep(0)}>
+        <img src="img/sauerteig_32.png" /> <span>Sauerteig</span>
+      </div>
       {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
       <div className="navigation">
         {canGoBack && (
