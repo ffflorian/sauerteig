@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {IconButton} from '@material-ui/core';
-import {Github as GithubCircle} from 'mdi-material-ui';
 
 import {Introduction} from './Introduction';
 import {introductionData, stepsData} from './data';
@@ -41,10 +39,7 @@ export const Content = () => {
     <>
       <div className="main">
         <h1>
-          Sauerteig
-          <IconButton className="icon" color="inherit" href="https://github.com/ffflorian/sauerteig">
-            <GithubCircle />
-          </IconButton>
+          <img src="img/sauerteig.svg" /> Sauerteig
         </h1>
         {currentStep === 0 ? <Introduction {...introductionData} /> : <Step index={currentStep} />}
         <div>
@@ -65,6 +60,11 @@ export const Content = () => {
               &nbsp; &rarr;
             </>
           )}
+        </div>
+        <div className="footer">
+          Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Icon by{' '}
+          <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>.
+          Source code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
         </div>
       </div>
     </>

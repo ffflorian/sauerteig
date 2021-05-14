@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a,
+a:visited {
+  color: #00f;
+}
+
+a.icon {
+  color: #000;
+}
+
+li {
+  line-height: 1.5em;
+}
+
 .main {
   margin: 50px;
 }
@@ -21,15 +34,13 @@ body {
   margin-bottom: 20px;
 }
 
-a,
-a:visited {
-  color: #00f;
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
-a.icon {
-  color: #000;
-}
-
-li {
-  line-height: 1.5em;
+.footer a,
+.footer a:visited {
+  color: rgb(97, 97, 97);
 }
