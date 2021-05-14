@@ -1,2 +1,0 @@
-(this.webpackJsonpsauerteig=this.webpackJsonpsauerteig||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);n(1);var r=n(3),s=n.n(r),c=n(0),i=function(){return Object(c.jsxs)(c.Fragment,{children:[Object(c.jsx)("h1",{children:"Sauerteig"}),Object(c.jsx)("h2",{children:"Anstellsauer"}),Object(c.jsx)("h2",{children:"Brotteig"})]})};n(9);s.a.render(Object(c.jsx)(i,{}),document.getElementById("root"))},9:function(e,t,n){}},[[10,1,2]]]);
-//# sourceMappingURL=main.85a6ec02.chunk.js.map
