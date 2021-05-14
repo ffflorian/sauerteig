@@ -44,3 +44,7 @@ li {
 .footer a:visited {
   color: rgb(97, 97, 97);
 }
+
+.arrows {
+  margin-top: 40px;
+}

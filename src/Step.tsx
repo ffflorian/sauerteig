@@ -6,7 +6,7 @@ export interface StepProps {
 }
 
 export const Step: React.FC<StepProps> = ({index}) => {
-  const {ingredients, manualTime, steps, subtitle, title} = stepsData[index - 1];
+  const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[index - 1];
 
   return (
     <div className="part">
@@ -32,6 +32,7 @@ export const Step: React.FC<StepProps> = ({index}) => {
           <li key={index}>{step}</li>
         ))}
       </ol>
+      {additionalInfo && <div>{additionalInfo.join(' ')}</div>}
     </div>
   );
 };

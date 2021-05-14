@@ -39,10 +39,10 @@ export const Content = () => {
     <>
       <div className="main">
         <h1>
-          <img src="img/sauerteig.svg" /> Sauerteig
+          <img src="img/sauerteig_32.png" /> Sauerteig
         </h1>
         {currentStep === 0 ? <Introduction {...introductionData} /> : <Step index={currentStep} />}
-        <div>
+        <div className="arrows">
           {canGoBack && (
             <>
               &larr;&nbsp;
