@@ -16,4 +16,4 @@ updates:
           - '> 14.x'
       - dependency-name: 'husky'
         versions:
-          - '>= 5.x'
+          - '> 4.x'
