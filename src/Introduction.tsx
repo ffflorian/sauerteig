@@ -1,7 +1,7 @@
 import React from 'react';
-import {BaseProps} from './data';
+import {IntroductionProps} from './data';
 
-export const BasePart: React.FC<BaseProps> = ({ingredients, title}) => {
+export const Introduction: React.FC<IntroductionProps> = ({ingredients, title}) => {
   return (
     <div className="part">
       <h1>{title}</h1>

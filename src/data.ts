@@ -1,4 +1,4 @@
-export interface StepProps {
+export interface Steps {
   additionalInfo?: string[];
   ingredients: string[];
   manualTime: number;
@@ -8,9 +8,9 @@ export interface StepProps {
   title: string;
 }
 
-export type BaseProps = Pick<StepProps, 'ingredients' | 'title'>;
+export type IntroductionProps = Pick<Steps, 'ingredients' | 'title'>;
 
-export const baseData: BaseProps = {
+export const baseData: IntroductionProps = {
   ingredients: [
     'Frischhaltefolie',
     'Backpapier',
@@ -27,7 +27,7 @@ export const baseData: BaseProps = {
   title: 'Sauerteigbrot',
 };
 
-export const recipeSteps: StepProps[] = [
+export const recipeSteps: Steps[] = [
   {
     ingredients: ['400 ml lauwarmes Wasser', '250 g Roggenvollkornmehl', 'Frischhaltefolie', 'mittelgroße Schüssel'],
     manualTime: 15,

@@ -1,10 +1,18 @@
 import React from 'react';
-import {StepProps} from './data';
+import {recipeSteps} from './data';
 
-export const Step: React.FC<StepProps> = ({ingredients, manualTime, steps, subtitle, title}) => {
+export interface StepProps {
+  index: number;
+}
+
+export const Step: React.FC<StepProps> = ({index}) => {
+  const {ingredients, manualTime, steps, subtitle, title} = recipeSteps[index - 1];
+
   return (
     <div className="part">
-      <h2>{title}</h2>
+      <h2>
+        {index}. {title}
+      </h2>
       <div className="subtitle">{subtitle}</div>
       <div className="time">
         <strong>Arbeitszeit: {manualTime} Minuten</strong>
