@@ -1,4 +1,4 @@
-export interface Steps {
+export interface StepData {
   additionalInfo?: string[];
   ingredients: string[];
   manualTime: number;
@@ -8,7 +8,7 @@ export interface Steps {
   title: string;
 }
 
-export type IntroductionProps = Pick<Steps, 'ingredients' | 'title'>;
+export type IntroductionProps = Pick<StepData, 'ingredients' | 'title'>;
 
 export const introductionData: IntroductionProps = {
   ingredients: [
@@ -27,7 +27,7 @@ export const introductionData: IntroductionProps = {
   title: 'Vorbereitung',
 };
 
-export const stepsData: Steps[] = [
+export const stepsData: StepData[] = [
   {
     ingredients: ['400 ml lauwarmes Wasser', '250 g Roggenvollkornmehl', 'Frischhaltefolie', 'mittelgroße Schüssel'],
     manualTime: 15,

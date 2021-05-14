@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import {Introduction} from './Introduction';
-import {introductionData, stepsData} from './data';
+import {stepsData} from './data';
 import {Step} from './Step';
 
 export const Content = () => {
@@ -14,7 +14,6 @@ export const Content = () => {
 
   useEffect(() => {
     const upHandler = (event: KeyboardEvent) => {
-      console.info({key: event.key});
       switch (event.key) {
         case 'ArrowRight': {
           goForward();
@@ -38,11 +37,11 @@ export const Content = () => {
   return (
     <>
       <div className="main">
-        <h1>
+        <h1 onClick={() => setCurrentStep(0)}>
           <img src="img/sauerteig_32.png" /> Sauerteig
         </h1>
-        {currentStep === 0 ? <Introduction {...introductionData} /> : <Step index={currentStep} />}
-        <div className="arrows">
+        {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
+        <div className="navigation">
           {canGoBack && (
             <>
               &larr;&nbsp;

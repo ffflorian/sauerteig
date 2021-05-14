@@ -21,6 +21,14 @@ li {
 }
 
 .main {
+  width: 30%;
+}
+
+.main h1 {
+  cursor: pointer;
+}
+
+.main {
   margin: 50px;
 }
 
@@ -45,6 +53,6 @@ li {
   color: rgb(97, 97, 97);
 }
 
-.arrows {
+.navigation {
   margin-top: 40px;
 }

@@ -1,9 +1,28 @@
 import React from 'react';
-import {IntroductionProps} from './data';
+import {introductionData, stepsData} from './data';
 
-export const Introduction: React.FC<IntroductionProps> = ({ingredients, title}) => {
+interface IntroductionProps {
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export const Introduction: React.FC<IntroductionProps> = ({setCurrentStep}) => {
+  const {ingredients, title} = introductionData;
+
   return (
     <div className="part">
+      <h2>Inhalt</h2>
+      <div className="contents">
+        <ol>
+          {stepsData.map((stepData, index) => (
+            <li key={index}>
+              <a href="#" onClick={() => setCurrentStep(index + 1)}>
+                {stepData.title}
+              </a>{' '}
+              {stepData.subtitle}
+            </li>
+          ))}
+        </ol>
+      </div>
       <h2>{title}</h2>
       Benötigt werden:
       <ul>
