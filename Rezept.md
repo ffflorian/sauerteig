@@ -65,7 +65,7 @@ Dieser Schritt kann auch mehr als 3x wiederholt werden, wenn das Brot später al
 
 Man nehme:
 
-- 350 g Roggen(vollkohrn)mehl
+- 350 g Roggen(vollkorn)mehl
 - 500 ml warmes Wasser
 
 1. Wasser und Mehl mit dem Teig verrühren
@@ -91,7 +91,7 @@ Wichtig: alle 1-2 Tage füttern, sonst verhungert der Anstellsauer.
 
 ### Teigherstellung
 
-**Zeitaufwand: 20 Minuten**
+**Zeitaufwand: 15 Minuten**
 
 **Zeit bis zum fertigen Brot: 4 Stunden**
 

@@ -1,11 +1,15 @@
 import React from 'react';
+import {BasePart} from './BasePart';
+import {recipeSteps, baseData} from './data';
+import {Step} from './Step';
 
 const App = () => (
-  <>
-    <h1>Sauerteig</h1>
-    <h2>Anstellsauer</h2>
-    <h2>Brotteig</h2>
-  </>
+  <div className="main">
+    <BasePart {...baseData} />
+    {recipeSteps.map((step, index) => (
+      <Step key={index} {...step} />
+    ))}
+  </div>
 );
 
 export default App;
