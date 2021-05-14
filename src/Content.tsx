@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {Introduction} from './Introduction';
 import {stepsData} from './data';
 import {Step} from './Step';
+import {useSwipeable} from 'react-swipeable';
 
 export const Content = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -11,6 +12,11 @@ export const Content = () => {
 
   const canGoForward = currentStep < stepsData.length;
   const canGoBack = currentStep > 0;
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => goForward(),
+    onSwipedRight: () => goBack(),
+  });
 
   useEffect(() => {
     const upHandler = (event: KeyboardEvent) => {
@@ -35,32 +41,30 @@ export const Content = () => {
   }, []);
 
   return (
-    <>
-      <div className="main">
-        <h1 onClick={() => setCurrentStep(0)}>
-          <img src="img/sauerteig_32.png" /> Sauerteig
-        </h1>
-        {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
-        <div className="navigation">
-          {canGoBack && (
-            <span className="previous" onClick={() => goBack()}>
-              &larr;&nbsp;
-              <span>Vorheriger Schritt</span>
-            </span>
-          )}
-          {canGoForward && (
-            <div className={`next${canGoBack ? ' float' : ''}`} onClick={() => goForward()}>
-              <span>Nächster Schritt</span>
-              &nbsp; &rarr;
-            </div>
-          )}
-        </div>
-        <div className="footer">
-          Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Icon by{' '}
-          <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>.
-          Source code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
-        </div>
+    <div className="main" {...handlers}>
+      <h1 onClick={() => setCurrentStep(0)}>
+        <img src="img/sauerteig_32.png" /> Sauerteig
+      </h1>
+      {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
+      <div className="navigation">
+        {canGoBack && (
+          <span className="previous" onClick={() => goBack()}>
+            &larr;&nbsp;
+            <span>Vorheriger Schritt</span>
+          </span>
+        )}
+        {canGoForward && (
+          <div className={`next${canGoBack ? ' float' : ''}`} onClick={() => goForward()}>
+            <span>Nächster Schritt</span>
+            &nbsp; &rarr;
+          </div>
+        )}
       </div>
-    </>
+      <div className="footer">
+        Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Icon by{' '}
+        <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>. Source
+        code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
+      </div>
+    </div>
   );
 };
