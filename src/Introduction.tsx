@@ -4,7 +4,7 @@ import {IntroductionProps} from './data';
 export const Introduction: React.FC<IntroductionProps> = ({ingredients, title}) => {
   return (
     <div className="part">
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       Benötigt werden:
       <ul>
         {ingredients.map((ingredient, index) => (

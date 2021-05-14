@@ -23,5 +23,13 @@ body {
 
 a,
 a:visited {
-  color: blue;
+  color: #00f;
+}
+
+a.icon {
+  color: #000;
+}
+
+li {
+  line-height: 1.5em;
 }

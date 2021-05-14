@@ -10,7 +10,7 @@ export interface Steps {
 
 export type IntroductionProps = Pick<Steps, 'ingredients' | 'title'>;
 
-export const baseData: IntroductionProps = {
+export const introductionData: IntroductionProps = {
   ingredients: [
     'Frischhaltefolie',
     'Backpapier',
@@ -24,10 +24,10 @@ export const baseData: IntroductionProps = {
     'ggf. Sonnenblumenkerne oder andere Zutaten, die eingebacken werden sollen',
     'ggf. Holzlöffel',
   ],
-  title: 'Sauerteigbrot',
+  title: 'Vorbereitung',
 };
 
-export const recipeSteps: Steps[] = [
+export const stepsData: Steps[] = [
   {
     ingredients: ['400 ml lauwarmes Wasser', '250 g Roggenvollkornmehl', 'Frischhaltefolie', 'mittelgroße Schüssel'],
     manualTime: 15,

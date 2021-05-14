@@ -1,12 +1,12 @@
 import React from 'react';
-import {recipeSteps} from './data';
+import {stepsData} from './data';
 
 export interface StepProps {
   index: number;
 }
 
 export const Step: React.FC<StepProps> = ({index}) => {
-  const {ingredients, manualTime, steps, subtitle, title} = recipeSteps[index - 1];
+  const {ingredients, manualTime, steps, subtitle, title} = stepsData[index - 1];
 
   return (
     <div className="part">
