@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "https://ffflorian.github.io/sauerteig/static/css/main.83c978ad.chunk.css",
-    "main.js": "https://ffflorian.github.io/sauerteig/static/js/main.ad7b332f.chunk.js",
-    "main.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.ad7b332f.chunk.js.map",
+    "main.css": "https://ffflorian.github.io/sauerteig/static/css/main.1e116045.chunk.css",
+    "main.js": "https://ffflorian.github.io/sauerteig/static/js/main.2e417baa.chunk.js",
+    "main.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.2e417baa.chunk.js.map",
     "runtime-main.js": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js",
     "runtime-main.js.map": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js.map",
-    "static/js/2.767370b7.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.767370b7.chunk.js",
-    "static/js/2.767370b7.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.767370b7.chunk.js.map",
+    "static/js/2.b28a3993.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.b28a3993.chunk.js",
+    "static/js/2.b28a3993.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.b28a3993.chunk.js.map",
     "index.html": "https://ffflorian.github.io/sauerteig/index.html",
-    "static/css/main.83c978ad.chunk.css.map": "https://ffflorian.github.io/sauerteig/static/css/main.83c978ad.chunk.css.map",
-    "static/js/2.767370b7.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.767370b7.chunk.js.LICENSE.txt"
+    "static/css/main.1e116045.chunk.css.map": "https://ffflorian.github.io/sauerteig/static/css/main.1e116045.chunk.css.map",
+    "static/js/2.b28a3993.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.b28a3993.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0711c142.js",
-    "static/js/2.767370b7.chunk.js",
-    "static/css/main.83c978ad.chunk.css",
-    "static/js/main.ad7b332f.chunk.js"
+    "static/js/2.b28a3993.chunk.js",
+    "static/css/main.1e116045.chunk.css",
+    "static/js/main.2e417baa.chunk.js"
   ]
 }
