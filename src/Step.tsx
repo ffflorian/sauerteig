@@ -9,8 +9,10 @@ export interface StepProps {
 
 export const Step: React.FC<StepProps> = ({stepNumber}) => {
   const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
-  const accumulatedMinutes = stepsData.slice(stepNumber - 1).reduce((result, step) => result + step.otherTime, 0);
-  const countDownText = formatDistance(new Date(), addMinutes(new Date(), accumulatedMinutes), {
+  const accumulatedCountdownMinutes = stepsData
+    .slice(stepNumber - 1)
+    .reduce((result, step) => result + step.otherTime, 0);
+  const countdownText = formatDistance(new Date(), addMinutes(new Date(), accumulatedCountdownMinutes), {
     locale: deLocale,
   });
 
@@ -21,7 +23,7 @@ export const Step: React.FC<StepProps> = ({stepNumber}) => {
       </h2>
       <div className="subtitle">{subtitle}</div>
       <div className="countdown">
-        <strong>Zeit bis das Brot fertig ist: {countDownText}</strong>
+        <strong>Zeit bis das Brot fertig ist: {countdownText}</strong>
       </div>
       <div className="time">
         <strong>Arbeitszeit: {manualTime} Minuten</strong>
