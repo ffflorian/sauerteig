@@ -51,7 +51,7 @@ export const stepsData: StepData[] = [
     ],
     ingredients: ['2 EL lauwarmes Wasser', '1 EL Roggen(vollkorn)mehl', '1 große Schüssel'],
     manualTime: 20,
-    otherTime: 1260,
+    otherTime: 1320,
     steps: ['Anstellsauer in die Schüssel umfüllen', 'Wasser und Mehl hinzufügen und verrühren'],
     subtitle: '(hier starten, wenn Anstellsauer schon vorhanden ist)',
     title: 'Füttern',

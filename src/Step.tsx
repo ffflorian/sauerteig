@@ -11,7 +11,7 @@ export const Step: React.FC<StepProps> = ({stepNumber}) => {
   const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
-    .reduce((result, step) => result + step.otherTime, 0);
+    .reduce((result, step) => result + step.otherTime + step.manualTime, 0);
   const countdownText = formatDistance(new Date(), addMinutes(new Date(), accumulatedCountdownMinutes), {
     locale: deLocale,
   });
