@@ -1,19 +1,30 @@
 import React from 'react';
 import {stepsData} from './data';
+import {formatDistance, addMinutes} from 'date-fns';
+import deLocale from 'date-fns/locale/de';
 
 export interface StepProps {
-  index: number;
+  stepNumber: number;
 }
 
-export const Step: React.FC<StepProps> = ({index}) => {
-  const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[index - 1];
+export const Step: React.FC<StepProps> = ({stepNumber}) => {
+  const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
+  const accumulatedCountdownMinutes = stepsData
+    .slice(stepNumber - 1)
+    .reduce((result, step) => result + step.otherTime, 0);
+  const countdownText = formatDistance(new Date(), addMinutes(new Date(), accumulatedCountdownMinutes), {
+    locale: deLocale,
+  });
 
   return (
     <div className="part">
       <h2>
-        {index}. {title}
+        {stepNumber}. {title}
       </h2>
       <div className="subtitle">{subtitle}</div>
+      <div className="countdown">
+        <strong>Zeit bis das Brot fertig ist: {countdownText}</strong>
+      </div>
       <div className="time">
         <strong>Arbeitszeit: {manualTime} Minuten</strong>
       </div>

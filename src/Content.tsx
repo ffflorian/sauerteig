@@ -45,7 +45,7 @@ export const Content = () => {
       <div className="pageTitle" onClick={() => setCurrentStep(0)}>
         <img src="img/sauerteig_32.png" /> <span>Sauerteig</span>
       </div>
-      {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step index={currentStep} />}
+      {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step stepNumber={currentStep} />}
       <div className="navigation">
         {canGoBack && (
           <span className="previous" onClick={() => goBack()}>

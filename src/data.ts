@@ -1,7 +1,9 @@
 export interface StepData {
   additionalInfo?: string[];
   ingredients: string[];
+  /** the time in minutes to work on the current step */
   manualTime: number;
+  /** the time in minutes to finish the current step */
   otherTime: number;
   steps: string[];
   subtitle?: string;
