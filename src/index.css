@@ -46,12 +46,13 @@ li {
   vertical-align: top;
 }
 
-.time {
+.countdown {
   color: rgb(97, 97, 97);
-  margin-bottom: 20px;
 }
 
-.subtitle {
+.subtitle,
+.time,
+.countdown {
   margin-bottom: 20px;
 }
 
