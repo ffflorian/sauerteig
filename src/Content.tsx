@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
+import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
 import {stepsData} from './data';
 import {Step} from './Step';
-import {useSwipeable} from 'react-swipeable';
 
 export const Content = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const goForward = () => canGoForward && setCurrentStep(currentStep + 1);
-  const goBack = () => canGoBack && setCurrentStep(currentStep - 1);
+  const goForward = () => canGoForward && setCurrentStep(previousStep => previousStep + 1);
+  const goBack = () => canGoBack && setCurrentStep(previousStep => previousStep - 1);
 
   const canGoForward = currentStep < stepsData.length;
   const canGoBack = currentStep > 0;
@@ -38,7 +38,7 @@ export const Content = () => {
     return () => {
       window.removeEventListener('keyup', upHandler);
     };
-  }, []);
+  }, [currentStep]);
 
   return (
     <div className="main" {...handlers}>
