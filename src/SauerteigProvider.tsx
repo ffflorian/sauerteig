@@ -1,25 +1,24 @@
 import React, {useState} from 'react';
 
-const storageItem = window.localStorage.getItem('SauerteigStep');
-
-console.info(storageItem);
-
 interface ContextProps {
   currentStep: number;
   setCurrentStep: (step: number) => void;
 }
+
+const localStorageKey = 'SauerteigStep';
+const storageItem = window.localStorage.getItem(localStorageKey);
 
 export const SauerteigContext = React.createContext<ContextProps>({
   currentStep: Number(storageItem) || 0,
   setCurrentStep: () => {},
 });
 
-const SauerteigProvider: React.FC<any> = ({children}) => {
+const SauerteigProvider: React.FC = ({children}) => {
   const [currentStep, setCurrentStep] = useState(Number(storageItem) || 0);
 
-  const persistCurrentStep = (step: number) => {
+  const persistCurrentStep = (step: number): void => {
     setCurrentStep(step);
-    window.localStorage.setItem('SauerteigStep', step.toString());
+    window.localStorage.setItem(localStorageKey, step.toString());
   };
 
   return (
