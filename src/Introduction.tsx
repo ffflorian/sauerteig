@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {introductionData, stepsData} from './data';
+import {SauerteigContext} from './SauerteigProvider';
 
-interface IntroductionProps {
-  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
-}
-
-export const Introduction: React.FC<IntroductionProps> = ({setCurrentStep}) => {
+export const Introduction = () => {
+  const {setCurrentStep} = useContext(SauerteigContext);
   const {ingredients, title} = introductionData;
 
   return (

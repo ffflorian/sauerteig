@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
 import {stepsData} from './data';
 import {Step} from './Step';
+import {SauerteigContext} from './SauerteigProvider';
 
 export const Content = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const goForward = () => canGoForward && setCurrentStep(previousStep => previousStep + 1);
-  const goBack = () => canGoBack && setCurrentStep(previousStep => previousStep - 1);
+  const {currentStep, setCurrentStep} = useContext(SauerteigContext);
+  const goForward = () => canGoForward && setCurrentStep(currentStep + 1);
+  const goBack = () => canGoBack && setCurrentStep(currentStep - 1);
 
   const canGoForward = currentStep < stepsData.length;
   const canGoBack = currentStep > 0;
@@ -45,7 +46,7 @@ export const Content = () => {
       <div className="pageTitle" onClick={() => setCurrentStep(0)}>
         <img src="img/sauerteig_32.png" /> <span>Sauerteig</span>
       </div>
-      {currentStep === 0 ? <Introduction setCurrentStep={setCurrentStep} /> : <Step stepNumber={currentStep} />}
+      {currentStep === 0 ? <Introduction /> : <Step stepNumber={currentStep} />}
       <div className="navigation">
         {canGoBack && (
           <span className="previous" onClick={() => goBack()}>
