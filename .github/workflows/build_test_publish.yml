@@ -51,7 +51,7 @@ jobs:
         if: |
           env.CI_SKIP == 'false' &&
           github.event_name != 'pull_request' &&
-          github.actor !== 'dependabot[bot]'
+          github.actor != 'dependabot[bot]'
         env:
           CI: true
           GIT_AUTHOR_NAME: ffflobot
