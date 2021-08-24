@@ -5,15 +5,15 @@
     "main.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.47d02126.chunk.js.map",
     "runtime-main.js": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js",
     "runtime-main.js.map": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js.map",
-    "static/js/2.50a825da.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.50a825da.chunk.js",
-    "static/js/2.50a825da.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.50a825da.chunk.js.map",
+    "static/js/2.5127d3a0.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.5127d3a0.chunk.js",
+    "static/js/2.5127d3a0.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.5127d3a0.chunk.js.map",
     "index.html": "https://ffflorian.github.io/sauerteig/index.html",
     "static/css/main.8f0bc88f.chunk.css.map": "https://ffflorian.github.io/sauerteig/static/css/main.8f0bc88f.chunk.css.map",
-    "static/js/2.50a825da.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.50a825da.chunk.js.LICENSE.txt"
+    "static/js/2.5127d3a0.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.5127d3a0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0711c142.js",
-    "static/js/2.50a825da.chunk.js",
+    "static/js/2.5127d3a0.chunk.js",
     "static/css/main.8f0bc88f.chunk.css",
     "static/js/main.47d02126.chunk.js"
   ]
