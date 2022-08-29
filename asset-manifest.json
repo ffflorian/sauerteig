@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "https://ffflorian.github.io/sauerteig/static/css/main.8f0bc88f.chunk.css",
-    "main.js": "https://ffflorian.github.io/sauerteig/static/js/main.54c374ce.chunk.js",
-    "main.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.54c374ce.chunk.js.map",
+    "main.js": "https://ffflorian.github.io/sauerteig/static/js/main.08175e58.chunk.js",
+    "main.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.08175e58.chunk.js.map",
     "runtime-main.js": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js",
     "runtime-main.js.map": "https://ffflorian.github.io/sauerteig/static/js/runtime-main.0711c142.js.map",
-    "static/js/2.14ccc29d.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.14ccc29d.chunk.js",
-    "static/js/2.14ccc29d.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.14ccc29d.chunk.js.map",
+    "static/js/2.dd6eff8c.chunk.js": "https://ffflorian.github.io/sauerteig/static/js/2.dd6eff8c.chunk.js",
+    "static/js/2.dd6eff8c.chunk.js.map": "https://ffflorian.github.io/sauerteig/static/js/2.dd6eff8c.chunk.js.map",
     "index.html": "https://ffflorian.github.io/sauerteig/index.html",
     "static/css/main.8f0bc88f.chunk.css.map": "https://ffflorian.github.io/sauerteig/static/css/main.8f0bc88f.chunk.css.map",
-    "static/js/2.14ccc29d.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.14ccc29d.chunk.js.LICENSE.txt"
+    "static/js/2.dd6eff8c.chunk.js.LICENSE.txt": "https://ffflorian.github.io/sauerteig/static/js/2.dd6eff8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0711c142.js",
-    "static/js/2.14ccc29d.chunk.js",
+    "static/js/2.dd6eff8c.chunk.js",
     "static/css/main.8f0bc88f.chunk.css",
-    "static/js/main.54c374ce.chunk.js"
+    "static/js/main.08175e58.chunk.js"
   ]
 }
