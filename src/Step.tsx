@@ -7,7 +7,7 @@ export interface StepProps {
   stepNumber: number;
 }
 
-export const Step: React.FC<StepProps> = ({stepNumber}) => {
+export const Step = ({stepNumber}: StepProps): JSX.Element => {
   const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)

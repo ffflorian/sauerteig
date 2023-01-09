@@ -6,7 +6,7 @@ import {stepsData} from './data';
 import {Step} from './Step';
 import {SauerteigContext} from './SauerteigProvider';
 
-export const Content = () => {
+export const Content = (): JSX.Element => {
   const {currentStep, setCurrentStep} = useContext(SauerteigContext);
   const goForward = () => canGoForward && setCurrentStep(currentStep + 1);
   const goBack = () => canGoBack && setCurrentStep(currentStep - 1);
