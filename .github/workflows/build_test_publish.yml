@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   build_test_deploy:
     name: Build, test and deploy
@@ -52,4 +55,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: public
+          clean: true
           branch: gh-pages
+          clean-exclude: |
+            .nojekyll
