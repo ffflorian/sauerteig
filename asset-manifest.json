@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://ffflorian.github.io/sauerteig/static/css/main.4b32d718.css",
+    "main.js": "https://ffflorian.github.io/sauerteig/static/js/main.0f2ef57b.js",
+    "index.html": "https://ffflorian.github.io/sauerteig/index.html",
+    "main.4b32d718.css.map": "https://ffflorian.github.io/sauerteig/static/css/main.4b32d718.css.map",
+    "main.0f2ef57b.js.map": "https://ffflorian.github.io/sauerteig/static/js/main.0f2ef57b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b32d718.css",
+    "static/js/main.0f2ef57b.js"
+  ]
+}
