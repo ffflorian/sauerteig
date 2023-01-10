@@ -39,12 +39,13 @@ export const Content = (): JSX.Element => {
     return () => {
       window.removeEventListener('keyup', upHandler);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentStep]);
 
   return (
     <div className="main" {...handlers}>
       <div className="pageTitle" onClick={() => setCurrentStep(0)}>
-        <img src="img/sauerteig_32.png" /> <span>Sauerteig</span>
+        <img src="img/sauerteig_32.png" alt="A loaf of bread" /> <span>Sauerteig</span>
       </div>
       {currentStep === 0 ? <Introduction /> : <Step stepNumber={currentStep} />}
       <div className="navigation">
