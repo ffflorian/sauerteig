@@ -21,7 +21,7 @@
   "devDependencies": {
     "@evilmartians/lefthook": "1.2.9",
     "@ffflorian/eslint-config": "0.8.3",
-    "@ffflorian/prettier-config": "0.1.4",
+    "@ffflorian/prettier-config": "0.2.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.4.0",
