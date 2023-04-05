@@ -57,5 +57,4 @@ jobs:
           folder: build
           clean: true
           branch: gh-pages
-          clean-exclude: |
-            .nojekyll
+          clean-exclude: .nojekyll
