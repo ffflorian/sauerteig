@@ -48,10 +48,11 @@
     "typescript": "5.0.4"
   },
   "engines": {
-    "node": ">= 10.9"
+    "node": ">= 14.10"
   },
   "license": "GPL-3.0",
   "name": "sauerteig",
+  "packageManager": "yarn@3.5.0",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
