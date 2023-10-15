@@ -45,7 +45,7 @@
     "eslint-plugin-unused-imports": "2.0.0",
     "prettier": "3.0.3",
     "react-scripts": "5.0.1",
-    "rimraf": "5.0.1",
+    "rimraf": "5.0.5",
     "typescript": "5.2.2"
   },
   "engines": {
