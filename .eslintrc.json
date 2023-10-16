@@ -1,7 +1,6 @@
 {
   "env": {
-    "jasmine": true,
-    "jest/globals": true
+    "browser": true
   },
   "extends": ["@ffflorian/eslint-config"],
   "ignorePatterns": ["vite.config.ts"],
@@ -15,7 +14,7 @@
       }
     }
   ],
-  "plugins": ["@typescript-eslint", "jasmine", "jest", "jsdoc", "no-unsanitized", "prettier", "react", "react-hooks", "sort-keys-fix", "typescript-sort-keys"],
+  "plugins": ["@typescript-eslint", "jsdoc", "no-unsanitized", "prettier", "react", "react-hooks", "sort-keys-fix", "typescript-sort-keys"],
   "rules": {
     "valid-jsdoc": "off",
     "react/jsx-uses-vars": "error",
