@@ -20,8 +20,7 @@
     "skipLibCheck": true,
     "strict": true,
     "strictFunctionTypes": true,
-    "target": "ESNext",
-    "types": ["vitest/globals", "vite/client"]
+    "target": "ESNext"
   },
   "include": ["src", "test", ".eslintrc.js", "*.config.ts", "src/global.ts"]
 }
