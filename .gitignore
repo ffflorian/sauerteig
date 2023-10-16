@@ -10,7 +10,6 @@
 
 # production
 /dist
-/index.html
 
 # misc
 /.idea
