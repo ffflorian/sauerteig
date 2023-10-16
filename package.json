@@ -13,10 +13,12 @@
     ]
   },
   "dependencies": {
+    "@vitejs/plugin-react": "4.1.0",
     "date-fns": "2.30.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-swipeable": "7.0.1"
+    "react-swipeable": "7.0.1",
+    "vite": "4.4.11"
   },
   "devDependencies": {
     "@evilmartians/lefthook": "1.5.2",
@@ -26,7 +28,7 @@
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.5",
     "@types/node": "~18",
-    "@types/react": "18.2.22",
+    "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
     "@typescript-eslint/eslint-plugin": "5.59.1",
     "@typescript-eslint/parser": "5.59.1",
@@ -44,9 +46,9 @@
     "eslint-plugin-typescript-sort-keys": "2.3.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "prettier": "3.0.3",
-    "react-scripts": "5.0.1",
     "rimraf": "5.0.5",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "vite-plugin-eslint": "1.8.1"
   },
   "engines": {
     "node": ">= 14.10"
@@ -57,9 +59,10 @@
   "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
-    "build:site": "react-scripts build",
-    "clear": "rimraf build",
-    "dist": "yarn clear && yarn build:site",
+    "build": "tsc -p tsconfig.json && vite build",
+    "clear": "rimraf dist",
+    "dev": "yarn start",
+    "dist": "yarn clear && yarn build",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
     "fix:ts": "yarn lint:ts --fix",
@@ -67,8 +70,7 @@
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "eslint --ignore-path .gitignore --ext .ts,.tsx src/",
     "prettier": "prettier \"*.{json,md,yml}\"",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "start": "vite --open"
   },
   "version": "1.6.0"
 }

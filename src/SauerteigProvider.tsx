@@ -1,4 +1,4 @@
-import React, {useState, ReactNode, ReactElement} from 'react';
+import {useState, ReactNode, ReactElement, createContext} from 'react';
 
 interface ContextProps {
   currentStep: number;
@@ -8,7 +8,7 @@ interface ContextProps {
 const localStorageKey = 'SauerteigStep';
 const storageItem = window.localStorage.getItem(localStorageKey);
 
-export const SauerteigContext = React.createContext<ContextProps>({
+export const SauerteigContext = createContext<ContextProps>({
   currentStep: Number(storageItem) || 0,
   setCurrentStep: () => {},
 });
@@ -17,7 +17,7 @@ interface SauerteigProviderProps {
   children: ReactNode | ReactElement;
 }
 
-const SauerteigProvider = ({children}: SauerteigProviderProps): JSX.Element => {
+const SauerteigProvider = ({children}: SauerteigProviderProps) => {
   const [currentStep, setCurrentStep] = useState(Number(storageItem) || 0);
 
   const persistCurrentStep = (step: number): void => {

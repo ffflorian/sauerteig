@@ -2,7 +2,8 @@
   "env": {
     "jasmine": true
   },
-  "extends": ["@ffflorian/eslint-config", "react-app"],
+  "extends": ["@ffflorian/eslint-config"],
+  "ignorePatterns": ["vite.config.ts"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],

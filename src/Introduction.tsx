@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import {introductionData, stepsData} from './data';
 import {SauerteigContext} from './SauerteigProvider';
 
-export const Introduction = (): JSX.Element => {
+export const Introduction = () => {
   const {setCurrentStep} = useContext(SauerteigContext);
   const {ingredients, title} = introductionData;
 

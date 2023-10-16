@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from 'react';
+import {useEffect, useContext} from 'react';
 import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
@@ -6,7 +6,7 @@ import {stepsData} from './data';
 import {Step} from './Step';
 import {SauerteigContext} from './SauerteigProvider';
 
-export const Content = (): JSX.Element => {
+export const Content = () => {
   const {currentStep, setCurrentStep} = useContext(SauerteigContext);
   const goForward = () => canGoForward && setCurrentStep(currentStep + 1);
   const goBack = () => canGoBack && setCurrentStep(currentStep - 1);

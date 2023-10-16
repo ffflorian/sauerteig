@@ -1,4 +1,3 @@
-import React from 'react';
 import {stepsData} from './data';
 import {formatDistance, addMinutes} from 'date-fns';
 import deLocale from 'date-fns/locale/de';
@@ -7,7 +6,7 @@ export interface StepProps {
   stepNumber: number;
 }
 
-export const Step = ({stepNumber}: StepProps): JSX.Element => {
+export const Step = ({stepNumber}: StepProps) => {
   const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
