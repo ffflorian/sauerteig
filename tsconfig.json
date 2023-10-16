@@ -22,5 +22,5 @@
     "strictFunctionTypes": true,
     "target": "ESNext"
   },
-  "include": ["src", "test", ".eslintrc.js", "*.config.ts", "src/global.ts"]
+  "include": ["src", ".eslintrc.js", "*.config.ts", "src/global.ts"]
 }
