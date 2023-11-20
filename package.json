@@ -52,7 +52,6 @@
   },
   "license": "GPL-3.0",
   "name": "sauerteig",
-  "packageManager": "yarn@3.5.0",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
