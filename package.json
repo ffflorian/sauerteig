@@ -54,6 +54,9 @@
   "name": "sauerteig",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
+  "resolutions": {
+    "strip-ansi": "^6"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && vite build",
     "clear": "rimraf dist",
