@@ -48,9 +48,6 @@ jobs:
           yarn dist
 
       - name: Deploy
-        if: |
-          github.event_name != 'pull_request' &&
-          !startsWith(github.event.head_commit.message, 'chore(deps')
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
