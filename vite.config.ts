@@ -2,8 +2,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 
-export default defineConfig(({}) => {
+export default defineConfig(({mode}) => {
   return {
+    base: mode === 'production' ? '/sauerteig' : '',
     plugins: [
       react(),
       {
