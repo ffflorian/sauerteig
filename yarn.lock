@@ -411,10 +411,10 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.54.0.tgz#4fab9a2ff7860082c304f750e94acd644cf984cf"
   integrity sha512-ut5V+D+fOoWPgGGNj83GGjnntO39xDy6DWxO0wb7Jp3DcMX0TfIqdzHF85VTQkerdyGmuuMD9AKAo5KiNlf/AQ==
 
-"@evilmartians/lefthook@1.5.2":
-  version "1.5.2"
-  resolved "https://registry.npmjs.org/@evilmartians/lefthook/-/lefthook-1.5.2.tgz#9a10711368f6386be7e633ad70bf2bca27e5a022"
-  integrity sha512-CI2TYP0KFGxd3iXDj/4JcFxN+aMWxC5raRRQjJzXATPok5IVC41+SAG1O05Ec1AQJGN4b6iU1bxqtopbsKgWpg==
+"@evilmartians/lefthook@1.5.4":
+  version "1.5.4"
+  resolved "https://registry.npmjs.org/@evilmartians/lefthook/-/lefthook-1.5.4.tgz#ccf8f8d68a46adef3eaf9ec6a429bd207bf761b3"
+  integrity sha512-oyfKxXgZ9QjLFzj67RzqAfmqIUQ4hhIb5lZcfWuFf6COObjMHkb4HQQb8jgEmMPFWwk3JEuVJgxatrwZ2M8J5g==
 
 "@ffflorian/eslint-config@0.10.1":
   version "0.10.1"
@@ -2812,6 +2812,7 @@ spdx-license-ids@^3.0.0:
   integrity sha512-eWN+LnM3GR6gPu35WxNgbGl8rmY1AEmoMDvL/QD6zYmPWgywxWqJWNdLGT+ke8dKNWrcYgYjPpG5gbTfghP8rw==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
