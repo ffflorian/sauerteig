@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "4.2.1",
-    "date-fns": "2.30.0",
+    "date-fns": "3.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-swipeable": "7.0.1",
