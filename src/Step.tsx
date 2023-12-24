@@ -1,6 +1,7 @@
-import {stepsData} from './data';
 import {formatDistance, addMinutes} from 'date-fns';
-import deLocale from 'date-fns/locale/de';
+import {de as deLocale} from 'date-fns/locale/de';
+
+import {stepsData} from './data';
 
 export interface StepProps {
   stepNumber: number;
