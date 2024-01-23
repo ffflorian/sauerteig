@@ -405,15 +405,15 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@evilmartians/lefthook@1.5.6":
-  version "1.5.6"
-  resolved "https://registry.npmjs.org/@evilmartians/lefthook/-/lefthook-1.5.6.tgz#3444593b45475564c115bd09ca6cc4fa11521a5d"
-  integrity sha512-Folu9eldoCQf7tdKyEvLWSyJAhgdYACnrEzqMWdCLpF9it4Wu6sL3I/rVFEjZcTxsUyNeYP3c9zz7xCjIioiVw==
+"@evilmartians/lefthook@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/@evilmartians/lefthook/-/lefthook-1.6.0.tgz#ad0191223022d8ba8b00e6074cd618cda6d33431"
+  integrity sha512-vmpQuxYnimUkDEn4UzJsAJ32tNJ5OwQuWG9tX+/5F6OuBFDi62guqOLiflpLBiH7WFVBTOefCQ/DJgubjE8WrA==
 
-"@ffflorian/eslint-config@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.npmjs.org/@ffflorian/eslint-config/-/eslint-config-0.10.1.tgz#1524a8bd3173e6eca0d49b82292c4ebe559a7361"
-  integrity sha512-RweZ3fdUmpKVu9iAbRGTC0GpuVfY1/z1Eb7HZGrVTtRsZtQD/9Z75Ewfz48Fppz/2alnxzn/c2kWfRvHOGR2Lw==
+"@ffflorian/eslint-config@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.npmjs.org/@ffflorian/eslint-config/-/eslint-config-0.10.2.tgz#2207a502e487d50cdee4c10e2fcffcbb7cc9dfb5"
+  integrity sha512-IjF0x62icGOFp0qejxlHQYRkR93eJ3qbv4hTHfjCm80mz3RrZQ5bYHusSwJyUP96/a7l+C1tPvZRgFemlG+WDQ==
 
 "@ffflorian/prettier-config@0.3.2":
   version "0.3.2"
@@ -1092,10 +1092,10 @@ csstype@^3.0.2:
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
-date-fns@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/date-fns/-/date-fns-3.2.0.tgz#c97cf685b62c829aa4ecba554e4a51768cf0bffc"
-  integrity sha512-E4KWKavANzeuusPi0jUjpuI22SURAznGkx7eZV+4i6x2A+IZxAMcajgkvuDAU1bg40+xuhW1zRdVIIM/4khuIg==
+date-fns@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-3.3.1.tgz#7581daca0892d139736697717a168afbb908cfed"
+  integrity sha512-y8e109LYGgoQDveiEBD3DYXKba1jWf5BA8YU1FL5Tvm0BTdEfy54WLCwnuYWZNnzzvALy/QQ4Hov+Q9RVRv+Zw==
 
 debug@^3.2.7:
   version "3.2.7"

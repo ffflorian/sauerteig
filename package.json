@@ -14,15 +14,15 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "4.2.1",
-    "date-fns": "3.2.0",
+    "date-fns": "3.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-swipeable": "7.0.1",
     "vite": "5.0.12"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "1.5.6",
-    "@ffflorian/eslint-config": "0.10.1",
+    "@evilmartians/lefthook": "1.6.0",
+    "@ffflorian/eslint-config": "0.10.2",
     "@ffflorian/prettier-config": "0.3.2",
     "@types/node": "~20",
     "@types/react": "18.2.48",
