@@ -21,7 +21,7 @@
     "vite": "5.2.11"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "1.6.12",
+    "@evilmartians/lefthook": "1.6.13",
     "@ffflorian/eslint-config": "0.10.3",
     "@ffflorian/prettier-config": "0.3.3",
     "@types/node": "~20",
