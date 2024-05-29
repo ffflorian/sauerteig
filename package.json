@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@evilmartians/lefthook": "1.6.12",
-    "@ffflorian/eslint-config": "0.10.2",
+    "@ffflorian/eslint-config": "0.10.3",
     "@ffflorian/prettier-config": "0.3.2",
     "@types/node": "~20",
     "@types/react": "18.3.3",
