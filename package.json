@@ -18,7 +18,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-swipeable": "7.0.2",
-    "vite": "6.3.4"
+    "vite": "6.3.5"
   },
   "devDependencies": {
     "@evilmartians/lefthook": "1.11.13",
