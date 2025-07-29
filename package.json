@@ -24,7 +24,7 @@
     "@evilmartians/lefthook": "1.11.14",
     "@ffflorian/eslint-config": "0.10.3",
     "@ffflorian/prettier-config": "0.3.3",
-    "@types/node": "~20",
+    "@types/node": "~24",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@typescript-eslint/eslint-plugin": "5.62.0",
