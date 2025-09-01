@@ -22,5 +22,6 @@
     "strictFunctionTypes": true,
     "target": "ESNext"
   },
-  "include": ["src", ".eslintrc.js", "*.config.ts", "src/global.ts"]
+  "include": ["src", ".eslintrc.js", "*.config.ts", "src/global.ts"],
+  "exclude": ["vite.config.ts"]
 }
