@@ -58,7 +58,7 @@
     "strip-ansi": "^6"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && vite build",
+    "build": "tsc && vite build",
     "clear": "rimraf dist",
     "dev": "yarn start",
     "dist": "yarn clear && yarn build",
