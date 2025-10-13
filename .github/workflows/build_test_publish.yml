@@ -23,17 +23,12 @@ jobs:
           node-version: 24.x
           cache: yarn
 
-      - name: Setup yarn
-        run: |
-          corepack prepare yarn@stable --activate
-          yarn set version classic
-
       - name: Build, lint and test
         run: |
-          yarn
+          yarn --frozen-lockfile
           yarn lint
           yarn test
-          yarn dist
+          yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
