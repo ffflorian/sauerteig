@@ -72,5 +72,6 @@
     "start": "vite --open",
     "test": "exit 0"
   },
-  "version": "1.6.0"
+  "version": "1.6.0",
+  "packageManager": "yarn@4.12.0"
 }

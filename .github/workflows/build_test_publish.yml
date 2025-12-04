@@ -25,7 +25,7 @@ jobs:
 
       - name: Build, lint and test
         run: |
-          yarn --frozen-lockfile
+          yarn --immutable
           yarn lint
           yarn test
           yarn build
