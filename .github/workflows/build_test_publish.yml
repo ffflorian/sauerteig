@@ -32,7 +32,7 @@ jobs:
 
       - name: Deploy
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23
         with:
           folder: dist
           clean: true
