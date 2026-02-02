@@ -1,3 +1,5 @@
+export type IntroductionProps = Pick<StepData, 'ingredients' | 'title'>;
+
 export interface StepData {
   additionalInfo?: string[];
   ingredients: string[];
@@ -9,8 +11,6 @@ export interface StepData {
   subtitle?: string;
   title: string;
 }
-
-export type IntroductionProps = Pick<StepData, 'ingredients' | 'title'>;
 
 export const introductionData: IntroductionProps = {
   ingredients: [

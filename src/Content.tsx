@@ -39,7 +39,7 @@ export const Content = () => {
     return () => {
       window.removeEventListener('keyup', upHandler);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [currentStep]);
 
   return (
