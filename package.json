@@ -15,7 +15,7 @@
   "dependencies": {
     "@vitejs/plugin-react": "5.1.2",
     "date-fns": "4.1.0",
-    "react": "19.2.3",
+    "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-swipeable": "7.0.2",
     "vite": "7.3.0"
@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "tsc && vite build",
-    "clear": "rimraf dist",
+    "clear": "rm -rf dist",
     "dev": "yarn start",
     "dist": "yarn clear && yarn build",
     "fix": "yarn fix:ts && yarn fix:other",

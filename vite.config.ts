@@ -15,9 +15,9 @@ export default defineConfig(({mode}) => {
       {
         // do not fail on serve (i.e. local development)
         ...eslint({
+          exclude: './.prettierignore',
           failOnError: false,
           failOnWarning: false,
-          ignorePath: './.prettierignore',
         }),
         apply: 'serve',
         enforce: 'post',
