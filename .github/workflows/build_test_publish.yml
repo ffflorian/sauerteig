@@ -23,9 +23,12 @@ jobs:
           node-version: 24.x
           cache: yarn
 
-      - name: Build, lint and test
+      - name: Install packages
         run: |
           yarn --immutable
+
+      - name: Lint, test, and build
+        run: |
           yarn lint
           yarn test
           yarn build

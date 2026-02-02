@@ -9,8 +9,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -20,8 +20,9 @@
     "skipLibCheck": true,
     "strict": true,
     "strictFunctionTypes": true,
-    "target": "ESNext"
+    "strictNullChecks": true,
+    "target": "esnext"
   },
-  "include": ["src", ".eslintrc.js", "*.config.ts", "src/global.ts"],
+  "include": ["src", "*.config.ts", "src/global.ts"],
   "exclude": ["vite.config.ts"]
 }

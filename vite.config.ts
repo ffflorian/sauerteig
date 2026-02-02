@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import eslint from 'vite-plugin-eslint';
 
 export default defineConfig(({mode}) => {
@@ -15,8 +15,8 @@ export default defineConfig(({mode}) => {
       {
         // do not fail on serve (i.e. local development)
         ...eslint({
-          failOnWarning: false,
           failOnError: false,
+          failOnWarning: false,
           ignorePath: './.prettierignore',
         }),
         apply: 'serve',
