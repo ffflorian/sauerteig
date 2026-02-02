@@ -39,7 +39,6 @@ export const Content = () => {
     return () => {
       window.removeEventListener('keyup', upHandler);
     };
-     
   }, [currentStep]);
 
   return (
