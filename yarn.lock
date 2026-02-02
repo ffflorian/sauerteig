@@ -790,33 +790,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/eslint-config-react@npm:0.1.0":
-  version: 0.1.0
-  resolution: "@ffflorian/eslint-config-react@npm:0.1.0"
+"@ffflorian/eslint-config-react@npm:0.1.3":
+  version: 0.1.3
+  resolution: "@ffflorian/eslint-config-react@npm:0.1.3"
   dependencies:
-    "@ffflorian/eslint-config": "npm:0.13.0"
+    "@ffflorian/eslint-config": "npm:0.13.3"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.0.1"
-  peerDependencies:
-    "@eslint/js": ">= 9.39.2"
-    eslint: ">= 9.39.2"
-    eslint-import-resolver-typescript: ">= 4.4.4"
-    eslint-plugin-import: ">= 2.32.0"
-    eslint-plugin-oxlint: ">= 1.42.0"
-    eslint-plugin-perfectionist: ">= 5.4.0"
-    eslint-plugin-react: ">= 7.37.5"
-    eslint-plugin-react-hooks: ">= 7.0.1"
-    globals: ">= 17.2.0"
-    jiti: ">= 2.6.1"
-    typescript: ">= 5.9.3"
-    typescript-eslint: ">= 8.54.0"
-  checksum: 10c0/dc1c5063a8dc36f0689877af2ae99008293f8ac3bf64f99207c6d7602f740deb42787701185fd3fc4852e17fdca11f927b14a65e774a05c7dd2d547b996074e0
+  checksum: 10c0/2b064aa3b772bc7762d936fa993935dc64f560b9640fdd726d3c6643ff1d674f0d247284f62709807817e3e12570134f3b0846ff11f16c930ba5df423f772cba
   languageName: node
   linkType: hard
 
-"@ffflorian/eslint-config@npm:0.13.0":
-  version: 0.13.0
-  resolution: "@ffflorian/eslint-config@npm:0.13.0"
+"@ffflorian/eslint-config@npm:0.13.3":
+  version: 0.13.3
+  resolution: "@ffflorian/eslint-config@npm:0.13.3"
   dependencies:
     "@eslint/js": "npm:9.39.2"
     eslint: "npm:9.39.2"
@@ -827,18 +814,7 @@ __metadata:
     globals: "npm:17.3.0"
     jiti: "npm:2.6.1"
     typescript-eslint: "npm:8.54.0"
-  peerDependencies:
-    "@eslint/js": ">= 9.39.2"
-    eslint: ">= 9.39.2"
-    eslint-import-resolver-typescript: ">= 4.4.4"
-    eslint-plugin-import: ">= 2.32.0"
-    eslint-plugin-oxlint: ">= 1.42.0"
-    eslint-plugin-perfectionist: ">= 5.4.0"
-    globals: ">= 17.2.0"
-    jiti: ">= 2.6.1"
-    typescript: ">= 5.9.3"
-    typescript-eslint: ">= 8.54.0"
-  checksum: 10c0/e9435e2dc6ac98d3a413cfa17a08c8758b2498db010ca27118335cdac381b32d0efc162fd7af8c671639e668422d5fb3ecadafe0523f810677ffab7db16930a7
+  checksum: 10c0/f5c0c0599598a27df5a324c09b2d01c0f5ee1028e5b178c0bb4e2b8df17df3cc7ac69f691457ab3df2c2672b60fd742c04dba560ce46603d98174a0cdef4fc48
   languageName: node
   linkType: hard
 
@@ -4748,13 +4724,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-json-from-dist@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "package-json-from-dist@npm:1.0.1"
-  checksum: 10c0/62ba2785eb655fec084a257af34dbe24292ab74516d6aecef97ef72d4897310bc6898f6c85b5cd22770eaa1ce60d55a0230e150fb6a966e3ecd6c511e23d164b
-  languageName: node
-  linkType: hard
-
 "parent-module@npm:^1.0.0":
   version: 1.0.1
   resolution: "parent-module@npm:1.0.1"
@@ -5059,18 +5028,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:6.1.2":
-  version: 6.1.2
-  resolution: "rimraf@npm:6.1.2"
-  dependencies:
-    glob: "npm:^13.0.0"
-    package-json-from-dist: "npm:^1.0.1"
-  bin:
-    rimraf: dist/esm/bin.mjs
-  checksum: 10c0/c11a6a6fad937ada03c12fe688860690df8296d7cd08dbe59e3cc087f44e43573ae26ecbe48e54cb7a6db745b8c81fe5a15b9359233cc21d52d9b5b3330fcc74
-  languageName: node
-  linkType: hard
-
 "rollup@npm:^2.77.2":
   version: 2.79.2
   resolution: "rollup@npm:2.79.2"
@@ -5267,7 +5224,7 @@ __metadata:
   resolution: "sauerteig@workspace:."
   dependencies:
     "@evilmartians/lefthook": "npm:2.0.16"
-    "@ffflorian/eslint-config-react": "npm:0.1.0"
+    "@ffflorian/eslint-config-react": "npm:0.1.3"
     "@ffflorian/prettier-config": "npm:0.5.4"
     "@types/node": "npm:~24"
     "@types/react": "npm:19.2.7"
@@ -5280,7 +5237,6 @@ __metadata:
     react: "npm:19.2.3"
     react-dom: "npm:19.2.4"
     react-swipeable: "npm:7.0.2"
-    rimraf: "npm:6.1.2"
     typescript: "npm:5.9.3"
     vite: "npm:7.3.0"
     vite-plugin-eslint: "npm:1.8.1"
