@@ -790,9 +790,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/eslint-config@npm:0.12.4":
-  version: 0.12.4
-  resolution: "@ffflorian/eslint-config@npm:0.12.4"
+"@ffflorian/eslint-config-react@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@ffflorian/eslint-config-react@npm:0.1.0"
+  dependencies:
+    "@ffflorian/eslint-config": "npm:0.13.0"
+    eslint-plugin-react: "npm:7.37.5"
+    eslint-plugin-react-hooks: "npm:7.0.1"
+  peerDependencies:
+    "@eslint/js": ">= 9.39.2"
+    eslint: ">= 9.39.2"
+    eslint-import-resolver-typescript: ">= 4.4.4"
+    eslint-plugin-import: ">= 2.32.0"
+    eslint-plugin-oxlint: ">= 1.42.0"
+    eslint-plugin-perfectionist: ">= 5.4.0"
+    eslint-plugin-react: ">= 7.37.5"
+    eslint-plugin-react-hooks: ">= 7.0.1"
+    globals: ">= 17.2.0"
+    jiti: ">= 2.6.1"
+    typescript: ">= 5.9.3"
+    typescript-eslint: ">= 8.54.0"
+  checksum: 10c0/dc1c5063a8dc36f0689877af2ae99008293f8ac3bf64f99207c6d7602f740deb42787701185fd3fc4852e17fdca11f927b14a65e774a05c7dd2d547b996074e0
+  languageName: node
+  linkType: hard
+
+"@ffflorian/eslint-config@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@ffflorian/eslint-config@npm:0.13.0"
   dependencies:
     "@eslint/js": "npm:9.39.2"
     eslint: "npm:9.39.2"
@@ -800,7 +824,7 @@ __metadata:
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-oxlint: "npm:1.42.0"
     eslint-plugin-perfectionist: "npm:5.4.0"
-    globals: "npm:17.2.0"
+    globals: "npm:17.3.0"
     jiti: "npm:2.6.1"
     typescript-eslint: "npm:8.54.0"
   peerDependencies:
@@ -814,7 +838,7 @@ __metadata:
     jiti: ">= 2.6.1"
     typescript: ">= 5.9.3"
     typescript-eslint: ">= 8.54.0"
-  checksum: 10c0/691e4ed5c8549229aa04b688ec8e43b3e24b25c93d20f2c190696411f2dedc3e5e914871d31a5d2d32edef086d92740cfd95e0c7028cead08e790958c6f1bdeb
+  checksum: 10c0/e9435e2dc6ac98d3a413cfa17a08c8758b2498db010ca27118335cdac381b32d0efc162fd7af8c671639e668422d5fb3ecadafe0523f810677ffab7db16930a7
   languageName: node
   linkType: hard
 
@@ -3415,13 +3439,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:17.2.0":
-  version: 17.2.0
-  resolution: "globals@npm:17.2.0"
-  checksum: 10c0/fd25a98b08c1d31082337cbbb5ff1b90b9980e1db69a8621fb942bdb2cdca8aa54d61466742e8bf4910578ea5fa903b8bf83bffd1b2d45551cc614830dba910b
-  languageName: node
-  linkType: hard
-
 "globals@npm:17.3.0":
   version: 17.3.0
   resolution: "globals@npm:17.3.0"
@@ -5250,7 +5267,7 @@ __metadata:
   resolution: "sauerteig@workspace:."
   dependencies:
     "@evilmartians/lefthook": "npm:2.0.16"
-    "@ffflorian/eslint-config": "npm:0.12.4"
+    "@ffflorian/eslint-config-react": "npm:0.1.0"
     "@ffflorian/prettier-config": "npm:0.5.4"
     "@types/node": "npm:~24"
     "@types/react": "npm:19.2.7"
@@ -5258,14 +5275,6 @@ __metadata:
     "@vitejs/plugin-react": "npm:5.1.2"
     date-fns: "npm:4.1.0"
     eslint: "npm:9.39.2"
-    eslint-import-resolver-typescript: "npm:4.4.4"
-    eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-oxlint: "npm:1.42.0"
-    eslint-plugin-perfectionist: "npm:5.4.0"
-    eslint-plugin-react: "npm:7.37.5"
-    eslint-plugin-react-hooks: "npm:7.0.1"
-    globals: "npm:17.3.0"
-    jiti: "npm:2.6.1"
     oxlint: "npm:1.42.0"
     prettier: "npm:3.8.1"
     react: "npm:19.2.3"
