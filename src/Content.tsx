@@ -1,4 +1,4 @@
-import {useEffect, useContext} from 'react';
+import {useEffect, useContext, useState} from 'react';
 import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
@@ -6,8 +6,31 @@ import {stepsData} from './data';
 import {Step} from './Step';
 import {SauerteigContext} from './SauerteigProvider';
 
+type Theme = 'dark' | 'light';
+const themeStorageKey = 'SauerteigTheme';
+
+const getInitialTheme = (): Theme | null => {
+  const stored = window.localStorage.getItem(themeStorageKey);
+  if (stored === 'dark' || stored === 'light') {
+    return stored;
+  }
+  return null;
+};
+
 export const Content = () => {
   const {currentStep, setCurrentStep} = useContext(SauerteigContext);
+  const [theme, setTheme] = useState<Theme | null>(getInitialTheme);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.dataset.theme = theme;
+      window.localStorage.setItem(themeStorageKey, theme);
+    } else {
+      delete document.documentElement.dataset.theme;
+      window.localStorage.removeItem(themeStorageKey);
+    }
+  }, [theme]);
+
   const goForward = () => canGoForward && setCurrentStep(currentStep + 1);
   const goBack = () => canGoBack && setCurrentStep(currentStep - 1);
 
@@ -41,8 +64,19 @@ export const Content = () => {
     };
   }, [currentStep]);
 
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const currentIsDark = theme === 'dark' || (theme === null && systemPrefersDark);
+  const toggleTheme = () => setTheme(currentIsDark ? 'light' : 'dark');
+
   return (
     <div className="main" {...handlers}>
+      <button
+        className="themeToggle"
+        onClick={toggleTheme}
+        title={currentIsDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {currentIsDark ? '☀️' : '🌙'}
+      </button>
       <div className="pageTitle" onClick={() => setCurrentStep(0)}>
         <img src="img/sauerteig_32.png" alt="A loaf of bread" /> <span>Sauerteig</span>
       </div>
