@@ -24,6 +24,8 @@ yarn fix            # auto-fix all linting issues
 yarn test           # placeholder (no tests yet)
 ```
 
+Always use `yarn`, not `npm`, for all package management and script execution.
+
 After making any code changes, always run `yarn fix` to catch and auto-fix linting or formatting errors before committing.
 
 ## Project Structure
@@ -71,6 +73,7 @@ index.html             # HTML entry point
 ## Pre-commit Hooks (lefthook)
 
 Runs sequentially on staged files:
+
 1. Prettier – formats `.js/.ts/.jsx/.tsx/.css/.json/.md/.yml`
 2. oxlint – fast lint + autofix for TypeScript/JavaScript
 3. ESLint – full lint + autofix for TypeScript/JavaScript
