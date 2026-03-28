@@ -54,6 +54,7 @@ index.html             # HTML entry point
 
 ## Conventions
 
+- **Branches**: use the format `<fix/feat/chore>/<branch-name>` (e.g. `feat/dark-mode`, `fix/icon-alignment`). Do not prefix branch names with `claude/`.
 - **Commits**: follow Conventional Commits (Angular preset) – `feat:`, `fix:`, `chore:`, etc. Breaking changes use `BREAKING CHANGE:` in the footer.
 - **Versioning**: automated via Semantic Release on push to `main`.
 - **Language**: all UI content and comments are in German.
