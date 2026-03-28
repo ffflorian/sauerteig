@@ -64,12 +64,16 @@ li {
   cursor: pointer;
 }
 
+.main .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main .pageTitle {
   text-align: center;
   font-size: 23pt;
   font-weight: bold;
-  display: inline-block;
-  width: 100%;
 }
 
 .main .pageTitle span {
@@ -98,8 +102,7 @@ li {
   font-size: 1.2em;
   padding: 0;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
 }
 
 .navigation {

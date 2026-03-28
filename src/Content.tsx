@@ -70,15 +70,17 @@ export const Content = () => {
 
   return (
     <div className="main" {...handlers}>
-      <button
-        className="themeToggle"
-        onClick={toggleTheme}
-        title={currentIsDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      >
-        {currentIsDark ? '☀️' : '🌙'}
-      </button>
-      <div className="pageTitle" onClick={() => setCurrentStep(0)}>
-        <img src="img/sauerteig_32.png" alt="A loaf of bread" /> <span>Sauerteig</span>
+      <div className="header">
+        <div className="pageTitle" onClick={() => setCurrentStep(0)}>
+          <img src="img/sauerteig_32.png" alt="A loaf of bread" /> <span>Sauerteig</span>
+        </div>
+        <button
+          className="themeToggle"
+          onClick={toggleTheme}
+          title={currentIsDark ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {currentIsDark ? '☀️' : '🌙'}
+        </button>
       </div>
       {currentStep === 0 ? <Introduction /> : <Step stepNumber={currentStep} />}
       <div className="navigation">
