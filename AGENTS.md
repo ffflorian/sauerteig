@@ -24,6 +24,8 @@ yarn fix            # auto-fix all linting issues
 yarn test           # placeholder (no tests yet)
 ```
 
+After making any code changes, always run `yarn fix` to catch and auto-fix linting or formatting errors before committing.
+
 ## Project Structure
 
 ```
