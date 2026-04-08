@@ -4,7 +4,7 @@ import eslint from 'vite-plugin-eslint';
 
 export default defineConfig(({mode}) => {
   return {
-    base: mode === 'production' ? '/sauerteig' : '',
+    base: mode === 'production' ? '/sauerteig/' : '',
     plugins: [
       react(),
       {
