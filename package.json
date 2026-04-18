@@ -19,7 +19,7 @@
     "react-swipeable": "7.0.2"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "2.1.4",
+    "@evilmartians/lefthook": "2.1.5",
     "@ffflorian/eslint-config-react": "0.2.2",
     "@ffflorian/prettier-config": "0.8.2",
     "@types/node": "~24",
