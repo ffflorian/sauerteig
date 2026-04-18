@@ -6,13 +6,13 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: write
 
 jobs:
   build_test_deploy:
     name: Build, test and deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
