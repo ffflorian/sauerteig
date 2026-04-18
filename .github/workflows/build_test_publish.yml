@@ -6,11 +6,11 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: write
-
+permissions: {}
 jobs:
   build_test_deploy:
+    permissions:
+      contents: read
     name: Build, test and deploy
     runs-on: ubuntu-latest
     steps:
