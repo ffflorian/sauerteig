@@ -1,4 +1,4 @@
-name: Build, test, and deploy
+name: Lint, test, and build
 
 permissions: {}
 
@@ -8,10 +8,10 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build_test_deploy:
+  lint_test_build:
     permissions:
       contents: read
-    name: Build, test and deploy
+    name: Lint, test, and build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
