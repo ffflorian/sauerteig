@@ -1,12 +1,12 @@
-name: CI
+name: Build, test, and deploy
+
+permissions: {}
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
-permissions: {}
 jobs:
   build_test_deploy:
     permissions:
