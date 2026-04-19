@@ -23,10 +23,10 @@ updates:
       # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
       - dependency-name: 'eslint'
         versions:
-          - '>=10'
+          - '>= 10'
       - dependency-name: '@types/node'
         versions:
-          - '> 24.x'
+          - '>= 25, < 26'
     cooldown:
       default-days: 5
       exclude:
