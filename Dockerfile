@@ -3,7 +3,7 @@ FROM node:26.1.0-alpine@sha256:e71ac5e964b9201072425d59d2e876359efa25dc96bb1768c
 
 WORKDIR /app
 
-COPY package.json yarn.lock .yarnrc.yml vite.config.ts tsconfig.json index.html ./
+COPY package.json yarn.lock .yarnrc.yml vite.config.ts tsconfig*.json index.html ./
 COPY src/ src/
 COPY public/ public/
 COPY .yarn/ .yarn/
