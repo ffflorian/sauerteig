@@ -10,7 +10,7 @@ updates:
     ignore:
       - dependency-name: node
         versions:
-          - '>= 25, < 26'
+          - '> 26'
   - package-ecosystem: npm
     directory: '/'
     schedule:
@@ -26,7 +26,7 @@ updates:
           - '>= 10'
       - dependency-name: '@types/node'
         versions:
-          - '>= 25, < 26'
+          - '> 26'
     cooldown:
       default-days: 5
       exclude:
