@@ -19,7 +19,6 @@
     "react-swipeable": "7.0.2"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "2.1.6",
     "@ffflorian/eslint-config-react": "0.2.2",
     "@ffflorian/prettier-config": "0.8.2",
     "@types/node": "~25",
@@ -27,6 +26,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "eslint": "9.39.4",
+    "lefthook": "2.1.6",
     "oxlint": "1.65.0",
     "prettier": "3.8.3",
     "typescript": "6.0.3",
