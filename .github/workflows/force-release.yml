@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - uses: ffflorian/actions/force-release@4405e0d723a90f03f13aaf0b454f541a77fd66a3
+      - uses: ffflorian/actions/force-release@172e12c92918422f50dfaf9972394874725add63
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run_command: 'npx semantic-release'
