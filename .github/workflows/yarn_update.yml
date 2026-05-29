@@ -26,7 +26,7 @@ jobs:
       - name: Update yarn
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: ffflorian/actions/yarn-update@172e12c92918422f50dfaf9972394874725add63
+        uses: ffflorian/actions/yarn-update@347c23df6262a6482a59a1558f17f4f0b69249b1
         with:
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
           release_cooldown_days: '5'
