@@ -7,6 +7,7 @@ on:
 
 jobs:
   force-release:
+    name: Force release
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -17,4 +18,5 @@ jobs:
       - uses: ffflorian/actions/force-release@4405e0d723a90f03f13aaf0b454f541a77fd66a3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          run_command: 'npx semantic-release'
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
