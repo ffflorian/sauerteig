@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ffflorian/sauerteig/compare/v1.0.1...v1.1.0) (2026-06-05)
+
+
+### Features
+
+* add step number to URL hash for bookmarking ([#1166](https://github.com/ffflorian/sauerteig/issues/1166)) ([de4ab93](https://github.com/ffflorian/sauerteig/commit/de4ab93ef81763a901ac01b28bc8501e1c34bbdd))
+
 ## [1.0.1](https://github.com/ffflorian/sauerteig/compare/v1.0.0...v1.0.1) (2026-05-29)
 
 # 1.0.0 (2026-05-27)
