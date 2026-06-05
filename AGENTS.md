@@ -113,7 +113,8 @@ index.html             # HTML entry point
 
 ## CI/CD
 
-- **build_test_publish.yml**: runs lint → test → build on every push/PR to `main`; deploys to GitHub Pages (`gh-pages` branch) on `main` merges.
+- **lint_test_publish.yml**: runs lint → test → publish (Semantic Release + Docker image) on push/PR to `main`.
+- **deploy.yml**: deploys to production on GitHub release publication; also triggerable manually via `workflow_dispatch`.
 - **codeql.yml**: CodeQL security analysis on push/PR to `main` and weekly.
 - **yarn_update.yml**: monthly automated yarn update PR.
 - **dependabot.yml**: automated dependency version updates.
