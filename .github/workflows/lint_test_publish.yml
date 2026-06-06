@@ -10,7 +10,7 @@ on:
 
 jobs:
   lint_typescript:
-    name: Lint TypeScript
+    name: Lint and build TypeScript
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -28,8 +28,10 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
 
-      - name: Lint
-        run: yarn lint
+      - name: Lint and build
+        run: |
+          yarn lint
+          yarn build
 
   test_nginx_config:
     name: Test nginx config
