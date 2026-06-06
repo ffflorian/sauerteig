@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ffflorian/sauerteig/compare/v1.1.0...v1.2.0) (2026-06-06)
+
+
+### Features
+
+* add VERSION and COMMIT build args to Dockerfile and expose as meta tags ([#1169](https://github.com/ffflorian/sauerteig/issues/1169)) ([7de032c](https://github.com/ffflorian/sauerteig/commit/7de032c6eb3ccab8ec1fda1849532ba36877ba3e)), closes [#1168](https://github.com/ffflorian/sauerteig/issues/1168)
+
 # [1.1.0](https://github.com/ffflorian/sauerteig/compare/v1.0.1...v1.1.0) (2026-06-05)
 
 
