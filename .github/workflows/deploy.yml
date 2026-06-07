@@ -12,11 +12,13 @@ jobs:
   deploy:
     name: Deploy latest image
     runs-on: ubuntu-latest
-    permissions: {}
+    permissions:
+      deployments: write
     steps:
       - name: Deploy
-        uses: ffflorian/actions/coolify-deploy@86a6f4fba506628f07585dcd4010e05f2396c25a
+        uses: ffflorian/actions/coolify-deploy@9c7842ec0251a5890f0ca9ef22deed8dbc4ea9fa
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           domain: ${{ secrets.COOLIFY_DOMAIN }}
           token: ${{ secrets.COOLIFY_TOKEN }}
           uuid: ${{ secrets.COOLIFY_UUID }}
