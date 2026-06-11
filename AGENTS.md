@@ -30,6 +30,7 @@ This file explains how coding agents should work in this repository.
 - No docstrings or type annotations on code not being changed.
 - No error handling for scenarios that cannot happen.
 - Three similar lines is better than a premature abstraction.
+- Always use curly braces for `if` statements, even single-line ones.
 
 ### Review Rules
 
