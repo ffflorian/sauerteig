@@ -14,6 +14,9 @@ function labelForMinutes(minutes: number): string {
 }
 
 function labelForRemaining(ms: number): string {
+  if (ms < 1000) {
+    return formatDuration({seconds: 1}, {locale: deLocale});
+  }
   return formatDuration(intervalToDuration({start: 0, end: ms}), {
     locale: deLocale,
     format: ['hours', 'minutes', 'seconds'],
