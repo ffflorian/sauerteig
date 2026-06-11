@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ffflorian/sauerteig/compare/v1.3.0...v1.4.0) (2026-06-11)
+
+
+### Features
+
+* add checkboxes with wavy strikethrough to recipe steps ([#1181](https://github.com/ffflorian/sauerteig/issues/1181)) ([93bbeda](https://github.com/ffflorian/sauerteig/commit/93bbeda90177b7fab5e1b756baa3d99b5416135d))
+
 # [1.3.0](https://github.com/ffflorian/sauerteig/compare/v1.2.2...v1.3.0) (2026-06-11)
 
 
