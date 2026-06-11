@@ -10,7 +10,10 @@ interface ReminderTimerProps {
 }
 
 function labelForMinutes(minutes: number): string {
-  return formatDuration(intervalToDuration({start: 0, end: minutes * 60 * 1000}), {locale: deLocale});
+  return formatDuration(intervalToDuration({start: 0, end: minutes * 60 * 1000}), {locale: deLocale}).replace(
+    'Tage',
+    'Tagen'
+  );
 }
 
 function labelForRemaining(ms: number): string {
