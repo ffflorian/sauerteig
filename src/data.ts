@@ -2,6 +2,7 @@ export type IntroductionProps = Pick<StepData, 'ingredients' | 'title'>;
 
 export interface StepData {
   additionalInfo?: string[];
+  importantInfo?: string;
   ingredients: string[];
   /** the time in minutes to work on the current step */
   manualTime: number;
@@ -67,7 +68,7 @@ export const stepsData: StepData[] = [
     title: 'Bereit machen zum backen',
   },
   {
-    additionalInfo: ['Wichtig: alle 1-2 Tage füttern, sonst verhungert der Anstellsauer.'],
+    importantInfo: 'alle 1-2 Tage füttern, sonst verhungert der Anstellsauer.',
     ingredients: [
       'ein luftdicht verschließbares Gefäß (z.B. ein gut gespültes Gurkenglas), das nicht zu klein ist, denn der Anstellsauer wächst',
       '2 EL kaltes Wasser',

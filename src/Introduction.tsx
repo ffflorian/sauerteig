@@ -1,10 +1,13 @@
-import {useContext} from 'react';
+import {useState, useContext} from 'react';
 import {introductionData, stepsData} from './data';
-import {SauerteigContext} from './SauerteigProvider';
+import {SauerteigContext} from './SauerteigContext';
 
 export const Introduction = () => {
   const {setCurrentStep} = useContext(SauerteigContext);
   const {ingredients, title} = introductionData;
+  const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
+
+  const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
 
   return (
     <div className="part">
@@ -23,9 +26,14 @@ export const Introduction = () => {
       </div>
       <h2>{title}</h2>
       Benötigt werden:
-      <ul>
+      <ul className="checklist">
         {ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+          <li key={index} className={checkedIngredients[index] ? 'checked' : ''}>
+            <label className="checklist-label">
+              <input type="checkbox" checked={checkedIngredients[index]} onChange={() => toggleIngredient(index)} />
+              <span>{ingredient}</span>
+            </label>
+          </li>
         ))}
       </ul>
     </div>
