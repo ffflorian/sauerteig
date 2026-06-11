@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ffflorian/sauerteig/compare/v1.5.0...v1.5.1) (2026-06-11)
+
+
+### Bug Fixes
+
+* use dative case "Tagen" in reminder button label ([8366253](https://github.com/ffflorian/sauerteig/commit/83662533afd98caa66e34cd97443e7deb592a2a5))
+
 # [1.5.0](https://github.com/ffflorian/sauerteig/compare/v1.4.0...v1.5.0) (2026-06-11)
 
 
