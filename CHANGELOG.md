@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ffflorian/sauerteig/compare/v1.2.2...v1.3.0) (2026-06-11)
+
+
+### Features
+
+* Style improvements ([5f0b916](https://github.com/ffflorian/sauerteig/commit/5f0b916ff906c56c8719245d631b361f8e48ba58))
+
 ## [1.2.2](https://github.com/ffflorian/sauerteig/compare/v1.2.1...v1.2.2) (2026-06-11)
 
 
