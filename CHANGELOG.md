@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ffflorian/sauerteig/compare/v1.4.0...v1.5.0) (2026-06-11)
+
+
+### Features
+
+* add per-step reminder timers and persist checkbox state ([#1182](https://github.com/ffflorian/sauerteig/issues/1182)) ([2d1be00](https://github.com/ffflorian/sauerteig/commit/2d1be00b20617410232253f85bb5566e06531c4e))
+
 # [1.4.0](https://github.com/ffflorian/sauerteig/compare/v1.3.0...v1.4.0) (2026-06-11)
 
 
