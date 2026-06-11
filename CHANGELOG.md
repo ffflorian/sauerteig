@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ffflorian/sauerteig/compare/v1.2.0...v1.2.1) (2026-06-11)
+
+
+### Bug Fixes
+
+* **deps:** Bump the react group with 2 updates ([#1174](https://github.com/ffflorian/sauerteig/issues/1174)) ([49d9eee](https://github.com/ffflorian/sauerteig/commit/49d9eeeac1a5af93cb6d231703b65ada5bef12b8))
+
 # [1.2.0](https://github.com/ffflorian/sauerteig/compare/v1.1.0...v1.2.0) (2026-06-06)
 
 
