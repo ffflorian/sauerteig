@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import {formatDistance, addMinutes} from 'date-fns';
 import {de as deLocale} from 'date-fns/locale/de';
 
@@ -8,13 +9,19 @@ export interface StepProps {
 }
 
 export const Step = ({stepNumber}: StepProps) => {
-  const {ingredients, manualTime, steps, subtitle, title, additionalInfo} = stepsData[stepNumber - 1];
+  const {ingredients, manualTime, steps, subtitle, title, additionalInfo, importantInfo} = stepsData[stepNumber - 1];
+  const [checkedSteps, setCheckedSteps] = useState<boolean[]>(() => steps.map(() => false));
+  const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
+
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
     .reduce((result, step) => result + step.otherTime + step.manualTime, 0);
   const countdownText = formatDistance(new Date(), addMinutes(new Date(), accumulatedCountdownMinutes), {
     locale: deLocale,
   });
+
+  const toggleStep = (index: number) => setCheckedSteps(prev => prev.map((v, i) => (i === index ? !v : v)));
+  const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
 
   return (
     <div className="part">
@@ -31,20 +38,35 @@ export const Step = ({stepNumber}: StepProps) => {
       {!!ingredients.length && (
         <>
           <h3>Zutaten</h3>
-          <ul>
+          <ul className="checklist">
             {ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
+              <li key={index} className={checkedIngredients[index] ? 'checked' : ''}>
+                <label className="checklist-label">
+                  <input type="checkbox" checked={checkedIngredients[index]} onChange={() => toggleIngredient(index)} />
+                  <span>{ingredient}</span>
+                </label>
+              </li>
             ))}
           </ul>
         </>
       )}
       <h3>Zubereitung</h3>
-      <ol>
+      <ol className="checklist">
         {steps.map((step, index) => (
-          <li key={index}>{step}</li>
+          <li key={index} className={checkedSteps[index] ? 'checked' : ''}>
+            <label className="checklist-label">
+              <input type="checkbox" checked={checkedSteps[index]} onChange={() => toggleStep(index)} />
+              <span>{step}</span>
+            </label>
+          </li>
         ))}
       </ol>
       {additionalInfo && <div>{additionalInfo.join(' ')}</div>}
+      {importantInfo && (
+        <div>
+          <strong>Wichtig:</strong> {importantInfo}
+        </div>
+      )}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import {useSwipeable} from 'react-swipeable';
 import {Introduction} from './Introduction';
 import {stepsData} from './data';
 import {Step} from './Step';
-import {SauerteigContext} from './SauerteigProvider';
+import {SauerteigContext} from './SauerteigContext';
 
 type Theme = 'dark' | 'light';
 const themeStorageKey = 'SauerteigTheme';
@@ -108,7 +108,7 @@ export const Content = () => {
           )}
         </button>
       </div>
-      {currentStep === 0 ? <Introduction /> : <Step stepNumber={currentStep} />}
+      {currentStep === 0 ? <Introduction /> : <Step key={currentStep} stepNumber={currentStep} />}
       <div className="navigation">
         {canGoBack && (
           <span className="previous" onClick={() => goBack()}>
