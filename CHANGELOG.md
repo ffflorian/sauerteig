@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/ffflorian/sauerteig/compare/v1.2.1...v1.2.2) (2026-06-11)
+
+
+### Bug Fixes
+
+* Install yarn with apk ([#1178](https://github.com/ffflorian/sauerteig/issues/1178)) ([65190c3](https://github.com/ffflorian/sauerteig/commit/65190c3e74f918825c11509b9a1aa12f378e5f35))
+
 ## [1.2.1](https://github.com/ffflorian/sauerteig/compare/v1.2.0...v1.2.1) (2026-06-11)
 
 
