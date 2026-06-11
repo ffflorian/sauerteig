@@ -123,7 +123,7 @@ export const stepsData: StepData[] = [
         text: '12 Min. verkneten (am besten mit einem Holzlöffel oder einer Kitchen Aid)',
         timerMinutes: 12,
       },
-      {id: 'n8w6x', text: 'Mit einem Küchenhandtuch abdecken 30 Min. gehen lassen', timerMinutes: 30},
+      {id: 'n8w6x', text: 'Mit einem Küchenhandtuch abdecken und 30 Min. gehen lassen', timerMinutes: 30},
       {id: 'c1m4k', text: 'Brotform mit Backpapier auslegen'},
       {
         id: 'd7z9p',

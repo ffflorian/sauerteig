@@ -105,7 +105,7 @@ Man nehme:
 1. Das Mehl, Wasser und Salz zum restlichen Anstellsauer hinzufügen
 2. Ggf. die Kerne hinzufügen
 3. 12 Min. verkneten (am besten mit einem Holzlöffel oder einer Kitchen Aid)
-4. Mit einem Küchenhandtuch abdecken 30 Min. gehen lassen
+4. Mit einem Küchenhandtuch abdecken und 30 Min. gehen lassen
 5. Brotform mit Backpapier auslegen
 6. Nicht abdecken (sonst wächst der Teig über die Form hinaus) und 2 Std. gehen lassen
 
