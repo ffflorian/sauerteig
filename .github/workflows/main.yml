@@ -75,6 +75,8 @@ jobs:
       packages: write
       issues: write
     runs-on: ubuntu-latest
+    outputs:
+      new_release_published: ${{ steps.publish_release.outputs.new_release_published }}
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
