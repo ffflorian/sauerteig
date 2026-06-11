@@ -3,15 +3,42 @@ import {formatDistance, addMinutes} from 'date-fns';
 import {de as deLocale} from 'date-fns/locale/de';
 
 import {stepsData} from './data';
+import {ReminderTimer} from './ReminderTimer';
 
 export interface StepProps {
   stepNumber: number;
 }
 
 export const Step = ({stepNumber}: StepProps) => {
-  const {ingredients, manualTime, steps, subtitle, title, additionalInfo, importantInfo} = stepsData[stepNumber - 1];
-  const [checkedSteps, setCheckedSteps] = useState<boolean[]>(() => steps.map(() => false));
-  const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
+  const {
+    id: stepId,
+    ingredients,
+    manualTime,
+    steps,
+    subtitle,
+    title,
+    additionalInfo,
+    importantInfo,
+  } = stepsData[stepNumber - 1];
+
+  const [checkedSteps, setCheckedSteps] = useState<boolean[]>(() =>
+    steps.map(step => localStorage.getItem(`SauerteigStep_${step.id}`) === 'true')
+  );
+
+  const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => {
+    const raw = localStorage.getItem(`SauerteigIngredients_${stepId}`);
+    if (raw !== null) {
+      try {
+        const stored = JSON.parse(raw) as boolean[] | null;
+        if (Array.isArray(stored) && stored.length === ingredients.length) {
+          return stored;
+        }
+      } catch {
+        return ingredients.map(() => false);
+      }
+    }
+    return ingredients.map(() => false);
+  });
 
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
@@ -20,8 +47,21 @@ export const Step = ({stepNumber}: StepProps) => {
     locale: deLocale,
   });
 
-  const toggleStep = (index: number) => setCheckedSteps(prev => prev.map((v, i) => (i === index ? !v : v)));
-  const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
+  const toggleStep = (index: number) => {
+    setCheckedSteps(prev => {
+      const next = prev.map((v, i) => (i === index ? !v : v));
+      localStorage.setItem(`SauerteigStep_${steps[index].id}`, String(next[index]));
+      return next;
+    });
+  };
+
+  const toggleIngredient = (index: number) => {
+    setCheckedIngredients(prev => {
+      const next = prev.map((v, i) => (i === index ? !v : v));
+      localStorage.setItem(`SauerteigIngredients_${stepId}`, JSON.stringify(next));
+      return next;
+    });
+  };
 
   return (
     <div className="part">
@@ -53,11 +93,21 @@ export const Step = ({stepNumber}: StepProps) => {
       <h3>Zubereitung</h3>
       <ol className="checklist">
         {steps.map((step, index) => (
-          <li key={index} className={checkedSteps[index] ? 'checked' : ''}>
+          <li key={step.id} className={checkedSteps[index] ? 'checked' : ''}>
             <label className="checklist-label">
               <input type="checkbox" checked={checkedSteps[index]} onChange={() => toggleStep(index)} />
-              <span>{step}</span>
+              <span>{step.text}</span>
             </label>
+            {step.timerMinutes !== undefined && (
+              <div className="step-timer">
+                <ReminderTimer
+                  disabled={checkedSteps[index]}
+                  minutes={step.timerMinutes}
+                  onExpire={() => toggleStep(index)}
+                  storageKey={`SauerteigTimer_${step.id}`}
+                />
+              </div>
+            )}
           </li>
         ))}
       </ol>

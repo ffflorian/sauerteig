@@ -253,6 +253,62 @@ li.checked .checklist-label span {
   color: color-mix(in srgb, var(--color-text-muted) 50%, transparent);
 }
 
+.step-timer {
+  padding-left: calc(1.05rem + 10px);
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.reminder-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: var(--color-link);
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+
+.reminder-timer:hover:not(:disabled) {
+  background-color: var(--color-border);
+}
+
+.reminder-timer:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.reminder-timer--active {
+  cursor: default;
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.reminder-timer--active:hover {
+  background-color: transparent;
+}
+
+.reminder-cancel {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 6px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.reminder-cancel:hover {
+  color: var(--color-accent);
+}
+
 .footer {
   margin-top: 56px;
   padding-top: 20px;
