@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/ffflorian/sauerteig/compare/v1.8.1...v1.9.0) (2026-06-12)
+
+
+### Features
+
+* add health endpoint to backend ([#1189](https://github.com/ffflorian/sauerteig/issues/1189)) ([a54a251](https://github.com/ffflorian/sauerteig/commit/a54a2516d1b1cddb8ca321def46e8598c7e4cec1))
+
 ## [1.8.1](https://github.com/ffflorian/sauerteig/compare/v1.8.0...v1.8.1) (2026-06-12)
 
 
