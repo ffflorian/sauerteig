@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ffflorian/sauerteig/compare/v1.5.2...v1.6.0) (2026-06-12)
+
+
+### Features
+
+* make app installable as PWA and prompt iOS users to install ([#1185](https://github.com/ffflorian/sauerteig/issues/1185)) ([508e3b2](https://github.com/ffflorian/sauerteig/commit/508e3b2527f2b549bd9fdd1538e449189fca434c))
+
 ## [1.5.2](https://github.com/ffflorian/sauerteig/compare/v1.5.1...v1.5.2) (2026-06-12)
 
 
