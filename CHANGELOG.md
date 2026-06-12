@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/ffflorian/sauerteig/compare/v1.6.0...v1.7.0) (2026-06-12)
+
+
+### Features
+
+* add info icon to reopen install hint after dismissal ([#1186](https://github.com/ffflorian/sauerteig/issues/1186)) ([b6ff1f0](https://github.com/ffflorian/sauerteig/commit/b6ff1f0a3ce0cc20d03bbdcbbcc4061ef7fadafd))
+
 # [1.6.0](https://github.com/ffflorian/sauerteig/compare/v1.5.2...v1.6.0) (2026-06-12)
 
 
