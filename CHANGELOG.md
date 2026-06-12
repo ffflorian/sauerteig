@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/ffflorian/sauerteig/compare/v1.7.0...v1.8.0) (2026-06-12)
+
+
+### Features
+
+* add Web Push notifications via NestJS backend in a monorepo ([#1187](https://github.com/ffflorian/sauerteig/issues/1187)) ([b578ac2](https://github.com/ffflorian/sauerteig/commit/b578ac2bf169f7164cc03b068110b4b0a2d0bc6f))
+
 # [1.7.0](https://github.com/ffflorian/sauerteig/compare/v1.6.0...v1.7.0) (2026-06-12)
 
 
