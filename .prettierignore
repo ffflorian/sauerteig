@@ -1,6 +1,10 @@
-dist
-node_modules
-package.json
-CHANGELOG.md
-.yarn
 .yarnrc.yml
+node_modules/
+packages/*/node_modules/
+dist/
+packages/*/dist/
+build/
+coverage/
+.vite/
+**/CLAUDE.md
+**/CHANGELOG.md

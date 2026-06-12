@@ -1,0 +1,52 @@
+{
+  "dependencies": {
+    "@nestjs/common": "11.1.24",
+    "@nestjs/core": "11.1.24",
+    "@nestjs/mongoose": "11.0.3",
+    "@nestjs/platform-express": "11.1.24",
+    "@nestjs/schedule": "5.0.1",
+    "@nestjs/throttler": "6.5.0",
+    "helmet": "8.2.0",
+    "mongoose": "9.6.3",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "web-push": "3.6.7"
+  },
+  "devDependencies": {
+    "@ffflorian/eslint-config": "0.14.2",
+    "@ffflorian/prettier-config": "0.8.2",
+    "@types/node": "~25",
+    "@types/web-push": "3.6.4",
+    "eslint": "10.4.1",
+    "oxlint": "1.68.0",
+    "prettier": "3.8.3",
+    "tsx": "4.22.4",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.60.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "name": "sauerteig-backend",
+  "prettier": "@ffflorian/prettier-config",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "IS_LOCAL=true yarn start",
+    "dist": "yarn clean && yarn build",
+    "fix": "yarn fix:ts && yarn fix:other",
+    "fix:other": "yarn prettier --write",
+    "fix:ts": "yarn lint:ts:oxlint --fix && yarn lint:ts:eslint --fix",
+    "lint": "yarn lint:other && yarn lint:ts",
+    "lint:other": "yarn prettier --list-different",
+    "lint:ts": "yarn lint:ts:oxlint && yarn lint:ts:eslint",
+    "lint:ts:eslint": "eslint .",
+    "lint:ts:oxlint": "oxlint --ignore-path .gitignore .",
+    "prettier": "prettier --ignore-path ../../.prettierignore .",
+    "start": "tsx src/main.ts",
+    "start:prod": "node dist/main.js",
+    "test": "exit 0"
+  },
+  "version": "1.0.0"
+}
