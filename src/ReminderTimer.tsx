@@ -2,6 +2,9 @@ import {useState, useEffect} from 'react';
 import {formatDuration, intervalToDuration} from 'date-fns';
 import {de as deLocale} from 'date-fns/locale/de';
 
+import {InstallPrompt} from './InstallPrompt';
+import {shouldSuggestInstall} from './iosPwa';
+
 interface ReminderTimerProps {
   disabled?: boolean;
   minutes: number;
@@ -11,6 +14,9 @@ interface ReminderTimerProps {
 
 // iOS Safari (outside the installed PWA) does not expose the Notification API.
 const notificationsSupported = typeof Notification !== 'undefined';
+
+// Once dismissed, do not nag the user with the install hint on every timer.
+const installPromptDismissedKey = 'SauerteigInstallPromptDismissed';
 
 function labelForMinutes(minutes: number): string {
   return formatDuration(intervalToDuration({start: 0, end: minutes * 60 * 1000}), {locale: deLocale}).replace(
@@ -38,6 +44,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   const [permission, setPermission] = useState<NotificationPermission>(
     notificationsSupported ? Notification.permission : 'default'
   );
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
 
   useEffect(() => {
     if (!disabled || endTime === null) {
@@ -89,6 +96,14 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     const end = Date.now() + minutes * 60 * 1000;
     localStorage.setItem(storageKey, String(end));
     setEndTime(end);
+    if (shouldSuggestInstall() && localStorage.getItem(installPromptDismissedKey) !== 'true') {
+      setShowInstallPrompt(true);
+    }
+  };
+
+  const dismissInstallPrompt = () => {
+    localStorage.setItem(installPromptDismissedKey, 'true');
+    setShowInstallPrompt(false);
   };
 
   const cancel = () => {
@@ -103,20 +118,21 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     return null;
   }
 
-  if (endTime !== null && remaining !== null && !disabled) {
-    return (
-      <div className="reminder-timer reminder-timer--active">
-        <span>🕐 Noch {labelForRemaining(remaining)}</span>
-        <button className="reminder-cancel" onClick={cancel}>
-          Abbrechen
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <button className="reminder-timer" onClick={startTimer} disabled={disabled}>
-      🕐 Erinnere mich in {labelForMinutes(minutes)}
-    </button>
+    <>
+      {endTime !== null && remaining !== null && !disabled ? (
+        <div className="reminder-timer reminder-timer--active">
+          <span>🕐 Noch {labelForRemaining(remaining)}</span>
+          <button className="reminder-cancel" onClick={cancel}>
+            Abbrechen
+          </button>
+        </div>
+      ) : (
+        <button className="reminder-timer" onClick={startTimer} disabled={disabled}>
+          🕐 Erinnere mich in {labelForMinutes(minutes)}
+        </button>
+      )}
+      {showInstallPrompt && <InstallPrompt onClose={dismissInstallPrompt} />}
+    </>
   );
 };
