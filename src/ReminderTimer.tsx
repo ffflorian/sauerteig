@@ -18,6 +18,24 @@ const notificationsSupported = typeof Notification !== 'undefined';
 // Once dismissed, do not nag the user with the install hint on every timer.
 const installPromptDismissedKey = 'SauerteigInstallPromptDismissed';
 
+const InfoIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 16v-4" />
+    <path d="M12 8h.01" />
+  </svg>
+);
+
 function labelForMinutes(minutes: number): string {
   return formatDuration(intervalToDuration({start: 0, end: minutes * 60 * 1000}), {locale: deLocale}).replace(
     'Tage',
@@ -45,6 +63,9 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     notificationsSupported ? Notification.permission : 'default'
   );
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [installDismissed, setInstallDismissed] = useState(
+    () => localStorage.getItem(installPromptDismissedKey) === 'true'
+  );
 
   useEffect(() => {
     if (!disabled || endTime === null) {
@@ -103,6 +124,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
 
   const dismissInstallPrompt = () => {
     localStorage.setItem(installPromptDismissedKey, 'true');
+    setInstallDismissed(true);
     setShowInstallPrompt(false);
   };
 
@@ -120,18 +142,30 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
 
   return (
     <>
-      {endTime !== null && remaining !== null && !disabled ? (
-        <div className="reminder-timer reminder-timer--active">
-          <span>🕐 Noch {labelForRemaining(remaining)}</span>
-          <button className="reminder-cancel" onClick={cancel}>
-            Abbrechen
+      <span className="reminder-timer-row">
+        {endTime !== null && remaining !== null && !disabled ? (
+          <div className="reminder-timer reminder-timer--active">
+            <span>🕐 Noch {labelForRemaining(remaining)}</span>
+            <button className="reminder-cancel" onClick={cancel}>
+              Abbrechen
+            </button>
+          </div>
+        ) : (
+          <button className="reminder-timer" onClick={startTimer} disabled={disabled}>
+            🕐 Erinnere mich in {labelForMinutes(minutes)}
           </button>
-        </div>
-      ) : (
-        <button className="reminder-timer" onClick={startTimer} disabled={disabled}>
-          🕐 Erinnere mich in {labelForMinutes(minutes)}
-        </button>
-      )}
+        )}
+        {installDismissed && shouldSuggestInstall() && (
+          <button
+            className="reminder-info"
+            onClick={() => setShowInstallPrompt(true)}
+            aria-label="Installationshinweis erneut anzeigen"
+            title="Installationshinweis erneut anzeigen"
+          >
+            <InfoIcon />
+          </button>
+        )}
+      </span>
       {showInstallPrompt && <InstallPrompt onClose={dismissInstallPrompt} />}
     </>
   );

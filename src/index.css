@@ -311,6 +311,28 @@ li.checked .checklist-label span {
   background-color: transparent;
 }
 
+.reminder-timer-row {
+  display: inline-flex;
+  align-items: center;
+}
+
+.reminder-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  padding: 4px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.reminder-info:hover {
+  color: var(--color-accent);
+}
+
 .reminder-cancel {
   background: none;
   border: none;
