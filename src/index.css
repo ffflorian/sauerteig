@@ -205,9 +205,26 @@ li {
   float: none;
 }
 
-ul.checklist {
+ul.checklist,
+ol.checklist {
   list-style: none;
   padding-left: 0;
+}
+
+/* iOS Safari hides native ::marker when the list item content is a flex container, so use a counter. */
+ol.checklist {
+  counter-reset: step;
+}
+
+ol.checklist > li {
+  counter-increment: step;
+}
+
+ol.checklist > li > .checklist-label::before {
+  content: counter(step) '.';
+  flex-shrink: 0;
+  min-width: 1.4em;
+  color: var(--color-text-muted);
 }
 
 .checklist-label {
@@ -254,7 +271,7 @@ li.checked .checklist-label span {
 }
 
 .step-timer {
-  padding-left: calc(1.05rem + 10px);
+  padding-left: calc(1.4em + 1.05rem + 20px);
   padding-top: 4px;
   padding-bottom: 2px;
 }
