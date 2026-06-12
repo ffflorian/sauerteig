@@ -9,6 +9,9 @@ interface ReminderTimerProps {
   storageKey: string;
 }
 
+// iOS Safari (outside the installed PWA) does not expose the Notification API.
+const notificationsSupported = typeof Notification !== 'undefined';
+
 function labelForMinutes(minutes: number): string {
   return formatDuration(intervalToDuration({start: 0, end: minutes * 60 * 1000}), {locale: deLocale}).replace(
     'Tage',
@@ -33,7 +36,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   });
   const [remaining, setRemaining] = useState<number | null>(null);
   const [permission, setPermission] = useState<NotificationPermission>(
-    typeof Notification !== 'undefined' ? Notification.permission : 'denied'
+    notificationsSupported ? Notification.permission : 'default'
   );
 
   useEffect(() => {
@@ -56,7 +59,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     const tick = () => {
       const diff = endTime - Date.now();
       if (diff <= 0) {
-        if (Notification.permission === 'granted') {
+        if (notificationsSupported && Notification.permission === 'granted') {
           new Notification('Sauerteig-Erinnerung', {
             body: `Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`,
           });
@@ -80,16 +83,8 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   }, [endTime, storageKey, minutes, onExpire, disabled]);
 
   const startTimer = async () => {
-    if (typeof Notification === 'undefined') {
-      return;
-    }
-    let perm = permission;
-    if (perm === 'default') {
-      perm = await Notification.requestPermission();
-      setPermission(perm);
-    }
-    if (perm === 'denied') {
-      return;
+    if (notificationsSupported && permission === 'default') {
+      setPermission(await Notification.requestPermission());
     }
     const end = Date.now() + minutes * 60 * 1000;
     localStorage.setItem(storageKey, String(end));
@@ -102,7 +97,9 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     setRemaining(null);
   };
 
-  if (permission === 'denied') {
+  // Only hide when the user actively denied notifications.
+  // If the API is missing entirely (iOS Safari), keep the timer as an in-app countdown.
+  if (notificationsSupported && permission === 'denied') {
     return null;
   }
 

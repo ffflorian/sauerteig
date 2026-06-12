@@ -116,7 +116,7 @@ nginx.conf              # nginx server config (port 8080, /_health endpoint)
 - **Branches**: use the format `<fix/feat/chore>/<branch-name>` (e.g. `feat/dark-mode`, `fix/icon-alignment`). Do not prefix branch names with `claude/`.
 - **Commits**: follow Conventional Commits (Angular preset) – `feat:`, `fix:`, `chore:`, etc. Breaking changes use `BREAKING CHANGE:` in the footer. Do not add Claude session URLs to commit messages or PR texts.
 - **Versioning**: automated via Semantic Release on push to `main`.
-- **Language**: all UI content and comments are in German.
+- **Language**: user-facing UI content is in German. All code (including code comments), commit messages, and PR descriptions are in English.
 - **Code style**: 2-space indent, LF line endings, UTF-8 (enforced by `.editorconfig` and Prettier).
 - **TypeScript**: strict mode enabled; no `any` without justification.
 
