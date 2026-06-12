@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/ffflorian/sauerteig/compare/v1.5.1...v1.5.2) (2026-06-12)
+
+
+### Bug Fixes
+
+* show timers and step numbers on iOS Safari ([#1184](https://github.com/ffflorian/sauerteig/issues/1184)) ([aac7dbe](https://github.com/ffflorian/sauerteig/commit/aac7dbe9abc29a2cfb393c0edd408ddf6cb2db4b))
+
 ## [1.5.1](https://github.com/ffflorian/sauerteig/compare/v1.5.0...v1.5.1) (2026-06-11)
 
 
