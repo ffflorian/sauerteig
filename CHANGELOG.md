@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/ffflorian/sauerteig/compare/v1.8.0...v1.8.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 1.1.11 to 1.1.15 ([#1188](https://github.com/ffflorian/sauerteig/issues/1188)) ([27465ff](https://github.com/ffflorian/sauerteig/commit/27465ff18a3dc429d0b1a3eb92f7a56aa67729e7))
+
 # [1.8.0](https://github.com/ffflorian/sauerteig/compare/v1.7.0...v1.8.0) (2026-06-12)
 
 
