@@ -1,0 +1,56 @@
+{
+  "author": "Florian Imdahl <git@ffflorian.de>",
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "dependencies": {
+    "date-fns": "4.4.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-swipeable": "7.0.2"
+  },
+  "devDependencies": {
+    "@ffflorian/eslint-config-react": "0.2.2",
+    "@ffflorian/prettier-config": "0.8.2",
+    "@types/node": "~25",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "oxlint": "1.68.0",
+    "prettier": "3.8.3",
+    "typescript": "6.0.3",
+    "vite": "8.0.16",
+    "vite-plugin-eslint": "1.8.1"
+  },
+  "name": "sauerteig-frontend",
+  "prettier": "@ffflorian/prettier-config",
+  "private": true,
+  "scripts": {
+    "build": "tsc && vite build",
+    "clean": "rm -rf dist",
+    "dev": "yarn start",
+    "dist": "yarn clean && yarn build",
+    "fix": "yarn fix:ts && yarn fix:other",
+    "fix:other": "yarn prettier --write",
+    "fix:ts": "yarn lint:ts:oxlint --fix && yarn lint:ts:eslint --fix",
+    "lint": "yarn lint:other && yarn lint:ts",
+    "lint:other": "yarn prettier --list-different",
+    "lint:ts": "yarn lint:ts:oxlint && yarn lint:ts:eslint",
+    "lint:ts:eslint": "eslint .",
+    "lint:ts:oxlint": "oxlint --ignore-path .gitignore .",
+    "prettier": "prettier --ignore-path ../../.prettierignore .",
+    "start": "vite --open",
+    "test": "exit 0"
+  },
+  "version": "1.0.1"
+}

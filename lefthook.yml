@@ -2,13 +2,21 @@ pre-commit:
   parallel: false
   commands:
     prettier:
-      glob: '*.{js,ts,jsx,tsx,css,csv,md,json,yml,yaml}'
+      glob: '**/*.{js,ts,jsx,tsx,css,json,md,yml}'
       exclude:
-        - CLAUDE.md
+        - '**/CLAUDE.md'
+        - '**/CHANGELOG.md'
+        - .yarnrc.yml
       run: npx --no prettier -- --write {staged_files} && git add {staged_files}
-    oxlint:
-      glob: '*.{js,ts,jsx,tsx}'
-      run: npx --no oxlint -- --ignore-path .gitignore --fix {staged_files} && git add {staged_files}
-    eslint:
-      glob: '*.{js,ts,jsx,tsx}'
-      run: npx --no eslint -- --fix {staged_files} && git add {staged_files}
+    oxlint-frontend:
+      glob: 'packages/frontend/**/*.{js,ts,jsx,tsx}'
+      run: (cd packages/frontend && npx --no oxlint -- --fix $(echo {staged_files} | sed 's|packages/frontend/||g')) && git add {staged_files}
+    oxlint-backend:
+      glob: 'packages/backend/**/*.{js,ts}'
+      run: (cd packages/backend && npx --no oxlint -- --fix $(echo {staged_files} | sed 's|packages/backend/||g')) && git add {staged_files}
+    eslint-frontend:
+      glob: 'packages/frontend/**/*.{js,ts,jsx,tsx}'
+      run: (cd packages/frontend && npx --no eslint -- --fix $(echo {staged_files} | sed 's|packages/frontend/||g')) && git add {staged_files}
+    eslint-backend:
+      glob: 'packages/backend/**/*.{js,ts}'
+      run: (cd packages/backend && npx --no eslint -- --fix $(echo {staged_files} | sed 's|packages/backend/||g')) && git add {staged_files}

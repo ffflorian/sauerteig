@@ -5,18 +5,22 @@ import {de as deLocale} from 'date-fns/locale/de';
 import {InstallPrompt} from './InstallPrompt';
 import {shouldSuggestInstall} from './iosPwa';
 
+const API_URL = import.meta.env.VITE_BACKEND_URL as string;
+const VAPID_PUBLIC_KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY as string;
+
+// iOS Safari (outside the installed PWA) does not expose the Notification API.
+const notificationsSupported = typeof Notification !== 'undefined';
+const pushSupported = 'serviceWorker' in navigator && 'PushManager' in window;
+
+// Once dismissed, do not nag the user with the install hint on every timer.
+const installPromptDismissedKey = 'SauerteigInstallPromptDismissed';
+
 interface ReminderTimerProps {
   disabled?: boolean;
   minutes: number;
   onExpire?: () => void;
   storageKey: string;
 }
-
-// iOS Safari (outside the installed PWA) does not expose the Notification API.
-const notificationsSupported = typeof Notification !== 'undefined';
-
-// Once dismissed, do not nag the user with the install hint on every timer.
-const installPromptDismissedKey = 'SauerteigInstallPromptDismissed';
 
 const InfoIcon = () => (
   <svg
@@ -53,7 +57,64 @@ function labelForRemaining(ms: number): string {
   });
 }
 
+function urlBase64ToUint8Array(base64String: string): Uint8Array<ArrayBuffer> {
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const rawData = atob(base64);
+  return new Uint8Array([...rawData].map(char => char.charCodeAt(0)));
+}
+
+async function getPushSubscription(): Promise<PushSubscription | null> {
+  if (!pushSupported || !VAPID_PUBLIC_KEY) {
+    return null;
+  }
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    const existing = await registration.pushManager.getSubscription();
+    if (existing) {
+      return existing;
+    }
+    return await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+    });
+  } catch {
+    return null;
+  }
+}
+
+async function scheduleBackendNotification(
+  subscription: PushSubscription,
+  expiresAt: number,
+  label: string
+): Promise<string | null> {
+  try {
+    const response = await fetch(`${API_URL}/push/schedule`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({subscription: subscription.toJSON(), expiresAt, label}),
+    });
+    if (!response.ok) {
+      return null;
+    }
+    const data = (await response.json()) as {timerId: string};
+    return data.timerId;
+  } catch {
+    return null;
+  }
+}
+
+async function cancelBackendNotification(timerId: string): Promise<void> {
+  try {
+    await fetch(`${API_URL}/push/schedule/${timerId}`, {method: 'DELETE'});
+  } catch {
+    // ignore
+  }
+}
+
 export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: ReminderTimerProps) => {
+  const timerIdKey = `${storageKey}_timerId`;
+
   const [endTime, setEndTime] = useState<number | null>(() => {
     const stored = localStorage.getItem(storageKey);
     return stored ? parseInt(stored, 10) : null;
@@ -72,12 +133,17 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       return;
     }
     const id = setTimeout(() => {
+      const timerId = localStorage.getItem(timerIdKey);
+      if (timerId) {
+        void cancelBackendNotification(timerId);
+        localStorage.removeItem(timerIdKey);
+      }
       localStorage.removeItem(storageKey);
       setEndTime(null);
       setRemaining(null);
     }, 0);
     return () => clearTimeout(id);
-  }, [disabled, endTime, storageKey]);
+  }, [disabled, endTime, storageKey, timerIdKey]);
 
   useEffect(() => {
     if (!endTime || disabled) {
@@ -87,10 +153,16 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     const tick = () => {
       const diff = endTime - Date.now();
       if (diff <= 0) {
+        // Show local notification when the app is open, then cancel the server-side push.
         if (notificationsSupported && Notification.permission === 'granted') {
           new Notification('Sauerteig-Erinnerung', {
             body: `Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`,
           });
+        }
+        const timerId = localStorage.getItem(timerIdKey);
+        if (timerId) {
+          void cancelBackendNotification(timerId);
+          localStorage.removeItem(timerIdKey);
         }
         localStorage.removeItem(storageKey);
         setEndTime(null);
@@ -108,15 +180,25 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       clearTimeout(immediateId);
       clearInterval(intervalId);
     };
-  }, [endTime, storageKey, minutes, onExpire, disabled]);
+  }, [endTime, storageKey, timerIdKey, minutes, onExpire, disabled]);
 
   const startTimer = async () => {
     if (notificationsSupported && permission === 'default') {
       setPermission(await Notification.requestPermission());
     }
+
     const end = Date.now() + minutes * 60 * 1000;
     localStorage.setItem(storageKey, String(end));
     setEndTime(end);
+
+    const subscription = await getPushSubscription();
+    if (subscription) {
+      const timerId = await scheduleBackendNotification(subscription, end, labelForMinutes(minutes));
+      if (timerId) {
+        localStorage.setItem(timerIdKey, timerId);
+      }
+    }
+
     if (shouldSuggestInstall() && localStorage.getItem(installPromptDismissedKey) !== 'true') {
       setShowInstallPrompt(true);
     }
@@ -129,6 +211,11 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   };
 
   const cancel = () => {
+    const timerId = localStorage.getItem(timerIdKey);
+    if (timerId) {
+      void cancelBackendNotification(timerId);
+      localStorage.removeItem(timerIdKey);
+    }
     localStorage.removeItem(storageKey);
     setEndTime(null);
     setRemaining(null);
