@@ -81,27 +81,35 @@ After making any code changes, always run `yarn fix` to catch and auto-fix linti
 
 ```
 src/
-  index.tsx            # entry point (React StrictMode)
-  App.tsx              # root component, wraps with SauerteigProvider
-  Content.tsx          # main layout: navigation, theme toggle, step display
-  Introduction.tsx     # step 0 – table of contents and ingredient overview
-  Step.tsx             # displays a single recipe step with countdown timer
-  SauerteigProvider.tsx # React Context for current step (persisted to localStorage)
-  data.ts              # recipe data: 6 steps, ingredients, timings
-  index.css            # global styles with CSS custom properties for theming
+  index.tsx             # entry point (React StrictMode)
+  App.tsx               # root component, wraps with SauerteigProvider
+  Content.tsx           # main layout: navigation, theme toggle, step display
+  Introduction.tsx      # step 0 – table of contents and ingredient overview
+  Step.tsx              # displays a single recipe step with reminder timers
+  ReminderTimer.tsx     # countdown timer with browser notification on expiry
+  SauerteigContext.ts   # React Context definition for the current step
+  SauerteigProvider.tsx # Context provider (current step persisted to localStorage)
+  data.ts               # recipe data: 6 steps, ingredients, timings
+  index.css             # global styles with CSS custom properties for theming
+  references.d.ts       # Vite client type references
 public/
-  img/                 # bread logo in sizes 16–512px + SVG
-  manifest.json        # PWA manifest
-index.html             # HTML entry point
+  img/                  # bread logo in sizes 16–512px + SVG
+  manifest.json         # PWA manifest
+  robots.txt            # crawler directives
+index.html              # HTML entry point
+Rezept.md               # the full recipe as plain text
+Dockerfile              # multi-stage build, served by nginx
+nginx.conf              # nginx server config (port 8080, /_health endpoint)
 ```
 
 ## Key Architecture Decisions
 
 - **State management**: React Context (`SauerteigContext`) for the current step; no external state library.
-- **Persistence**: `localStorage` keys – `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference).
+- **Persistence**: `localStorage` keys – `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference), plus one key per reminder timer storing its expiry timestamp.
+- **Reminder timers**: `ReminderTimer` lets the user start a countdown for a waiting period. The expiry timestamp is stored in `localStorage` so the countdown survives reloads, and a browser `Notification` fires when it expires (requires notification permission).
 - **Theme**: CSS custom properties on `:root[data-theme]`. System preference detected via `prefers-color-scheme`; user override persisted to `localStorage`.
-- **Navigation**: keyboard (arrow keys), swipe gestures, and on-screen buttons all supported.
-- **Base URL**: `/sauerteig` in production, empty string in development (see `vite.config.ts`).
+- **Navigation**: keyboard (arrow keys), swipe gestures (`react-swipeable`), and on-screen buttons all supported.
+- **Deployment**: built into a static bundle, packaged as an nginx Docker image (`Dockerfile`), and deployed to Coolify by the CI workflow. Served from the site root, so assets use relative paths.
 
 ## Conventions
 
@@ -114,11 +122,12 @@ index.html             # HTML entry point
 
 ## CI/CD
 
-- **lint_test_publish.yml**: runs lint → test → publish (Semantic Release + Docker image) on push/PR to `main`.
-- **deploy.yml**: deploys to production on GitHub release publication; also triggerable manually via `workflow_dispatch`.
-- **codeql.yml**: CodeQL security analysis on push/PR to `main` and weekly.
-- **yarn_update.yml**: monthly automated yarn update PR.
-- **dependabot.yml**: automated dependency version updates.
+- **main.yml**: on push/PR to `main`, lints + builds TypeScript, validates the nginx config, and lints the Dockerfile (hadolint). On push to `main` it then publishes a release (Semantic Release) and Docker image and deploys to Coolify. Deploy lives in this workflow because GitHub does not fire `release` events for releases created with `GITHUB_TOKEN`.
+- **force_release.yml**: manually forces a release via `workflow_dispatch`.
+- **git_mirror.yml**: mirrors `main` to Codeberg and GitLab on push.
+- **yarn_update.yml**: monthly (and on its own change) automated yarn update PR.
+- **delete_old_packages.yml**: weekly cleanup of old container package versions (keeps the latest 2).
+- **dependabot.yml**: weekly dependency updates for npm, Docker, and GitHub Actions.
 
 ## Pre-commit Hooks (lefthook)
 
