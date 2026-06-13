@@ -53,63 +53,99 @@ This file explains how coding agents should work in this repository.
 
 ## Tech Stack
 
+### Frontend (`packages/frontend`)
+
 - **React 19** with **TypeScript 6** (strict mode)
 - **Vite 8** as build tool and dev server
 - **date-fns 4** for time formatting (German locale)
 - **react-swipeable** for touch gestures
+- **vitest 4** + **@testing-library/react** for unit and component tests
+
+### Backend (`packages/backend`)
+
+- **NestJS 11** with **TypeScript 6** (strict mode)
+- **Mongoose 9** for MongoDB access
+- **web-push 3** for Web Push notifications
+- **vitest 4** for unit tests
+
+### Shared
+
 - **ESLint** + **oxlint** for linting, **Prettier** for formatting
 - **lefthook** for pre-commit hooks
 - **Semantic Release** for automated versioning and changelogs
 
 ## Commands
 
+Run from the repo root unless noted. All root scripts delegate to every workspace via `yarn workspaces foreach`.
+
 ```bash
-yarn install        # install dependencies
-yarn start          # start dev server (http://localhost:5173)
-yarn build          # type-check + Vite build
-yarn dist           # clear dist/ then build
-yarn lint           # run all linters (Prettier, oxlint, ESLint)
-yarn fix            # auto-fix all linting issues
-yarn test           # placeholder (no tests yet)
+yarn install  # install all workspace dependencies
+yarn build    # type-check + build all packages
+yarn dist     # clean then build all packages
+yarn lint     # run all linters across all packages
+yarn fix      # auto-fix all linting issues across all packages
+yarn test     # run all tests across all packages
+```
+
+Per-workspace commands (when you only need one package):
+
+```bash
+yarn workspace sauerteig-frontend start  # frontend dev server (http://localhost:5173)
+yarn workspace sauerteig-backend dev     # backend dev server (http://localhost:3000)
+yarn workspace sauerteig-frontend test   # frontend tests only
+yarn workspace sauerteig-backend test    # backend tests only
 ```
 
 Always use `yarn`, not `npm`, for all package management and script execution.
 
-After making any code changes, always run `yarn fix` to catch and auto-fix linting or formatting errors before committing.
+After finishing any code changes, always run `yarn fix` and `yarn build` to catch linting, formatting, and type errors before committing.
 
 ## Project Structure
 
 ```
-src/
-  index.tsx             # entry point (React StrictMode)
-  App.tsx               # root component, wraps with SauerteigProvider
-  Content.tsx           # main layout: navigation, theme toggle, step display
-  Introduction.tsx      # step 0 – table of contents and ingredient overview
-  Step.tsx              # displays a single recipe step with reminder timers
-  ReminderTimer.tsx     # countdown timer with browser notification on expiry
-  SauerteigContext.ts   # React Context definition for the current step
-  SauerteigProvider.tsx # Context provider (current step persisted to localStorage)
-  data.ts               # recipe data: 6 steps, ingredients, timings
-  index.css             # global styles with CSS custom properties for theming
-  references.d.ts       # Vite client type references
-public/
-  img/                  # bread logo in sizes 16–512px + SVG
-  manifest.json         # PWA manifest
-  robots.txt            # crawler directives
-index.html              # HTML entry point
-Rezept.md               # the full recipe as plain text
-Dockerfile              # multi-stage build, served by nginx
-nginx.conf              # nginx server config (port 8080, /_health endpoint)
+packages/
+  frontend/
+    src/
+      index.tsx             # entry point (React StrictMode)
+      App.tsx               # root component, wraps with SauerteigProvider
+      Content.tsx           # main layout: navigation, theme toggle, step display
+      Introduction.tsx      # step 0 - table of contents and ingredient overview
+      Step.tsx              # displays a single recipe step with reminder timers
+      ReminderTimer.tsx     # countdown timer with browser notification on expiry
+      SauerteigContext.ts   # React Context definition for the current step
+      SauerteigProvider.tsx # Context provider (current step persisted to localStorage)
+      data.ts               # recipe data: 6 steps, ingredients, timings
+      index.css             # global styles with CSS custom properties for theming
+      references.d.ts       # Vite client type references
+      __tests__/            # vitest test suite (83 tests, >=80% coverage)
+    public/
+      img/                  # bread logo in sizes 16-512px + SVG
+      manifest.json         # PWA manifest
+      robots.txt            # crawler directives
+    index.html              # HTML entry point
+    vite.config.ts          # Vite + vitest config
+  backend/
+    src/
+      main.ts               # NestJS entry point
+      app.module.ts         # root module
+      config/config.ts      # env var config (PORT, VAPID keys, MongoDB URI, etc.)
+      health/               # GET /_health endpoint
+      push/                 # Web Push scheduling: controller, service, scheduler, schema
+      __tests__/            # vitest test suite (12 tests, >=80% coverage)
+    vitest.config.ts        # vitest config
+frontend.Dockerfile         # multi-stage build: Vite + nginx (port 8080, /_health)
+backend.Dockerfile          # multi-stage build: NestJS (port 3000)
+Rezept.md                   # the full recipe as plain text
 ```
 
 ## Key Architecture Decisions
 
 - **State management**: React Context (`SauerteigContext`) for the current step; no external state library.
-- **Persistence**: `localStorage` keys – `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference), plus one key per reminder timer storing its expiry timestamp.
-- **Reminder timers**: `ReminderTimer` lets the user start a countdown for a waiting period. The expiry timestamp is stored in `localStorage` so the countdown survives reloads, and a browser `Notification` fires when it expires (requires notification permission).
+- **Persistence**: `localStorage` keys - `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference), plus one key per reminder timer storing its expiry timestamp.
+- **Reminder timers**: `ReminderTimer` lets the user start a countdown for a waiting period. The expiry timestamp is stored in `localStorage` so the countdown survives reloads, and a browser `Notification` fires when it expires (requires notification permission). The backend schedules a fallback push notification via Web Push for when the app is not open.
 - **Theme**: CSS custom properties on `:root[data-theme]`. System preference detected via `prefers-color-scheme`; user override persisted to `localStorage`.
 - **Navigation**: keyboard (arrow keys), swipe gestures (`react-swipeable`), and on-screen buttons all supported.
-- **Deployment**: built into a static bundle, packaged as an nginx Docker image (`Dockerfile`), and deployed to Coolify by the CI workflow. Served from the site root, so assets use relative paths.
+- **Deployment**: each package is built into its own Docker image (`frontend.Dockerfile`, `backend.Dockerfile`) and deployed to Coolify by the CI workflow. Frontend is served from the site root, so assets use relative paths.
 
 ## Conventions
 
