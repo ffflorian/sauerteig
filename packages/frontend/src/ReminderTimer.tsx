@@ -5,8 +5,8 @@ import {de as deLocale} from 'date-fns/locale/de';
 import {InstallPrompt} from './InstallPrompt';
 import {shouldSuggestInstall} from './iosPwa';
 
-const API_URL = import.meta.env.VITE_BACKEND_URL as string;
-const VAPID_PUBLIC_KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY as string;
+const API_URL = import.meta.env.VITE_BACKEND_URL!;
+const VAPID_PUBLIC_KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY!;
 
 // iOS Safari (outside the installed PWA) does not expose the Notification API.
 const notificationsSupported = typeof Notification !== 'undefined';
@@ -135,7 +135,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     const id = setTimeout(() => {
       const timerId = localStorage.getItem(timerIdKey);
       if (timerId) {
-        void cancelBackendNotification(timerId);
+        cancelBackendNotification(timerId);
         localStorage.removeItem(timerIdKey);
       }
       localStorage.removeItem(storageKey);
@@ -161,7 +161,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
         }
         const timerId = localStorage.getItem(timerIdKey);
         if (timerId) {
-          void cancelBackendNotification(timerId);
+          cancelBackendNotification(timerId);
           localStorage.removeItem(timerIdKey);
         }
         localStorage.removeItem(storageKey);
@@ -213,7 +213,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   const cancel = () => {
     const timerId = localStorage.getItem(timerIdKey);
     if (timerId) {
-      void cancelBackendNotification(timerId);
+      cancelBackendNotification(timerId);
       localStorage.removeItem(timerIdKey);
     }
     localStorage.removeItem(storageKey);

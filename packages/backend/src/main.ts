@@ -14,4 +14,4 @@ async function bootstrap() {
   console.info(`Server listening on http://localhost:${String(PORT)}`);
 }
 
-void bootstrap();
+bootstrap();
