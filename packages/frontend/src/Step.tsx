@@ -26,16 +26,14 @@ export const Step = ({stepNumber}: StepProps) => {
   );
 
   const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => {
-    const raw = localStorage.getItem(`SauerteigIngredients_${stepId}`);
-    if (raw !== null) {
-      try {
-        const stored = JSON.parse(raw) as boolean[] | null;
-        if (Array.isArray(stored) && stored.length === ingredients.length) {
-          return stored;
-        }
-      } catch {
-        return ingredients.map(() => false);
+    try {
+      const raw = localStorage.getItem(`SauerteigIngredients_${stepId}`);
+      const stored = JSON.parse(raw ?? 'null') as boolean[] | null;
+      if (Array.isArray(stored) && stored.length === ingredients.length) {
+        return stored;
       }
+    } catch {
+      /* invalid JSON or wrong shape - fall through to default */
     }
     return ingredients.map(() => false);
   });

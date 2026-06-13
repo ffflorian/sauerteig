@@ -11,7 +11,7 @@ async function bootstrap() {
   app.enableCors({origin: IS_LOCAL ? true : FRONTEND_URL});
 
   await app.listen(PORT);
-  console.info(`Server listening on http://localhost:${String(PORT)}`);
+  console.info(`Server listening on http://localhost:${PORT}`);
 }
 
 bootstrap();

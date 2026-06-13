@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import {formatDuration, intervalToDuration} from 'date-fns';
 import {de as deLocale} from 'date-fns/locale/de';
 
@@ -128,22 +128,24 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     () => localStorage.getItem(installPromptDismissedKey) === 'true'
   );
 
+  const clearTimer = useCallback(() => {
+    const timerId = localStorage.getItem(timerIdKey);
+    if (timerId) {
+      cancelBackendNotification(timerId);
+      localStorage.removeItem(timerIdKey);
+    }
+    localStorage.removeItem(storageKey);
+    setEndTime(null);
+    setRemaining(null);
+  }, [storageKey, timerIdKey]);
+
   useEffect(() => {
     if (!disabled || endTime === null) {
       return;
     }
-    const id = setTimeout(() => {
-      const timerId = localStorage.getItem(timerIdKey);
-      if (timerId) {
-        cancelBackendNotification(timerId);
-        localStorage.removeItem(timerIdKey);
-      }
-      localStorage.removeItem(storageKey);
-      setEndTime(null);
-      setRemaining(null);
-    }, 0);
+    const id = setTimeout(clearTimer, 0);
     return () => clearTimeout(id);
-  }, [disabled, endTime, storageKey, timerIdKey]);
+  }, [disabled, endTime, clearTimer]);
 
   useEffect(() => {
     if (!endTime || disabled) {
@@ -159,14 +161,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
             body: `Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`,
           });
         }
-        const timerId = localStorage.getItem(timerIdKey);
-        if (timerId) {
-          cancelBackendNotification(timerId);
-          localStorage.removeItem(timerIdKey);
-        }
-        localStorage.removeItem(storageKey);
-        setEndTime(null);
-        setRemaining(null);
+        clearTimer();
         onExpire?.();
       } else {
         setRemaining(diff);
@@ -180,7 +175,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       clearTimeout(immediateId);
       clearInterval(intervalId);
     };
-  }, [endTime, storageKey, timerIdKey, minutes, onExpire, disabled]);
+  }, [endTime, clearTimer, minutes, onExpire, disabled]);
 
   const startTimer = async () => {
     if (notificationsSupported && permission === 'default') {
@@ -188,7 +183,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     }
 
     const end = Date.now() + minutes * 60 * 1000;
-    localStorage.setItem(storageKey, String(end));
+    localStorage.setItem(storageKey, end.toString());
     setEndTime(end);
 
     const subscription = await getPushSubscription();
@@ -210,17 +205,6 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     setShowInstallPrompt(false);
   };
 
-  const cancel = () => {
-    const timerId = localStorage.getItem(timerIdKey);
-    if (timerId) {
-      cancelBackendNotification(timerId);
-      localStorage.removeItem(timerIdKey);
-    }
-    localStorage.removeItem(storageKey);
-    setEndTime(null);
-    setRemaining(null);
-  };
-
   // Only hide when the user actively denied notifications.
   // If the API is missing entirely (iOS Safari), keep the timer as an in-app countdown.
   if (notificationsSupported && permission === 'denied') {
@@ -233,7 +217,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
         {endTime !== null && remaining !== null && !disabled ? (
           <div className="reminder-timer reminder-timer--active">
             <span>🕐 Noch {labelForRemaining(remaining)}</span>
-            <button className="reminder-cancel" onClick={cancel}>
+            <button className="reminder-cancel" onClick={clearTimer}>
               Abbrechen
             </button>
           </div>
