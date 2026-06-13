@@ -74,7 +74,6 @@ Object.defineProperty(navigator, 'serviceWorker', {
   },
 });
 
-// fetch
 vi.stubGlobal(
   'fetch',
   vi.fn().mockResolvedValue({
