@@ -47,7 +47,7 @@ Object.defineProperty(window, 'matchMedia', {
 // Notification API (not in jsdom)
 class MockNotification {
   static permission: NotificationPermission = 'default';
-  static requestPermission = vi.fn<[], Promise<NotificationPermission>>().mockResolvedValue('granted');
+  static requestPermission = vi.fn<() => Promise<NotificationPermission>>().mockResolvedValue('granted');
   options?: NotificationOptions;
   title: string;
   constructor(title: string, options?: NotificationOptions) {
@@ -75,7 +75,10 @@ Object.defineProperty(navigator, 'serviceWorker', {
 });
 
 // fetch
-global.fetch = vi.fn().mockResolvedValue({
-  json: vi.fn().mockResolvedValue({timerId: 'mock-timer-id'}),
-  ok: true,
-});
+vi.stubGlobal(
+  'fetch',
+  vi.fn().mockResolvedValue({
+    json: vi.fn().mockResolvedValue({timerId: 'mock-timer-id'}),
+    ok: true,
+  })
+);

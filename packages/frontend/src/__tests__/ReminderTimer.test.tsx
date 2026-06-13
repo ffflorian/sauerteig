@@ -118,6 +118,6 @@ describe('ReminderTimer', () => {
     render(<ReminderTimer minutes={5} storageKey="test-timer" />);
     await startTimer();
     await act(async () => {});
-    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('/push/schedule'), expect.any(Object));
+    expect(vi.mocked(fetch)).toHaveBeenCalledWith(expect.stringContaining('/push/schedule'), expect.any(Object));
   });
 });
