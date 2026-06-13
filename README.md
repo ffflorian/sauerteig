@@ -1,10 +1,12 @@
-![Sauerteig logo](public/img/sauerteig_128.png)
+![Sauerteig logo](packages/frontend/public/img/sauerteig_128.png)
 
 # sauerteig [![Build Status](https://github.com/ffflorian/sauerteig/workflows/Main/badge.svg)](https://github.com/ffflorian/sauerteig/actions/)
 
 Bake the best sour dough bread.
 
 Sauerteig is an installable Progressive Web App that walks you through baking sourdough bread one step at a time. The recipe and all UI text are in German.
+
+This is a monorepo with two packages: a React frontend (`packages/frontend`) and a NestJS backend (`packages/backend`) that handles scheduled push notifications.
 
 ## Features
 
@@ -17,7 +19,7 @@ Sauerteig is an installable Progressive Web App that walks you through baking so
 
 ## Tech stack
 
-React 19, TypeScript 6, and Vite 8. See [AGENTS.md](AGENTS.md) for the full stack, project structure, and contribution conventions.
+React 19, TypeScript 6, Vite 8 (frontend) and NestJS, Mongoose, web-push (backend). See [AGENTS.md](AGENTS.md) for the full stack, project structure, and contribution conventions.
 
 ## Install
 
@@ -27,30 +29,39 @@ yarn
 
 ## Start
 
-Runs the dev server at http://localhost:5173 and opens it in your browser.
+Frontend dev server at http://localhost:5173:
 
 ```
-yarn start
+yarn workspace sauerteig-frontend start
+```
+
+Backend dev server at http://localhost:3000:
+
+```
+yarn workspace sauerteig-backend dev
 ```
 
 ## Build
 
-Type-checks and bundles into `dist/`.
+Type-checks and bundles both packages:
 
 ```
-yarn dist
+yarn build
 ```
 
 ## Docker
 
-The app ships as an nginx-served Docker image (see [`Dockerfile`](Dockerfile)).
+Each package has its own Dockerfile.
 
 ```
-docker build -t sauerteig .
-docker run -p 8080:8080 sauerteig
+docker build -f frontend.Dockerfile -t sauerteig-frontend .
+docker run -p 8080:8080 sauerteig-frontend
+
+docker build -f backend.Dockerfile -t sauerteig-backend .
+docker run -p 3000:3000 sauerteig-backend
 ```
 
-The container exposes the app on port 8080 and provides a `/_health` endpoint.
+The frontend container exposes the app on port 8080 and provides a `/_health` endpoint.
 
 ## Recipe
 

@@ -116,7 +116,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   const timerIdKey = `${storageKey}_timerId`;
 
   const [endTime, setEndTime] = useState<number | null>(() => {
-    const stored = localStorage.getItem(storageKey);
+    const stored = window.localStorage.getItem(storageKey);
     return stored ? parseInt(stored, 10) : null;
   });
   const [remaining, setRemaining] = useState<number | null>(null);
@@ -125,16 +125,16 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   );
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [installDismissed, setInstallDismissed] = useState(
-    () => localStorage.getItem(installPromptDismissedKey) === 'true'
+    () => window.localStorage.getItem(installPromptDismissedKey) === 'true'
   );
 
   const clearTimer = useCallback(() => {
-    const timerId = localStorage.getItem(timerIdKey);
+    const timerId = window.localStorage.getItem(timerIdKey);
     if (timerId) {
       cancelBackendNotification(timerId);
-      localStorage.removeItem(timerIdKey);
+      window.localStorage.removeItem(timerIdKey);
     }
-    localStorage.removeItem(storageKey);
+    window.localStorage.removeItem(storageKey);
     setEndTime(null);
     setRemaining(null);
   }, [storageKey, timerIdKey]);
@@ -183,24 +183,24 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     }
 
     const end = Date.now() + minutes * 60 * 1000;
-    localStorage.setItem(storageKey, end.toString());
+    window.localStorage.setItem(storageKey, end.toString());
     setEndTime(end);
 
     const subscription = await getPushSubscription();
     if (subscription) {
       const timerId = await scheduleBackendNotification(subscription, end, labelForMinutes(minutes));
       if (timerId) {
-        localStorage.setItem(timerIdKey, timerId);
+        window.localStorage.setItem(timerIdKey, timerId);
       }
     }
 
-    if (shouldSuggestInstall() && localStorage.getItem(installPromptDismissedKey) !== 'true') {
+    if (shouldSuggestInstall() && window.localStorage.getItem(installPromptDismissedKey) !== 'true') {
       setShowInstallPrompt(true);
     }
   };
 
   const dismissInstallPrompt = () => {
-    localStorage.setItem(installPromptDismissedKey, 'true');
+    window.localStorage.setItem(installPromptDismissedKey, 'true');
     setInstallDismissed(true);
     setShowInstallPrompt(false);
   };

@@ -22,12 +22,12 @@ export const Step = ({stepNumber}: StepProps) => {
   } = stepsData[stepNumber - 1];
 
   const [checkedSteps, setCheckedSteps] = useState<boolean[]>(() =>
-    steps.map(step => localStorage.getItem(`SauerteigStep_${step.id}`) === 'true')
+    steps.map(step => window.localStorage.getItem(`SauerteigStep_${step.id}`) === 'true')
   );
 
   const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => {
     try {
-      const raw = localStorage.getItem(`SauerteigIngredients_${stepId}`);
+      const raw = window.localStorage.getItem(`SauerteigIngredients_${stepId}`);
       const stored = JSON.parse(raw ?? 'null') as boolean[] | null;
       if (Array.isArray(stored) && stored.length === ingredients.length) {
         return stored;
@@ -48,7 +48,7 @@ export const Step = ({stepNumber}: StepProps) => {
   const toggleStep = (index: number) => {
     setCheckedSteps(prev => {
       const next = prev.map((v, i) => (i === index ? !v : v));
-      localStorage.setItem(`SauerteigStep_${steps[index].id}`, String(next[index]));
+      window.localStorage.setItem(`SauerteigStep_${steps[index].id}`, String(next[index]));
       return next;
     });
   };
@@ -56,7 +56,7 @@ export const Step = ({stepNumber}: StepProps) => {
   const toggleIngredient = (index: number) => {
     setCheckedIngredients(prev => {
       const next = prev.map((v, i) => (i === index ? !v : v));
-      localStorage.setItem(`SauerteigIngredients_${stepId}`, JSON.stringify(next));
+      window.localStorage.setItem(`SauerteigIngredients_${stepId}`, JSON.stringify(next));
       return next;
     });
   };

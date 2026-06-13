@@ -25,5 +25,5 @@
     "types": []
   },
   "include": ["src", "*.config.ts", "src/global.ts"],
-  "exclude": ["vite.config.ts"]
+  "exclude": ["vite.config.ts", "eslint.config.ts"]
 }

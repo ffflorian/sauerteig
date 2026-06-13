@@ -25,7 +25,7 @@
     "dist": "yarn workspaces foreach --all --parallel --exclude sauerteig run dist",
     "fix": "yarn workspaces foreach --all --parallel --exclude sauerteig run fix",
     "lint": "yarn workspaces foreach --all --parallel --exclude sauerteig run lint",
-    "test": "exit 0"
+    "test": "yarn workspaces foreach --all --parallel --exclude sauerteig run test"
   },
   "version": "1.0.1",
   "workspaces": [
