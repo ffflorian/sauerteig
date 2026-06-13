@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/ffflorian/sauerteig/compare/v1.10.2...v1.11.0) (2026-06-13)
+
+
+### Features
+
+* add /info endpoint exposing version and commit ([#1193](https://github.com/ffflorian/sauerteig/issues/1193)) ([ca307f7](https://github.com/ffflorian/sauerteig/commit/ca307f7112b45d4c14c45d3c1abb589e854227e7))
+
 ## [1.10.2](https://github.com/ffflorian/sauerteig/compare/v1.10.1...v1.10.2) (2026-06-13)
 
 
