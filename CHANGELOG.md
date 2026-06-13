@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/ffflorian/sauerteig/compare/v1.9.0...v1.10.0) (2026-06-13)
+
+
+### Features
+
+* Add AddToHomeIcon ([6b64a00](https://github.com/ffflorian/sauerteig/commit/6b64a00facf78c4055151035a5506c4a47b1ed7c))
+
 # [1.9.0](https://github.com/ffflorian/sauerteig/compare/v1.8.1...v1.9.0) (2026-06-12)
 
 
