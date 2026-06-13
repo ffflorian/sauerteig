@@ -147,6 +147,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   const [installDismissed, setInstallDismissed] = useState(
     () => window.localStorage.getItem(installPromptDismissedKey) === 'true'
   );
+  const [backendUnreachable, setBackendUnreachable] = useState(false);
 
   const clearTimer = useCallback(() => {
     const timerId = window.localStorage.getItem(timerIdKey);
@@ -157,6 +158,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     window.localStorage.removeItem(storageKey);
     setEndTime(null);
     setRemaining(null);
+    setBackendUnreachable(false);
   }, [storageKey, timerIdKey]);
 
   useEffect(() => {
@@ -207,6 +209,9 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       const timerId = await scheduleBackendNotification(subscription, end, labelForMinutes(minutes));
       if (timerId) {
         window.localStorage.setItem(timerIdKey, timerId);
+        setBackendUnreachable(false);
+      } else {
+        setBackendUnreachable(true);
       }
     }
 
@@ -253,6 +258,11 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
           </button>
         )}
       </span>
+      {endTime !== null && backendUnreachable && (
+        <span className="reminder-warning" role="alert">
+          ⚠️ Server nicht erreichbar - die Erinnerung im Hintergrund ist nicht aktiv.
+        </span>
+      )}
       {showInstallPrompt && <InstallPrompt onClose={dismissInstallPrompt} />}
     </>
   );
