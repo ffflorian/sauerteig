@@ -3,14 +3,16 @@ FROM node:26.2.0-alpine@sha256:7c6af15abe4e3de859690e7db171d0d711bf37d27528eddfe
 
 ARG VERSION
 ARG COMMIT
-ARG VITE_BACKEND_URL
-ARG VITE_VAPID_PUBLIC_KEY
 
 ENV NPM_CONFIG_UPDATE_NOTIFIER=false
-ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 ENV VITE_COMMIT_ID=$COMMIT
 ENV VITE_VERSION=$VERSION
-ENV VITE_VAPID_PUBLIC_KEY=$VITE_VAPID_PUBLIC_KEY
+
+# VITE_BACKEND_URL and VITE_VAPID_PUBLIC_KEY are non-secret and committed in
+# packages/frontend/.env.production. They are intentionally not passed as build
+# args here: an empty build arg would override the .env.production value (Vite
+# lets process.env take precedence), shipping an empty VAPID key and silently
+# breaking push subscriptions.
 
 WORKDIR /app
 
