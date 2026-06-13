@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/ffflorian/sauerteig/compare/v1.10.0...v1.10.1) (2026-06-13)
+
+
+### Bug Fixes
+
+* show timer notifications via service worker for iOS Safari ([#1191](https://github.com/ffflorian/sauerteig/issues/1191)) ([38d431f](https://github.com/ffflorian/sauerteig/commit/38d431fff424b0fb9cacce44019e04cf1c48698c))
+
 # [1.10.0](https://github.com/ffflorian/sauerteig/compare/v1.9.0...v1.10.0) (2026-06-13)
 
 
