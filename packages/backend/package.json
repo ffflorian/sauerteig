@@ -17,12 +17,14 @@
     "@ffflorian/prettier-config": "0.8.2",
     "@types/node": "~25",
     "@types/web-push": "3.6.4",
+    "@vitest/coverage-v8": "4.1.8",
     "eslint": "10.4.1",
     "oxlint": "1.68.0",
     "prettier": "3.8.3",
     "tsx": "4.22.4",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.60.1"
+    "typescript-eslint": "8.60.1",
+    "vitest": "4.1.8"
   },
   "files": [
     "dist"
@@ -46,7 +48,8 @@
     "prettier": "prettier --ignore-path ../../.prettierignore .",
     "start": "tsx src/main.ts",
     "start:prod": "node dist/main.js",
-    "test": "exit 0"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "version": "1.0.0"
 }
