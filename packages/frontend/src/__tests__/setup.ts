@@ -70,6 +70,7 @@ Object.defineProperty(navigator, 'serviceWorker', {
           toJSON: () => ({endpoint: 'https://push.example.com', keys: {auth: 'auth', p256dh: 'p256dh'}}),
         }),
       },
+      showNotification: vi.fn().mockResolvedValue(undefined),
     }),
   },
 });

@@ -112,6 +112,26 @@ async function cancelBackendNotification(timerId: string): Promise<void> {
   }
 }
 
+// iOS Safari does not support the Notification constructor (it throws a
+// TypeError), so notifications must be shown through the service worker
+// registration. Prefer it everywhere and only fall back to the constructor
+// when no service worker is available.
+async function showLocalNotification(body: string): Promise<void> {
+  if (!notificationsSupported || Notification.permission !== 'granted') {
+    return;
+  }
+  if (pushSupported) {
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.showNotification('Sauerteig-Erinnerung', {body});
+      return;
+    } catch {
+      // fall back to the constructor below
+    }
+  }
+  new Notification('Sauerteig-Erinnerung', {body});
+}
+
 export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: ReminderTimerProps) => {
   const timerIdKey = `${storageKey}_timerId`;
 
@@ -127,6 +147,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   const [installDismissed, setInstallDismissed] = useState(
     () => window.localStorage.getItem(installPromptDismissedKey) === 'true'
   );
+  const [backendUnreachable, setBackendUnreachable] = useState(false);
 
   const clearTimer = useCallback(() => {
     const timerId = window.localStorage.getItem(timerIdKey);
@@ -137,6 +158,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     window.localStorage.removeItem(storageKey);
     setEndTime(null);
     setRemaining(null);
+    setBackendUnreachable(false);
   }, [storageKey, timerIdKey]);
 
   useEffect(() => {
@@ -155,12 +177,8 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     const tick = () => {
       const diff = endTime - Date.now();
       if (diff <= 0) {
-        // Show local notification when the app is open, then cancel the server-side push.
-        if (notificationsSupported && Notification.permission === 'granted') {
-          new Notification('Sauerteig-Erinnerung', {
-            body: `Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`,
-          });
-        }
+        // Show a local notification when the app is open, then cancel the server-side push.
+        void showLocalNotification(`Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`);
         clearTimer();
         onExpire?.();
       } else {
@@ -191,6 +209,9 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       const timerId = await scheduleBackendNotification(subscription, end, labelForMinutes(minutes));
       if (timerId) {
         window.localStorage.setItem(timerIdKey, timerId);
+        setBackendUnreachable(false);
+      } else {
+        setBackendUnreachable(true);
       }
     }
 
@@ -237,6 +258,11 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
           </button>
         )}
       </span>
+      {endTime !== null && backendUnreachable && (
+        <span className="reminder-warning" role="alert">
+          ⚠️ Server nicht erreichbar - die Erinnerung im Hintergrund ist nicht aktiv.
+        </span>
+      )}
       {showInstallPrompt && <InstallPrompt onClose={dismissInstallPrompt} />}
     </>
   );

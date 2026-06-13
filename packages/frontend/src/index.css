@@ -348,6 +348,13 @@ li.checked .checklist-label span {
   color: var(--color-accent);
 }
 
+.reminder-warning {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+
 .install-prompt-overlay {
   position: fixed;
   inset: 0;

@@ -120,4 +120,28 @@ describe('ReminderTimer', () => {
     await act(async () => {});
     expect(vi.mocked(fetch)).toHaveBeenCalledWith(expect.stringContaining('/push/schedule'), expect.any(Object));
   });
+
+  it('shows the expiry notification via the service worker (iOS-safe)', async () => {
+    MockNotification.permission = 'granted';
+    const registration = (await navigator.serviceWorker.ready) as unknown as {
+      showNotification: ReturnType<typeof vi.fn>;
+    };
+    render(<ReminderTimer minutes={1} storageKey="test-timer" />);
+    await startTimer(1);
+    await act(async () => {
+      vi.advanceTimersByTime(60_000);
+    });
+    expect(registration.showNotification).toHaveBeenCalledWith(
+      'Sauerteig-Erinnerung',
+      expect.objectContaining({body: expect.stringContaining('abgelaufen')})
+    );
+  });
+
+  it('warns when the backend cannot be reached', async () => {
+    vi.mocked(fetch).mockResolvedValueOnce({ok: false} as Response);
+    render(<ReminderTimer minutes={5} storageKey="test-timer" />);
+    await startTimer();
+    await act(async () => {});
+    expect(screen.getByText(/nicht erreichbar/i)).toBeInTheDocument();
+  });
 });
