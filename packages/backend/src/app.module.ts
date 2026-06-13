@@ -6,10 +6,11 @@ import {ThrottlerGuard, ThrottlerModule} from '@nestjs/throttler';
 
 import {MONGODB_URI} from './config/config.js';
 import {HealthController} from './health/health.controller.js';
+import {InfoController} from './info/info.controller.js';
 import {PushModule} from './push/push.module.js';
 
 @Module({
-  controllers: [HealthController],
+  controllers: [HealthController, InfoController],
   imports: [
     MongooseModule.forRoot(MONGODB_URI),
     ScheduleModule.forRoot(),
