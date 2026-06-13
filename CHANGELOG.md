@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/ffflorian/sauerteig/compare/v1.10.1...v1.10.2) (2026-06-13)
+
+
+### Bug Fixes
+
+* stop Docker build from clobbering frontend push env vars ([#1192](https://github.com/ffflorian/sauerteig/issues/1192)) ([a2f1be5](https://github.com/ffflorian/sauerteig/commit/a2f1be5a135be9f03fad5818d9b87a2fb52b1fac))
+
 ## [1.10.1](https://github.com/ffflorian/sauerteig/compare/v1.10.0...v1.10.1) (2026-06-13)
 
 
