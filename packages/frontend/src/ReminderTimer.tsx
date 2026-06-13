@@ -15,6 +15,11 @@ const pushSupported = 'serviceWorker' in navigator && 'PushManager' in window;
 // Once dismissed, do not nag the user with the install hint on every timer.
 const installPromptDismissedKey = 'SauerteigInstallPromptDismissed';
 
+// An on-time expiry (app open) is detected within one tick. A larger gap means
+// the app was backgrounded across the expiry, so the backend push already
+// delivered the notification and the local one would be a duplicate.
+const onTimeExpiryToleranceMs = 2000;
+
 interface ReminderTimerProps {
   disabled?: boolean;
   minutes: number;
@@ -149,17 +154,22 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
   );
   const [backendUnreachable, setBackendUnreachable] = useState(false);
 
-  const clearTimer = useCallback(() => {
-    const timerId = window.localStorage.getItem(timerIdKey);
-    if (timerId) {
-      cancelBackendNotification(timerId);
-      window.localStorage.removeItem(timerIdKey);
-    }
-    window.localStorage.removeItem(storageKey);
-    setEndTime(null);
-    setRemaining(null);
-    setBackendUnreachable(false);
-  }, [storageKey, timerIdKey]);
+  const clearTimer = useCallback(
+    (cancelBackend = true) => {
+      const timerId = window.localStorage.getItem(timerIdKey);
+      if (timerId) {
+        if (cancelBackend) {
+          cancelBackendNotification(timerId);
+        }
+        window.localStorage.removeItem(timerIdKey);
+      }
+      window.localStorage.removeItem(storageKey);
+      setEndTime(null);
+      setRemaining(null);
+      setBackendUnreachable(false);
+    },
+    [storageKey, timerIdKey]
+  );
 
   useEffect(() => {
     if (!disabled || endTime === null) {
@@ -176,14 +186,21 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
 
     const tick = () => {
       const diff = endTime - Date.now();
-      if (diff <= 0) {
-        // Show a local notification when the app is open, then cancel the server-side push.
+      if (diff > 0) {
+        setRemaining(diff);
+        return;
+      }
+      // If a backend push was scheduled and the timer expired while the app was
+      // backgrounded, the server push already showed the notification. Clear the
+      // local state but leave the push in place instead of showing a duplicate.
+      const scheduledBackend = window.localStorage.getItem(timerIdKey) !== null;
+      if (scheduledBackend && Date.now() - endTime > onTimeExpiryToleranceMs) {
+        clearTimer(false);
+      } else {
         void showLocalNotification(`Die Wartezeit von ${labelForMinutes(minutes)} ist abgelaufen!`);
         clearTimer();
-        onExpire?.();
-      } else {
-        setRemaining(diff);
       }
+      onExpire?.();
     };
 
     const immediateId = setTimeout(tick, 0);
@@ -193,7 +210,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
       clearTimeout(immediateId);
       clearInterval(intervalId);
     };
-  }, [endTime, clearTimer, minutes, onExpire, disabled]);
+  }, [endTime, clearTimer, minutes, onExpire, disabled, timerIdKey]);
 
   const startTimer = async () => {
     if (notificationsSupported && permission === 'default') {
@@ -238,7 +255,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
         {endTime !== null && remaining !== null && !disabled ? (
           <div className="reminder-timer reminder-timer--active">
             <span>🕐 Noch {labelForRemaining(remaining)}</span>
-            <button className="reminder-cancel" onClick={clearTimer}>
+            <button className="reminder-cancel" onClick={() => clearTimer()}>
               Abbrechen
             </button>
           </div>

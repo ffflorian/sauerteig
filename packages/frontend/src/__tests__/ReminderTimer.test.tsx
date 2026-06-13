@@ -137,6 +137,27 @@ describe('ReminderTimer', () => {
     );
   });
 
+  it('does not show a duplicate local notification when the timer expired in the background', async () => {
+    MockNotification.permission = 'granted';
+    const registration = (await navigator.serviceWorker.ready) as unknown as {
+      showNotification: ReturnType<typeof vi.fn>;
+    };
+    // Timer expired 10s ago while the app was backgrounded, with a backend push scheduled.
+    window.localStorage.setItem('test-timer', String(Date.now() - 10_000));
+    window.localStorage.setItem('test-timer_timerId', 'mock-timer-id');
+    render(<ReminderTimer minutes={5} storageKey="test-timer" />);
+    await act(async () => {
+      vi.advanceTimersByTime(0);
+    });
+    expect(registration.showNotification).not.toHaveBeenCalled();
+    // Local state is cleared, but the backend push is not cancelled.
+    expect(window.localStorage.getItem('test-timer')).toBeNull();
+    expect(vi.mocked(fetch)).not.toHaveBeenCalledWith(
+      expect.stringContaining('/push/schedule/'),
+      expect.objectContaining({method: 'DELETE'})
+    );
+  });
+
   it('warns when the backend cannot be reached', async () => {
     vi.mocked(fetch).mockResolvedValueOnce({ok: false} as Response);
     render(<ReminderTimer minutes={5} storageKey="test-timer" />);
