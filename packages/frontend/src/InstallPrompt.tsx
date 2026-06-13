@@ -4,6 +4,25 @@ interface InstallPromptProps {
   onClose: () => void;
 }
 
+const AddToHomeIcon = () => (
+  <svg
+    className="install-prompt-share-icon"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="3" />
+    <path d="M12 8v8" />
+    <path d="M8 12h8" />
+  </svg>
+);
+
 const ShareIcon = () => (
   <svg
     className="install-prompt-share-icon"
@@ -44,7 +63,7 @@ export const InstallPrompt = ({onClose}: InstallPromptProps) => {
             Tippe unten auf <ShareIcon /> <strong>Teilen</strong>.
           </li>
           <li>
-            Wähle <strong>Zum Home-Bildschirm</strong>.
+            Wähle <AddToHomeIcon /> <strong>Zum Home-Bildschirm</strong>.
           </li>
           <li>Öffne Sauerteig künftig über das neue Symbol.</li>
         </ol>
