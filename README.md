@@ -19,7 +19,7 @@ This is a monorepo with two packages: a React frontend (`packages/frontend`) and
 
 ## Screenshot
 
-![Sauerteig screenshot](.github/screenshots/progress-bar.png)
+![Sauerteig screenshot](.github/screenshots/screenshot.png)
 
 ## Tech stack
 
