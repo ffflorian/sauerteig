@@ -126,25 +126,51 @@ describe('Step', () => {
     const checkboxes = screen.getAllByRole('checkbox');
     // The checkboxes cover ingredients first, then steps — find the step checkbox
     const ingredientCount = step.ingredients.length;
-    fireEvent.click(checkboxes[ingredientCount + timerStepIndex]);
+    // Steps unlock sequentially, so check every step up to and including the timer's step.
+    for (let i = 0; i <= timerStepIndex; i++) {
+      fireEvent.click(checkboxes[ingredientCount + i]);
+    }
     const timers = screen.getAllByTestId('reminder-timer');
     expect(timers[0].dataset.disabled).toBe('true');
   });
 
-  it('reports progress only for preparation steps, not ingredients', () => {
-    const onProgress = vi.fn();
-    render(<Step stepNumber={stepWithIngredients} onProgress={onProgress} />);
+  it('notifies on preparation step changes but not ingredient changes', () => {
+    const onStepsChange = vi.fn();
+    render(<Step stepNumber={stepWithIngredients} onStepsChange={onStepsChange} />);
     const step = stepsData[stepWithIngredients - 1];
     const checkboxes = screen.getAllByRole('checkbox');
 
-    onProgress.mockClear();
-    // Toggling an ingredient (first checkboxes) must not change progress.
+    onStepsChange.mockClear();
+    // Toggling an ingredient must not affect progress.
     fireEvent.click(checkboxes[0]);
-    expect(onProgress).not.toHaveBeenCalled();
+    expect(onStepsChange).not.toHaveBeenCalled();
 
-    // Toggling a preparation step updates progress to 1/steps.length.
+    // Toggling a preparation step notifies the parent.
     fireEvent.click(checkboxes[step.ingredients.length]);
-    expect(onProgress).toHaveBeenLastCalledWith(1 / step.steps.length);
+    expect(onStepsChange).toHaveBeenCalled();
+  });
+
+  it('disables a preparation step until the previous one is checked', () => {
+    render(<Step stepNumber={1} />);
+    const ingredientCount = stepsData[0].ingredients.length;
+    const checkboxes = screen.getAllByRole('checkbox');
+    expect(checkboxes[ingredientCount]).toBeEnabled();
+    expect(checkboxes[ingredientCount + 1]).toBeDisabled();
+    fireEvent.click(checkboxes[ingredientCount]);
+    expect(checkboxes[ingredientCount + 1]).toBeEnabled();
+  });
+
+  it('unchecking a step also unchecks the steps below it', () => {
+    render(<Step stepNumber={1} />);
+    const ingredientCount = stepsData[0].ingredients.length;
+    const checkboxes = screen.getAllByRole('checkbox');
+    fireEvent.click(checkboxes[ingredientCount]); // check step 1
+    fireEvent.click(checkboxes[ingredientCount + 1]); // check step 2
+    expect(checkboxes[ingredientCount + 1]).toBeChecked();
+    fireEvent.click(checkboxes[ingredientCount]); // uncheck step 1
+    expect(checkboxes[ingredientCount]).not.toBeChecked();
+    expect(checkboxes[ingredientCount + 1]).not.toBeChecked();
+    expect(window.localStorage.getItem(`SauerteigStep_${stepsData[0].steps[1].id}`)).toBe('false');
   });
 
   it('renders additionalInfo when present', () => {

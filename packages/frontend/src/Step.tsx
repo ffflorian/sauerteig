@@ -6,11 +6,14 @@ import {stepsData} from './data';
 import {ReminderTimer} from './ReminderTimer';
 
 export interface StepProps {
-  onProgress?: (value: number) => void;
+  onStepsChange?: () => void;
   stepNumber: number;
 }
 
-export const Step = ({onProgress, stepNumber}: StepProps) => {
+// A checkbox can only be toggled once every box above it is checked.
+const isUnlocked = (checked: boolean[], index: number) => checked.slice(0, index).every(Boolean);
+
+export const Step = ({onStepsChange, stepNumber}: StepProps) => {
   const {
     id: stepId,
     ingredients,
@@ -43,8 +46,8 @@ export const Step = ({onProgress, stepNumber}: StepProps) => {
   const completedSteps = checkedSteps.filter(Boolean).length;
 
   useEffect(() => {
-    onProgress?.(steps.length === 0 ? 0 : completedSteps / steps.length);
-  }, [completedSteps, steps.length, onProgress]);
+    onStepsChange?.();
+  }, [completedSteps, onStepsChange]);
 
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
@@ -55,15 +58,22 @@ export const Step = ({onProgress, stepNumber}: StepProps) => {
 
   const toggleStep = (index: number) => {
     setCheckedSteps(prev => {
-      const next = prev.map((v, i) => (i === index ? !v : v));
-      window.localStorage.setItem(`SauerteigStep_${steps[index].id}`, String(next[index]));
+      const willCheck = !prev[index];
+      // Checking fills the prefix up to here; unchecking clears everything from here down.
+      const next = prev.map((v, i) => (willCheck ? v || i <= index : v && i < index));
+      next.forEach((v, i) => {
+        if (v !== prev[i]) {
+          window.localStorage.setItem(`SauerteigStep_${steps[i].id}`, String(v));
+        }
+      });
       return next;
     });
   };
 
   const toggleIngredient = (index: number) => {
     setCheckedIngredients(prev => {
-      const next = prev.map((v, i) => (i === index ? !v : v));
+      const willCheck = !prev[index];
+      const next = prev.map((v, i) => (willCheck ? v || i <= index : v && i < index));
       window.localStorage.setItem(`SauerteigIngredients_${stepId}`, JSON.stringify(next));
       return next;
     });
@@ -88,7 +98,12 @@ export const Step = ({onProgress, stepNumber}: StepProps) => {
             {ingredients.map((ingredient, index) => (
               <li key={index} className={checkedIngredients[index] ? 'checked' : ''}>
                 <label className="checklist-label">
-                  <input type="checkbox" checked={checkedIngredients[index]} onChange={() => toggleIngredient(index)} />
+                  <input
+                    type="checkbox"
+                    checked={checkedIngredients[index]}
+                    disabled={!isUnlocked(checkedIngredients, index)}
+                    onChange={() => toggleIngredient(index)}
+                  />
                   <span>{ingredient}</span>
                 </label>
               </li>
@@ -101,7 +116,12 @@ export const Step = ({onProgress, stepNumber}: StepProps) => {
         {steps.map((step, index) => (
           <li key={step.id} className={checkedSteps[index] ? 'checked' : ''}>
             <label className="checklist-label">
-              <input type="checkbox" checked={checkedSteps[index]} onChange={() => toggleStep(index)} />
+              <input
+                type="checkbox"
+                checked={checkedSteps[index]}
+                disabled={!isUnlocked(checkedSteps, index)}
+                onChange={() => toggleStep(index)}
+              />
               <span>{step.text}</span>
             </label>
             {step.timerMinutes !== undefined && (

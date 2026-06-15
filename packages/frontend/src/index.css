@@ -167,7 +167,7 @@ li {
 }
 
 .navigation {
-  margin-top: 48px;
+  margin-top: 24px;
   display: flex;
   align-items: center;
   padding-top: 20px;
@@ -251,8 +251,21 @@ ol.checklist > li > .checklist-label::before {
     border-color 0.15s;
 }
 
-.checklist-label input[type='checkbox']:hover {
+.checklist-label input[type='checkbox']:not(:disabled):hover {
   border-color: var(--color-accent);
+}
+
+.checklist-label input[type='checkbox']:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.checklist-label:has(input:disabled) {
+  cursor: not-allowed;
+}
+
+.checklist-label:has(input:disabled) span {
+  opacity: 0.5;
 }
 
 .checklist-label input[type='checkbox']:checked {
@@ -461,18 +474,17 @@ li.checked .checklist-label span {
 }
 
 .progress-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px;
+  margin-top: 48px;
+  height: 4px;
   background-color: var(--color-border);
-  z-index: 900;
+  border-radius: 999px;
+  overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 100%;
   width: 0;
+  border-radius: 999px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-link));
   transition:
     width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),

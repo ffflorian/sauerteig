@@ -1,5 +1,5 @@
 export interface ProgressBarProps {
-  /** completion fraction of the current page, between 0 and 1 */
+  /** overall completion fraction across all steps, between 0 and 1 */
   value: number;
 }
 
