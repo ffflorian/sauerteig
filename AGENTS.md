@@ -108,16 +108,17 @@ packages/
     src/
       index.tsx             # entry point (React StrictMode)
       App.tsx               # root component, wraps with SauerteigProvider
-      Content.tsx           # main layout: navigation, theme toggle, step display
+      Content.tsx           # main layout: navigation, theme toggle, step display, progress bar
       Introduction.tsx      # step 0 - table of contents and ingredient overview
       Step.tsx              # displays a single recipe step with reminder timers
       ReminderTimer.tsx     # countdown timer with browser notification on expiry
+      ProgressBar.tsx       # thin bar above the navigation showing cumulative step progress
       SauerteigContext.ts   # React Context definition for the current step
       SauerteigProvider.tsx # Context provider (current step persisted to localStorage)
       data.ts               # recipe data: 6 steps, ingredients, timings
       index.css             # global styles with CSS custom properties for theming
       references.d.ts       # Vite client type references
-      __tests__/            # vitest test suite (83 tests, >=80% coverage)
+      __tests__/            # vitest test suite (96 tests, >=80% coverage)
     public/
       img/                  # bread logo in sizes 16-512px + SVG
       manifest.json         # PWA manifest
@@ -141,8 +142,10 @@ Rezept.md                   # the full recipe as plain text
 ## Key Architecture Decisions
 
 - **State management**: React Context (`SauerteigContext`) for the current step; no external state library.
-- **Persistence**: `localStorage` keys - `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference), plus one key per reminder timer storing its expiry timestamp.
+- **Persistence**: `localStorage` keys - `SauerteigStep` (current step), `SauerteigTheme` (light/dark preference), `SauerteigStep_<stepItemId>` (one per preparation step, `'true'`/`'false'`), `SauerteigIngredients_<stepId>` (JSON boolean array per page), plus one `SauerteigTimer_<stepItemId>` per reminder timer storing its expiry timestamp.
 - **Reminder timers**: `ReminderTimer` lets the user start a countdown for a waiting period. The expiry timestamp is stored in `localStorage` so the countdown survives reloads, and a browser `Notification` fires when it expires (requires notification permission). The backend schedules a fallback push notification via Web Push for when the app is not open.
+- **Progress bar**: `ProgressBar` is a thin bar rendered above the navigation buttons. `Content` derives a cumulative fraction from `localStorage` (checked preparation steps across all pages divided by the total number of preparation steps), so it advances across pages and does not reset when navigating. `Step` reports changes through an `onStepsChange` callback that triggers a recount. Ingredient checkboxes do not count toward progress.
+- **Checklists**: preparation steps (Zubereitung) are sequential - a step is only checkable once every step above it is checked, and unchecking a step clears the steps below it (the checked items stay a contiguous prefix). Ingredient checkboxes (Zutaten on step pages and the intro's "Benötigt werden" list) are independent and checkable in any order.
 - **Theme**: CSS custom properties on `:root[data-theme]`. System preference detected via `prefers-color-scheme`; user override persisted to `localStorage`.
 - **Navigation**: keyboard (arrow keys), swipe gestures (`react-swipeable`), and on-screen buttons all supported.
 - **Deployment**: each package is built into its own Docker image (`frontend.Dockerfile`, `backend.Dockerfile`) and deployed to Coolify by the CI workflow. Frontend is served from the site root, so assets use relative paths.
