@@ -1,4 +1,4 @@
-import {useEffect, useContext, useState} from 'react';
+import {useCallback, useEffect, useContext, useState} from 'react';
 import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
@@ -9,6 +9,15 @@ import {SauerteigContext} from './SauerteigContext';
 
 type Theme = 'dark' | 'light';
 const themeStorageKey = 'SauerteigTheme';
+
+// Progress is cumulative across every preparation step of every page.
+const totalSteps = stepsData.reduce((sum, step) => sum + step.steps.length, 0);
+const countCompletedSteps = () =>
+  stepsData.reduce(
+    (sum, step) =>
+      sum + step.steps.filter(item => window.localStorage.getItem(`SauerteigStep_${item.id}`) === 'true').length,
+    0
+  );
 
 const getInitialTheme = (): Theme | null => {
   const stored = window.localStorage.getItem(themeStorageKey);
@@ -21,7 +30,9 @@ const getInitialTheme = (): Theme | null => {
 export const Content = () => {
   const {currentStep, setCurrentStep} = useContext(SauerteigContext);
   const [theme, setTheme] = useState<Theme | null>(getInitialTheme);
-  const [progress, setProgress] = useState(0);
+  const [completedSteps, setCompletedSteps] = useState(countCompletedSteps);
+  const handleStepsChange = useCallback(() => setCompletedSteps(countCompletedSteps()), []);
+  const progress = totalSteps === 0 ? 0 : completedSteps / totalSteps;
 
   useEffect(() => {
     if (theme) {
@@ -111,10 +122,11 @@ export const Content = () => {
         </button>
       </div>
       {currentStep === 0 ? (
-        <Introduction onProgress={setProgress} />
+        <Introduction />
       ) : (
-        <Step key={currentStep} stepNumber={currentStep} onProgress={setProgress} />
+        <Step key={currentStep} stepNumber={currentStep} onStepsChange={handleStepsChange} />
       )}
+      <ProgressBar value={progress} />
       <div className="navigation">
         {canGoBack && (
           <span className="previous" onClick={() => goBack()}>
@@ -134,7 +146,6 @@ export const Content = () => {
         <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>. Source
         code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
       </div>
-      <ProgressBar value={progress} />
     </div>
   );
 };

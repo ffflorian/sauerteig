@@ -97,6 +97,14 @@ describe('Content', () => {
     expect(setCurrentStep).not.toHaveBeenCalled();
   });
 
+  it('shows cumulative progress across all steps from localStorage', () => {
+    const allSteps = stepsData.flatMap(s => s.steps);
+    window.localStorage.setItem(`SauerteigStep_${allSteps[0].id}`, 'true');
+    window.localStorage.setItem(`SauerteigStep_${allSteps[1].id}`, 'true');
+    renderContent(0);
+    expect(screen.getByRole('progressbar').getAttribute('aria-valuenow')).toBe(String(2 / allSteps.length));
+  });
+
   it('theme toggle button is rendered', () => {
     renderContent(0);
     expect(screen.getByRole('button', {name: /mode/i})).toBeInTheDocument();
