@@ -2,21 +2,13 @@ import {useState, useContext} from 'react';
 import {introductionData, stepsData} from './data';
 import {SauerteigContext} from './SauerteigContext';
 
-// A checkbox can only be toggled once every box above it is checked.
-const isUnlocked = (checked: boolean[], index: number) => checked.slice(0, index).every(Boolean);
-
 export const Introduction = () => {
   const {setCurrentStep} = useContext(SauerteigContext);
   const {ingredients, title} = introductionData;
   const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
 
-  // The intro only lists ingredients, which do not count toward progress.
-  const toggleIngredient = (index: number) => {
-    setCheckedIngredients(prev => {
-      const willCheck = !prev[index];
-      return prev.map((v, i) => (willCheck ? v || i <= index : v && i < index));
-    });
-  };
+  // The intro only lists ingredients, which are not sequential and do not count toward progress.
+  const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
 
   return (
     <div className="part">
@@ -39,12 +31,7 @@ export const Introduction = () => {
         {ingredients.map((ingredient, index) => (
           <li key={index} className={checkedIngredients[index] ? 'checked' : ''}>
             <label className="checklist-label">
-              <input
-                type="checkbox"
-                checked={checkedIngredients[index]}
-                disabled={!isUnlocked(checkedIngredients, index)}
-                onChange={() => toggleIngredient(index)}
-              />
+              <input type="checkbox" checked={checkedIngredients[index]} onChange={() => toggleIngredient(index)} />
               <span>{ingredient}</span>
             </label>
           </li>

@@ -46,6 +46,15 @@ describe('Introduction', () => {
     expect(checkboxes[0]).toBeChecked();
   });
 
+  it('allows checking ingredients in any order', () => {
+    renderWithContext();
+    const checkboxes = screen.getAllByRole('checkbox');
+    expect(checkboxes[2]).toBeEnabled();
+    fireEvent.click(checkboxes[2]);
+    expect(checkboxes[2]).toBeChecked();
+    expect(checkboxes[0]).not.toBeChecked();
+  });
+
   it('toggling a checked checkbox unchecks it', () => {
     renderWithContext();
     const checkboxes = screen.getAllByRole('checkbox');

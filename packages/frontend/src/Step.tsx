@@ -10,7 +10,7 @@ export interface StepProps {
   stepNumber: number;
 }
 
-// A checkbox can only be toggled once every box above it is checked.
+// A preparation step can only be toggled once every step above it is checked.
 const isUnlocked = (checked: boolean[], index: number) => checked.slice(0, index).every(Boolean);
 
 export const Step = ({onStepsChange, stepNumber}: StepProps) => {
@@ -72,8 +72,7 @@ export const Step = ({onStepsChange, stepNumber}: StepProps) => {
 
   const toggleIngredient = (index: number) => {
     setCheckedIngredients(prev => {
-      const willCheck = !prev[index];
-      const next = prev.map((v, i) => (willCheck ? v || i <= index : v && i < index));
+      const next = prev.map((v, i) => (i === index ? !v : v));
       window.localStorage.setItem(`SauerteigIngredients_${stepId}`, JSON.stringify(next));
       return next;
     });
@@ -98,12 +97,7 @@ export const Step = ({onStepsChange, stepNumber}: StepProps) => {
             {ingredients.map((ingredient, index) => (
               <li key={index} className={checkedIngredients[index] ? 'checked' : ''}>
                 <label className="checklist-label">
-                  <input
-                    type="checkbox"
-                    checked={checkedIngredients[index]}
-                    disabled={!isUnlocked(checkedIngredients, index)}
-                    onChange={() => toggleIngredient(index)}
-                  />
+                  <input type="checkbox" checked={checkedIngredients[index]} onChange={() => toggleIngredient(index)} />
                   <span>{ingredient}</span>
                 </label>
               </li>

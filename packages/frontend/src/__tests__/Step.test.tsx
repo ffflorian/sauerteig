@@ -150,6 +150,16 @@ describe('Step', () => {
     expect(onStepsChange).toHaveBeenCalled();
   });
 
+  it('allows checking ingredients in any order', () => {
+    render(<Step stepNumber={stepWithIngredients} />);
+    const checkboxes = screen.getAllByRole('checkbox');
+    // The second ingredient is enabled and checkable without the first.
+    expect(checkboxes[1]).toBeEnabled();
+    fireEvent.click(checkboxes[1]);
+    expect(checkboxes[1]).toBeChecked();
+    expect(checkboxes[0]).not.toBeChecked();
+  });
+
   it('disables a preparation step until the previous one is checked', () => {
     render(<Step stepNumber={1} />);
     const ingredientCount = stepsData[0].ingredients.length;
