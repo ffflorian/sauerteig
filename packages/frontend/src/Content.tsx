@@ -2,6 +2,7 @@ import {useEffect, useContext, useState} from 'react';
 import {useSwipeable} from 'react-swipeable';
 
 import {Introduction} from './Introduction';
+import {ProgressBar} from './ProgressBar';
 import {stepsData} from './data';
 import {Step} from './Step';
 import {SauerteigContext} from './SauerteigContext';
@@ -20,6 +21,7 @@ const getInitialTheme = (): Theme | null => {
 export const Content = () => {
   const {currentStep, setCurrentStep} = useContext(SauerteigContext);
   const [theme, setTheme] = useState<Theme | null>(getInitialTheme);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (theme) {
@@ -108,7 +110,11 @@ export const Content = () => {
           )}
         </button>
       </div>
-      {currentStep === 0 ? <Introduction /> : <Step key={currentStep} stepNumber={currentStep} />}
+      {currentStep === 0 ? (
+        <Introduction onProgress={setProgress} />
+      ) : (
+        <Step key={currentStep} stepNumber={currentStep} onProgress={setProgress} />
+      )}
       <div className="navigation">
         {canGoBack && (
           <span className="previous" onClick={() => goBack()}>
@@ -128,6 +134,7 @@ export const Content = () => {
         <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>. Source
         code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
       </div>
+      <ProgressBar value={progress} />
     </div>
   );
 };

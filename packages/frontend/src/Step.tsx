@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {formatDistance, addMinutes} from 'date-fns';
 import {de as deLocale} from 'date-fns/locale/de';
 
@@ -6,10 +6,11 @@ import {stepsData} from './data';
 import {ReminderTimer} from './ReminderTimer';
 
 export interface StepProps {
+  onProgress?: (value: number) => void;
   stepNumber: number;
 }
 
-export const Step = ({stepNumber}: StepProps) => {
+export const Step = ({onProgress, stepNumber}: StepProps) => {
   const {
     id: stepId,
     ingredients,
@@ -37,6 +38,13 @@ export const Step = ({stepNumber}: StepProps) => {
     }
     return ingredients.map(() => false);
   });
+
+  const totalChecks = ingredients.length + steps.length;
+  const completedChecks = checkedIngredients.filter(Boolean).length + checkedSteps.filter(Boolean).length;
+
+  useEffect(() => {
+    onProgress?.(totalChecks === 0 ? 0 : completedChecks / totalChecks);
+  }, [completedChecks, totalChecks, onProgress]);
 
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)

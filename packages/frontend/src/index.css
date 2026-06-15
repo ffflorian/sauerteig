@@ -460,6 +460,29 @@ li.checked .checklist-label span {
   }
 }
 
+.progress-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--color-border);
+  z-index: 900;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-link));
+  transition:
+    width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+
+.progress-bar-fill.complete {
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
 .footer {
   margin-top: 56px;
   padding-top: 20px;
