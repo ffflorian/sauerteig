@@ -17,6 +17,10 @@ This is a monorepo with two packages: a React frontend (`packages/frontend`) and
 - **Progress persistence**: your current step and running timers are stored in `localStorage`, so you can close the app and pick up where you left off.
 - **Installable PWA**: add it to your home screen and use it offline-friendly.
 
+## Screenshot
+
+![Sauerteig screenshot](.github/screenshots/progress-bar.png)
+
 ## Tech stack
 
 React 19, TypeScript 6, Vite 8 (frontend) and NestJS, Mongoose, web-push (backend). See [AGENTS.md](AGENTS.md) for the full stack, project structure, and contribution conventions.
