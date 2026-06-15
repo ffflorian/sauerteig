@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/ffflorian/sauerteig/compare/v1.11.1...v1.12.0) (2026-06-15)
+
+
+### Features
+
+* add page completion progress bar ([#1195](https://github.com/ffflorian/sauerteig/issues/1195)) ([e6e0a21](https://github.com/ffflorian/sauerteig/commit/e6e0a21013bb630f27a731d63ba90a18a4404e56))
+
 ## [1.11.1](https://github.com/ffflorian/sauerteig/compare/v1.11.0...v1.11.1) (2026-06-14)
 
 
