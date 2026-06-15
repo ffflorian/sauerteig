@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/ffflorian/sauerteig/compare/v1.12.0...v1.13.0) (2026-06-15)
+
+
+### Features
+
+* cumulative progress bar with sequential checkboxes ([#1196](https://github.com/ffflorian/sauerteig/issues/1196)) ([9e30b42](https://github.com/ffflorian/sauerteig/commit/9e30b42221e5fcc5c8a25e2fcf7779a6fb629314))
+
 # [1.12.0](https://github.com/ffflorian/sauerteig/compare/v1.11.1...v1.12.0) (2026-06-15)
 
 
