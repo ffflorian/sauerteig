@@ -131,6 +131,22 @@ describe('Step', () => {
     expect(timers[0].dataset.disabled).toBe('true');
   });
 
+  it('reports progress only for preparation steps, not ingredients', () => {
+    const onProgress = vi.fn();
+    render(<Step stepNumber={stepWithIngredients} onProgress={onProgress} />);
+    const step = stepsData[stepWithIngredients - 1];
+    const checkboxes = screen.getAllByRole('checkbox');
+
+    onProgress.mockClear();
+    // Toggling an ingredient (first checkboxes) must not change progress.
+    fireEvent.click(checkboxes[0]);
+    expect(onProgress).not.toHaveBeenCalled();
+
+    // Toggling a preparation step updates progress to 1/steps.length.
+    fireEvent.click(checkboxes[step.ingredients.length]);
+    expect(onProgress).toHaveBeenLastCalledWith(1 / step.steps.length);
+  });
+
   it('renders additionalInfo when present', () => {
     render(<Step stepNumber={stepWithAdditional} />);
     const step = stepsData[stepWithAdditional - 1];

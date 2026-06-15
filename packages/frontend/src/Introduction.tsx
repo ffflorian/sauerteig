@@ -1,11 +1,20 @@
-import {useState, useContext} from 'react';
+import {useEffect, useState, useContext} from 'react';
 import {introductionData, stepsData} from './data';
 import {SauerteigContext} from './SauerteigContext';
 
-export const Introduction = () => {
+export interface IntroductionComponentProps {
+  onProgress?: (value: number) => void;
+}
+
+export const Introduction = ({onProgress}: IntroductionComponentProps) => {
   const {setCurrentStep} = useContext(SauerteigContext);
   const {ingredients, title} = introductionData;
   const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
+
+  // The intro only lists ingredients, which do not count toward progress.
+  useEffect(() => {
+    onProgress?.(0);
+  }, [onProgress]);
 
   const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
 
