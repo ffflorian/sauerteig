@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/ffflorian/sauerteig/compare/v1.13.0...v1.13.1) (2026-06-15)
+
+
+### Bug Fixes
+
+* make ingredient checkboxes non-sequential ([#1197](https://github.com/ffflorian/sauerteig/issues/1197)) ([ef5fbde](https://github.com/ffflorian/sauerteig/commit/ef5fbde712135d1edb68550882623c129e7b14c1))
+
 # [1.13.0](https://github.com/ffflorian/sauerteig/compare/v1.12.0...v1.13.0) (2026-06-15)
 
 
