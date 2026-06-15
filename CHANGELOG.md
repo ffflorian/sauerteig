@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/ffflorian/sauerteig/compare/v1.13.1...v1.14.0) (2026-06-15)
+
+
+### Features
+
+* **frontend:** add repeating bread outline background pattern ([#1198](https://github.com/ffflorian/sauerteig/issues/1198)) ([a055e58](https://github.com/ffflorian/sauerteig/commit/a055e58ffe153645bae0d8ae69b4e4332a0c2822))
+
 ## [1.13.1](https://github.com/ffflorian/sauerteig/compare/v1.13.0...v1.13.1) (2026-06-15)
 
 
