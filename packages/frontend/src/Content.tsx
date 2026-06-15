@@ -121,25 +121,27 @@ export const Content = () => {
           )}
         </button>
       </div>
-      {currentStep === 0 ? (
-        <Introduction />
-      ) : (
-        <Step key={currentStep} stepNumber={currentStep} onStepsChange={handleStepsChange} />
-      )}
-      <ProgressBar value={progress} />
-      <div className="navigation">
-        {canGoBack && (
-          <span className="previous" onClick={() => goBack()}>
-            &larr;&nbsp;
-            <span>Vorheriger Schritt</span>
-          </span>
+      <div className="content">
+        {currentStep === 0 ? (
+          <Introduction />
+        ) : (
+          <Step key={currentStep} stepNumber={currentStep} onStepsChange={handleStepsChange} />
         )}
-        {canGoForward && (
-          <div className={`next${canGoBack ? ' float' : ''}`} onClick={() => goForward()}>
-            <span>Nächster Schritt</span>
-            &nbsp; &rarr;
-          </div>
-        )}
+        <ProgressBar value={progress} />
+        <div className="navigation">
+          {canGoBack && (
+            <span className="previous" onClick={() => goBack()}>
+              &larr;&nbsp;
+              <span>Vorheriger Schritt</span>
+            </span>
+          )}
+          {canGoForward && (
+            <div className={`next${canGoBack ? ' float' : ''}`} onClick={() => goForward()}>
+              <span>Nächster Schritt</span>
+              &nbsp; &rarr;
+            </div>
+          )}
+        </div>
       </div>
       <div className="footer">
         Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Icon by{' '}

@@ -86,9 +86,16 @@ li {
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
-  margin-bottom: 32px;
   border-bottom: 1px solid var(--color-border);
   position: relative;
+}
+
+/* Solid panel between the header's bottom border and the footer's top border,
+   so the page pattern only shows around the header, footer, and margins. */
+.content {
+  background-color: var(--color-background);
+  padding-top: 32px;
+  padding-bottom: 56px;
 }
 
 .main .pageTitle {
@@ -501,7 +508,6 @@ li.checked .checklist-label span {
 }
 
 .footer {
-  margin-top: 56px;
   padding-top: 20px;
   border-top: 1px solid var(--color-border);
   font-size: 0.8rem;
