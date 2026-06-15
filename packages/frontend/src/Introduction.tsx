@@ -11,11 +11,10 @@ export const Introduction = ({onProgress}: IntroductionComponentProps) => {
   const {ingredients, title} = introductionData;
   const [checkedIngredients, setCheckedIngredients] = useState<boolean[]>(() => ingredients.map(() => false));
 
-  const completedChecks = checkedIngredients.filter(Boolean).length;
-
+  // The intro only lists ingredients, which do not count toward progress.
   useEffect(() => {
-    onProgress?.(ingredients.length === 0 ? 0 : completedChecks / ingredients.length);
-  }, [completedChecks, ingredients.length, onProgress]);
+    onProgress?.(0);
+  }, [onProgress]);
 
   const toggleIngredient = (index: number) => setCheckedIngredients(prev => prev.map((v, i) => (i === index ? !v : v)));
 
