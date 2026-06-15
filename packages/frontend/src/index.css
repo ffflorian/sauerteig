@@ -7,7 +7,7 @@
   --color-border: #e5ddd4;
   --color-link: #9e5e22;
   --color-icon: #2c2416;
-  --bg-pattern: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22128%22%20height%3D%22128%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cdefs%3E%3Cg%20id%3D%22l%22%3E%3Cpath%20d%3D%22M6%2C44%20C6%2C26%2018%2C18%2032%2C18%20C46%2C18%2058%2C26%2058%2C44%20C58%2C50%2053%2C52%2047%2C52%20L17%2C52%20C11%2C52%206%2C50%206%2C44%20Z%22%2F%3E%3Cpath%20d%3D%22M18%2C30%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M28%2C26%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M38%2C28%20l7%2C7%22%2F%3E%3C%2Fg%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f1e9dd%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%280%2C-3%29%20rotate%28-13%2032%2035%29%22%2F%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%2864%2C61%29%20rotate%28-13%2032%2035%29%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  --bg-pattern: url('./pattern-light.svg');
 }
 
 :root[data-theme='dark'] {
@@ -19,7 +19,7 @@
   --color-border: #3a3228;
   --color-link: #d4893a;
   --color-icon: #e8dfd0;
-  --bg-pattern: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22128%22%20height%3D%22128%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cdefs%3E%3Cg%20id%3D%22l%22%3E%3Cpath%20d%3D%22M6%2C44%20C6%2C26%2018%2C18%2032%2C18%20C46%2C18%2058%2C26%2058%2C44%20C58%2C50%2053%2C52%2047%2C52%20L17%2C52%20C11%2C52%206%2C50%206%2C44%20Z%22%2F%3E%3Cpath%20d%3D%22M18%2C30%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M28%2C26%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M38%2C28%20l7%2C7%22%2F%3E%3C%2Fg%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2326221a%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%280%2C-3%29%20rotate%28-13%2032%2035%29%22%2F%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%2864%2C61%29%20rotate%28-13%2032%2035%29%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  --bg-pattern: url('./pattern-dark.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +32,7 @@
     --color-border: #3a3228;
     --color-link: #d4893a;
     --color-icon: #e8dfd0;
-    --bg-pattern: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22128%22%20height%3D%22128%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cdefs%3E%3Cg%20id%3D%22l%22%3E%3Cpath%20d%3D%22M6%2C44%20C6%2C26%2018%2C18%2032%2C18%20C46%2C18%2058%2C26%2058%2C44%20C58%2C50%2053%2C52%2047%2C52%20L17%2C52%20C11%2C52%206%2C50%206%2C44%20Z%22%2F%3E%3Cpath%20d%3D%22M18%2C30%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M28%2C26%20l8%2C8%22%2F%3E%3Cpath%20d%3D%22M38%2C28%20l7%2C7%22%2F%3E%3C%2Fg%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2326221a%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%280%2C-3%29%20rotate%28-13%2032%2035%29%22%2F%3E%3Cuse%20href%3D%22%23l%22%20transform%3D%22translate%2864%2C61%29%20rotate%28-13%2032%2035%29%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+    --bg-pattern: url('./pattern-dark.svg');
   }
 }
 
