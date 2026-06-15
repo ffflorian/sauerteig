@@ -39,12 +39,12 @@ export const Step = ({onProgress, stepNumber}: StepProps) => {
     return ingredients.map(() => false);
   });
 
-  const totalChecks = ingredients.length + steps.length;
-  const completedChecks = checkedIngredients.filter(Boolean).length + checkedSteps.filter(Boolean).length;
+  // Only the preparation steps drive progress; ingredient checkboxes do not.
+  const completedSteps = checkedSteps.filter(Boolean).length;
 
   useEffect(() => {
-    onProgress?.(totalChecks === 0 ? 0 : completedChecks / totalChecks);
-  }, [completedChecks, totalChecks, onProgress]);
+    onProgress?.(steps.length === 0 ? 0 : completedSteps / steps.length);
+  }, [completedSteps, steps.length, onProgress]);
 
   const accumulatedCountdownMinutes = stepsData
     .slice(stepNumber - 1)
