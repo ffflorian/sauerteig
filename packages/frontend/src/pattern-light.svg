@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <g id="l">
+      <path d="M6,44 C6,26 18,18 32,18 C46,18 58,26 58,44 C58,50 53,52 47,52 L17,52 C11,52 6,50 6,44 Z"/>
+      <path d="M18,30 l8,8"/>
+      <path d="M28,26 l8,8"/>
+      <path d="M38,28 l7,7"/>
+    </g>
+  </defs>
+  <g fill="none" stroke="#f1e9dd" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#l" transform="translate(0,-3) rotate(-13 32 35)"/>
+    <use href="#l" transform="translate(64,61) rotate(-13 32 35)"/>
+  </g>
+</svg>

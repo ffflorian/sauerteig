@@ -7,6 +7,7 @@
   --color-border: #e5ddd4;
   --color-link: #9e5e22;
   --color-icon: #2c2416;
+  --bg-pattern: url('./pattern-light.svg');
 }
 
 :root[data-theme='dark'] {
@@ -18,6 +19,7 @@
   --color-border: #3a3228;
   --color-link: #d4893a;
   --color-icon: #e8dfd0;
+  --bg-pattern: url('./pattern-dark.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +32,7 @@
     --color-border: #3a3228;
     --color-link: #d4893a;
     --color-icon: #e8dfd0;
+    --bg-pattern: url('./pattern-dark.svg');
   }
 }
 
@@ -46,6 +49,8 @@ body {
     -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   background-color: var(--color-background);
+  background-image: var(--bg-pattern);
+  background-repeat: repeat;
   color: var(--color-text);
   line-height: 1.65;
   transition:
@@ -81,9 +86,16 @@ li {
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
-  margin-bottom: 32px;
   border-bottom: 1px solid var(--color-border);
   position: relative;
+}
+
+/* Solid panel between the header's bottom border and the footer's top border,
+   so the page pattern only shows around the header, footer, and margins. */
+.content {
+  background-color: var(--color-background);
+  padding-top: 32px;
+  padding-bottom: 56px;
 }
 
 .main .pageTitle {
@@ -496,7 +508,6 @@ li.checked .checklist-label span {
 }
 
 .footer {
-  margin-top: 56px;
   padding-top: 20px;
   border-top: 1px solid var(--color-border);
   font-size: 0.8rem;
