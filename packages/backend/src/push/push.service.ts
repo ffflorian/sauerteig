@@ -1,4 +1,4 @@
-import {Injectable, Logger} from '@nestjs/common';
+import {HttpStatus, Injectable, Logger} from '@nestjs/common';
 import {InjectModel} from '@nestjs/mongoose';
 import {Model, Types} from 'mongoose';
 import webpush from 'web-push';
@@ -71,7 +71,7 @@ export class PushService {
         this.logger.error(
           `Failed to send push for ${String(doc._id)} (status ${String(statusCode)}): ${String(error)}${body ? ` - ${body}` : ''}`
         );
-        if (statusCode === 404 || statusCode === 410) {
+        if (statusCode === HttpStatus.NOT_FOUND || statusCode === HttpStatus.GONE) {
           await this.model.findByIdAndDelete(doc._id);
           this.logger.warn(`Removed expired subscription ${String(doc._id)}`);
         }

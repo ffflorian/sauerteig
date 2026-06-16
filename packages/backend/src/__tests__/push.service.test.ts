@@ -16,6 +16,7 @@ vi.mock('../config/config.js', () => ({
   VAPID_SUBJECT: 'mailto:test@example.com',
 }));
 
+import {HttpStatus} from '@nestjs/common';
 import webpush from 'web-push';
 
 const mockWebpush = vi.mocked(webpush);
@@ -94,7 +95,7 @@ describe('PushService', () => {
     it('deletes document on 410 error (subscription gone)', async () => {
       const doc = {_id: 'doc1', auth: 'a', endpoint: 'https://push.example.com', label: '5 Min', p256dh: 'p'};
       model.find.mockResolvedValue([doc]);
-      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: 410});
+      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: HttpStatus.GONE});
 
       await service.sendDue();
 
@@ -104,7 +105,7 @@ describe('PushService', () => {
     it('deletes document on 404 error (not found)', async () => {
       const doc = {_id: 'doc1', auth: 'a', endpoint: 'https://push.example.com', label: '5 Min', p256dh: 'p'};
       model.find.mockResolvedValue([doc]);
-      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: 404});
+      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: HttpStatus.NOT_FOUND});
 
       await service.sendDue();
 
@@ -114,7 +115,7 @@ describe('PushService', () => {
     it('does not delete on other errors', async () => {
       const doc = {_id: 'doc1', auth: 'a', endpoint: 'https://push.example.com', label: '5 Min', p256dh: 'p'};
       model.find.mockResolvedValue([doc]);
-      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: 500});
+      mockWebpush.sendNotification.mockRejectedValueOnce({statusCode: HttpStatus.INTERNAL_SERVER_ERROR});
 
       await service.sendDue();
 

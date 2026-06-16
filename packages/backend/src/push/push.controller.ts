@@ -1,4 +1,4 @@
-import {Body, Controller, Delete, HttpCode, Param, Post} from '@nestjs/common';
+import {Body, Controller, Delete, HttpCode, HttpStatus, Param, Post} from '@nestjs/common';
 
 import {PushService} from './push.service.js';
 
@@ -16,7 +16,7 @@ export class PushController {
   constructor(private readonly pushService: PushService) {}
 
   @Delete('schedule/:id')
-  @HttpCode(204)
+  @HttpCode(HttpStatus.NO_CONTENT)
   async cancel(@Param('id') id: string): Promise<void> {
     await this.pushService.cancel(id);
   }

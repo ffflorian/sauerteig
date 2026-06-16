@@ -1,10 +1,10 @@
-import {Controller, Get, HttpCode} from '@nestjs/common';
+import {Controller, Get, HttpCode, HttpStatus} from '@nestjs/common';
 import {SkipThrottle} from '@nestjs/throttler';
 
 @Controller('_health')
 @SkipThrottle()
 export class HealthController {
   @Get()
-  @HttpCode(200)
+  @HttpCode(HttpStatus.OK)
   check(): void {}
 }
