@@ -144,7 +144,7 @@ export const Content = () => {
         </div>
       </div>
       <div className="footer">
-        Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Icon by{' '}
+        Made with ❤️ in Berlin by <a href="https://github.com/ffflorian">Florian Imdahl</a>. Logo by{' '}
         <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>. Source
         code on <a href="https://github.com/ffflorian/sauerteig">GitHub</a>.
       </div>
