@@ -5,7 +5,7 @@ export const IS_LOCAL = process.env['IS_LOCAL'] === 'true';
 try {
   loadEnvFile('.env');
 } catch {
-  console.warn('Error loading .env file, using defaults and environment variables');
+  console.info('Not loading .env file, using defaults and environment variables');
 }
 
 export const COMMIT = process.env['COMMIT'] || 'unknown';
