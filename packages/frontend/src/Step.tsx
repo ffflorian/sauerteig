@@ -56,14 +56,16 @@ export const Step = ({onStepsChange, stepNumber}: StepProps) => {
     locale: deLocale,
   });
 
-  const toggleStep = (index: number) => {
+  const toggleStep = (stepIndex: number) => {
     setCheckedSteps(prev => {
-      const willCheck = !prev[index];
+      const willCheck = !prev[stepIndex];
       // Checking fills the prefix up to here; unchecking clears everything from here down.
-      const next = prev.map((v, i) => (willCheck ? v || i <= index : v && i < index));
-      next.forEach((v, i) => {
-        if (v !== prev[i]) {
-          window.localStorage.setItem(`SauerteigStep_${steps[i].id}`, String(v));
+      const next = prev.map((isPreviousChecked, previousIndex) =>
+        willCheck ? isPreviousChecked || previousIndex <= stepIndex : isPreviousChecked && previousIndex < stepIndex
+      );
+      next.forEach((isNextChecked, nextIndex) => {
+        if (isNextChecked !== prev[nextIndex]) {
+          window.localStorage.setItem(`SauerteigStep_${steps[nextIndex].id}`, String(isNextChecked));
         }
       });
       return next;

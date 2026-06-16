@@ -190,10 +190,12 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
         setRemaining(diff);
         return;
       }
+
       // If a backend push was scheduled and the timer expired while the app was
       // backgrounded, the server push already showed the notification. Clear the
       // local state but leave the push in place instead of showing a duplicate.
       const scheduledBackend = window.localStorage.getItem(timerIdKey) !== null;
+
       if (scheduledBackend && Date.now() - endTime > onTimeExpiryToleranceMs) {
         clearTimer(false);
       } else {
@@ -222,6 +224,7 @@ export const ReminderTimer = ({disabled, minutes, onExpire, storageKey}: Reminde
     setEndTime(end);
 
     const subscription = await getPushSubscription();
+
     if (subscription) {
       const timerId = await scheduleBackendNotification(subscription, end, labelForMinutes(minutes));
       if (timerId) {

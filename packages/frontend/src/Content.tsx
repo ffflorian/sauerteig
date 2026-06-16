@@ -13,18 +13,16 @@ const themeStorageKey = 'SauerteigTheme';
 // Progress is cumulative across every preparation step of every page.
 const totalSteps = stepsData.reduce((sum, step) => sum + step.steps.length, 0);
 const countCompletedSteps = () =>
-  stepsData.reduce(
-    (sum, step) =>
-      sum + step.steps.filter(item => window.localStorage.getItem(`SauerteigStep_${item.id}`) === 'true').length,
-    0
-  );
+  stepsData.reduce((sum, step) => {
+    const stepsLength = step.steps.filter(
+      item => window.localStorage.getItem(`SauerteigStep_${item.id}`) === 'true'
+    ).length;
+    return sum + stepsLength;
+  }, 0);
 
 const getInitialTheme = (): Theme | null => {
   const stored = window.localStorage.getItem(themeStorageKey);
-  if (stored === 'dark' || stored === 'light') {
-    return stored;
-  }
-  return null;
+  return stored === 'dark' || stored === 'light' ? stored : null;
 };
 
 export const Content = () => {
