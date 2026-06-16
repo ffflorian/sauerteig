@@ -1,3 +1,11 @@
+## [1.14.1](https://github.com/ffflorian/sauerteig/compare/v1.14.0...v1.14.1) (2026-06-16)
+
+
+### Bug Fixes
+
+* **backend:** Update .env warning message ([cb37835](https://github.com/ffflorian/sauerteig/commit/cb3783509ab249047e1b98ea4e0be91e986d1a93))
+* **frontend:** Wording ([fcf515a](https://github.com/ffflorian/sauerteig/commit/fcf515a51dd7feeb328cb7cf350ed17b2a83dfdc))
+
 # [1.14.0](https://github.com/ffflorian/sauerteig/compare/v1.13.1...v1.14.0) (2026-06-15)
 
 
