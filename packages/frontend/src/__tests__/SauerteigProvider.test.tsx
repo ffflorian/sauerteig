@@ -82,7 +82,9 @@ describe('SauerteigProvider', () => {
         <Consumer />
       </SauerteigProvider>
     );
-    screen.getByText('go to 2').click();
+    act(() => {
+      screen.getByText('go to 2').click();
+    });
     await waitFor(() => expect(window.localStorage.getItem('SauerteigStep')).toBe('2'));
   });
 
