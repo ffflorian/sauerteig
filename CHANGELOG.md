@@ -1,3 +1,20 @@
+## [1.14.2](https://github.com/ffflorian/sauerteig/compare/v1.14.1...v1.14.2) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** Bump @babel/core from 7.29.0 to 7.29.7 ([#1211](https://github.com/ffflorian/sauerteig/issues/1211)) [ci skip] ([ab3fef9](https://github.com/ffflorian/sauerteig/commit/ab3fef9fb758496606f173178db1cb35f4cf331b))
+* **deps:** Bump @nestjs/common from 11.1.24 to 11.1.26 ([#1206](https://github.com/ffflorian/sauerteig/issues/1206)) [ci skip] ([e9d44a7](https://github.com/ffflorian/sauerteig/commit/e9d44a786699d2f6eebe875190bf6a383ec4db61))
+* **deps:** Bump @nestjs/core from 11.1.24 to 11.1.26 ([#1205](https://github.com/ffflorian/sauerteig/issues/1205)) [ci skip] ([3c521f9](https://github.com/ffflorian/sauerteig/commit/3c521f9526d868bb78d4eb8b4a67a78078995e4e))
+* **deps:** Bump @nestjs/mongoose from 11.0.3 to 11.0.4 ([#1209](https://github.com/ffflorian/sauerteig/issues/1209)) [ci skip] ([5e17615](https://github.com/ffflorian/sauerteig/commit/5e1761582e63897d8ab13b5a16f69bdbf53710c8))
+* **deps:** Bump @nestjs/platform-express from 11.1.24 to 11.1.26 ([#1207](https://github.com/ffflorian/sauerteig/issues/1207)) [ci skip] ([aa3ecdc](https://github.com/ffflorian/sauerteig/commit/aa3ecdcf69f182cfb073eeff048988344093fe1f))
+* **deps:** Bump @nestjs/schedule from 5.0.1 to 6.1.3 ([#1201](https://github.com/ffflorian/sauerteig/issues/1201)) [ci skip] ([42aa1f5](https://github.com/ffflorian/sauerteig/commit/42aa1f5d9f67588319b1d3450ce660cadd612ae4))
+* **deps:** Bump js-yaml from 4.1.1 to 4.2.0 ([#1213](https://github.com/ffflorian/sauerteig/issues/1213)) [ci skip] ([0b68f77](https://github.com/ffflorian/sauerteig/commit/0b68f7735e0751a05fd803129649893c5a0503ec))
+* **deps:** Bump mongoose from 9.6.3 to 9.7.0 ([#1204](https://github.com/ffflorian/sauerteig/issues/1204)) [ci skip] ([e480639](https://github.com/ffflorian/sauerteig/commit/e480639317a7a1f848432311a9bf577bff075a47))
+* **deps:** Bump nginx from 1.31.1-alpine to 1.31.2-alpine ([#1199](https://github.com/ffflorian/sauerteig/issues/1199)) [ci skip] ([29e6da8](https://github.com/ffflorian/sauerteig/commit/29e6da843f89a22ba2e9399b3401e0bc09289c3c))
+* **deps:** Bump tar from 7.5.11 to 7.5.16 ([#1212](https://github.com/ffflorian/sauerteig/issues/1212)) ([935e4b8](https://github.com/ffflorian/sauerteig/commit/935e4b8ef28eebd382b82534b827e98fc4e5805a))
+* **deps:** Bump undici from 6.26.0 to 6.27.0 ([#1214](https://github.com/ffflorian/sauerteig/issues/1214)) [ci skip] ([e542114](https://github.com/ffflorian/sauerteig/commit/e5421142c52288a2dbf5b2c9cbf66397210f6a15))
+
 ## [1.14.1](https://github.com/ffflorian/sauerteig/compare/v1.14.0...v1.14.1) (2026-06-16)
 
 
