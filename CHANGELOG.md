@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/ffflorian/sauerteig/compare/v1.14.2...v1.14.3) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** Bump node from 26.2.0-alpine to 26.3.1-alpine ([#1215](https://github.com/ffflorian/sauerteig/issues/1215)) ([e1c9637](https://github.com/ffflorian/sauerteig/commit/e1c963780dca794fbb382b815c9a45c9a817e11f))
+
 ## [1.14.2](https://github.com/ffflorian/sauerteig/compare/v1.14.1...v1.14.2) (2026-06-18)
 
 
