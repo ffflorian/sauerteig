@@ -1090,15 +1090,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/mongoose@npm:11.0.3":
-  version: 11.0.3
-  resolution: "@nestjs/mongoose@npm:11.0.3"
+"@nestjs/mongoose@npm:11.0.4":
+  version: 11.0.4
+  resolution: "@nestjs/mongoose@npm:11.0.4"
   peerDependencies:
     "@nestjs/common": ^10.0.0 || ^11.0.0
     "@nestjs/core": ^10.0.0 || ^11.0.0
-    mongoose: ^7.0.0 || ^8.0.0
+    mongoose: ^7.0.0 || ^8.0.0 || ^9.0.0
     rxjs: ^7.0.0
-  checksum: 10c0/4a3ed2046462170edcbe1c734386d008319d4d3e7cf1f3bddde959f5759093fb166fdaf7b18fd3a6f7aea41a62efbffd8266e9d3addeeef9161b849906df9cc1
+  checksum: 10c0/291f2e06e5b14ddf53bb3f04fee894613c5c2134ff1b13ed2c82d0ee43d519c987fbf4a287e667004ac56c6bd2bd1b1496ef8d28c0639e7f80a9b646b651f55a
   languageName: node
   linkType: hard
 
@@ -10007,7 +10007,7 @@ __metadata:
     "@ffflorian/prettier-config": "npm:0.8.2"
     "@nestjs/common": "npm:11.1.24"
     "@nestjs/core": "npm:11.1.24"
-    "@nestjs/mongoose": "npm:11.0.3"
+    "@nestjs/mongoose": "npm:11.0.4"
     "@nestjs/platform-express": "npm:11.1.24"
     "@nestjs/schedule": "npm:5.0.1"
     "@nestjs/throttler": "npm:6.5.0"
