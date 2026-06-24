@@ -1,3 +1,10 @@
+## [1.14.4](https://github.com/ffflorian/sauerteig/compare/v1.14.3...v1.14.4) (2026-06-24)
+
+
+### Bug Fixes
+
+* **deps:** Bump undici to 7.28.0 ([cb9ee7d](https://github.com/ffflorian/sauerteig/commit/cb9ee7d71ca147f96535a24563309edb26d98594))
+
 ## [1.14.3](https://github.com/ffflorian/sauerteig/compare/v1.14.2...v1.14.3) (2026-06-18)
 
 
