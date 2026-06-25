@@ -1051,9 +1051,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:11.1.26":
-  version: 11.1.26
-  resolution: "@nestjs/core@npm:11.1.26"
+"@nestjs/core@npm:11.1.27":
+  version: 11.1.27
+  resolution: "@nestjs/core@npm:11.1.27"
   dependencies:
     fast-safe-stringify: "npm:2.1.1"
     iterare: "npm:1.2.1"
@@ -1074,7 +1074,7 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: 10c0/2d8882de6e94fae7aca6bc29b4778ccdce20bfb901e5bb845fb6d439fea339fb5f817a7b9469659aa4e2b8405d7a1ff0dcd7a696992f8c0699be5dc1213d42e1
+  checksum: 10c0/ac70ec5777bd93db85ba640dd952e8fd903162a71aa35f3aac99e33b1f5d87f17a317861dd7c060ee739c6252f38745a6991c713e15ca3cd354e27b036ad1e2d
   languageName: node
   linkType: hard
 
@@ -9974,7 +9974,7 @@ __metadata:
     "@ffflorian/eslint-config": "npm:0.14.2"
     "@ffflorian/prettier-config": "npm:1.0.0"
     "@nestjs/common": "npm:11.1.26"
-    "@nestjs/core": "npm:11.1.26"
+    "@nestjs/core": "npm:11.1.27"
     "@nestjs/mongoose": "npm:11.0.4"
     "@nestjs/platform-express": "npm:11.1.26"
     "@nestjs/schedule": "npm:6.1.3"
