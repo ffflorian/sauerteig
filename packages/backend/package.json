@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@ffflorian/eslint-config": "0.14.2",
-    "@ffflorian/prettier-config": "0.8.2",
+    "@ffflorian/prettier-config": "1.0.0",
     "@types/node": "~25",
     "@types/web-push": "3.6.4",
     "@vitest/coverage-v8": "4.1.8",
