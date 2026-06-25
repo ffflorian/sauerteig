@@ -31,6 +31,10 @@ updates:
       react:
         patterns:
           - react*
+      vite:
+        patterns:
+          - vite
+          - '@vite/*'
     ignore:
       - dependency-name: eslint
         update-types:
