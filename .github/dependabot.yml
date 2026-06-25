@@ -35,6 +35,9 @@ updates:
         patterns:
           - vitest
           - '@vitest/*'
+      nestjs:
+        patterns:
+          - '@nestjs/*'
     ignore:
       - dependency-name: eslint
         update-types:
