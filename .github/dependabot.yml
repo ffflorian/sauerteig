@@ -31,7 +31,7 @@ updates:
       react:
         patterns:
           - react*
-      vite:
+      vitest:
         patterns:
           - vitest
           - '@vitest/*'
