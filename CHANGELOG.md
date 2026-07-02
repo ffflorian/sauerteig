@@ -1,3 +1,10 @@
+## [1.14.7](https://github.com/ffflorian/sauerteig/compare/v1.14.6...v1.14.7) (2026-07-02)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.7.1 to 9.7.3 ([#1240](https://github.com/ffflorian/sauerteig/issues/1240)) ([515a81b](https://github.com/ffflorian/sauerteig/commit/515a81b60e2a47f39bd783a8ef317e9bb720562f))
+
 ## [1.14.6](https://github.com/ffflorian/sauerteig/compare/v1.14.5...v1.14.6) (2026-06-26)
 
 
