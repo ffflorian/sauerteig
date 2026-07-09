@@ -1,12 +1,25 @@
-import config from '@ffflorian/eslint-config-react';
-import {Config, defineConfig} from 'eslint/config';
+import eslintBaseConfig from '@ffflorian/eslint-config';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import {defineConfig} from 'eslint/config';
+import globals from 'globals';
 
 export default defineConfig([
-  config as Config,
+  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
+  reactHooks.configs.flat.recommended,
+  eslintBaseConfig,
   {
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     languageOptions: {
-      parserOptions: {
-        tsconfigRootDir: import.meta.dirname,
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
+      },
+    },
+    settings: {
+      react: {
+        version: 'detect',
       },
     },
   },
