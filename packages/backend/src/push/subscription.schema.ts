@@ -1,6 +1,8 @@
 import {Prop, Schema, SchemaFactory} from '@nestjs/mongoose';
 import {Document} from 'mongoose';
 
+export type ScheduledNotificationDocument = Document & ScheduledNotification;
+
 @Schema()
 export class ScheduledNotification {
   @Prop({required: true})
@@ -21,6 +23,4 @@ export class ScheduledNotification {
   @Prop({default: false})
   sent!: boolean;
 }
-
-export type ScheduledNotificationDocument = Document & ScheduledNotification;
 export const ScheduledNotificationSchema = SchemaFactory.createForClass(ScheduledNotification);
