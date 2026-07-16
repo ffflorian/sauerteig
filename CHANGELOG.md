@@ -1,3 +1,12 @@
+## [1.14.9](https://github.com/ffflorian/sauerteig/compare/v1.14.8...v1.14.9) (2026-07-16)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.7.3 to 9.7.4 ([#1258](https://github.com/ffflorian/sauerteig/issues/1258)) [ci skip] ([e63a983](https://github.com/ffflorian/sauerteig/commit/e63a98328c45e4c5add85ff11f66bb5ef1f5bb0e))
+* **deps:** Bump nginx from 1.31.2-alpine to 1.31.3-alpine ([#1253](https://github.com/ffflorian/sauerteig/issues/1253)) ([1c0dbbc](https://github.com/ffflorian/sauerteig/commit/1c0dbbc3badb028c9de06169c27a79acbe2c893e))
+* **deps:** Bump the nestjs group with 3 updates ([#1254](https://github.com/ffflorian/sauerteig/issues/1254)) [ci skip] ([63315d2](https://github.com/ffflorian/sauerteig/commit/63315d219984c719ff83e22266c338bc7a293796))
+
 ## [1.14.8](https://github.com/ffflorian/sauerteig/compare/v1.14.7...v1.14.8) (2026-07-09)
 
 
