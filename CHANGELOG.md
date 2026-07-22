@@ -1,3 +1,10 @@
+## [1.14.10](https://github.com/[secure]/sauerteig/compare/v1.14.9...v1.14.10) (2026-07-22)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 1.1.15 to 1.1.16 ([#1265](https://github.com/[secure]/sauerteig/issues/1265)) ([4ce89d5](https://github.com/[secure]/sauerteig/commit/4ce89d55dbe2bbc06348b91e89de3fe4213437e9))
+
 ## [1.14.9](https://github.com/ffflorian/sauerteig/compare/v1.14.8...v1.14.9) (2026-07-16)
 
 
