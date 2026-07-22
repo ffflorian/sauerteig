@@ -1,3 +1,10 @@
+## [1.14.11](https://github.com/[secure]/sauerteig/compare/v1.14.10...v1.14.11) (2026-07-22)
+
+
+### Bug Fixes
+
+* **deps:** Bump body-parser from 2.2.2 to 2.3.0 ([#1266](https://github.com/[secure]/sauerteig/issues/1266)) ([9404ea6](https://github.com/[secure]/sauerteig/commit/9404ea69df86f6a9a50bdc827e4642144fc66d73))
+
 ## [1.14.10](https://github.com/[secure]/sauerteig/compare/v1.14.9...v1.14.10) (2026-07-22)
 
 
