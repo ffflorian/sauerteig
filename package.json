@@ -6,7 +6,7 @@
     "@semantic-release/git": "10.0.1",
     "lefthook": "2.1.10",
     "prettier": "3.9.5",
-    "semantic-release": "25.0.6"
+    "semantic-release": "25.0.8"
   },
   "engines": {
     "node": ">= 26.0"
