@@ -10018,7 +10018,7 @@ __metadata:
     rxjs: "npm:7.8.2"
     tsx: "npm:4.23.0"
     typescript: "npm:6.0.3"
-    typescript-eslint: "npm:8.63.0"
+    typescript-eslint: "npm:8.64.0"
     vitest: "npm:4.1.10"
     web-push: "npm:3.6.7"
   languageName: unknown
