@@ -1,3 +1,11 @@
+## [1.14.12](https://github.com/[secure]/sauerteig/compare/v1.14.11...v1.14.12) (2026-07-23)
+
+
+### Bug Fixes
+
+* **deps:** Bump helmet from 8.2.0 to 8.3.0 ([#1273](https://github.com/[secure]/sauerteig/issues/1273)) ([8d07470](https://github.com/[secure]/sauerteig/commit/8d07470513ba6d0f8c1ed80df8d3bb3911ebe264))
+* **deps:** Bump nginx from `2776cd5` to `4a73073` ([#1271](https://github.com/[secure]/sauerteig/issues/1271)) [ci skip] ([0334f63](https://github.com/[secure]/sauerteig/commit/0334f631575a1a6bbcf0457249a8993ec4fb2bee))
+
 ## [1.14.11](https://github.com/[secure]/sauerteig/compare/v1.14.10...v1.14.11) (2026-07-22)
 
 
