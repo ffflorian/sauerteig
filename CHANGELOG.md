@@ -1,3 +1,15 @@
+## [1.14.13](https://github.com/[secure]/sauerteig/compare/v1.14.12...v1.14.13) (2026-07-30)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 1.1.16 to 1.1.18 ([#1292](https://github.com/[secure]/sauerteig/issues/1292)) [ci skip] ([0665302](https://github.com/[secure]/sauerteig/commit/0665302908c980ff5ba00860d17c6ea3255cf69d))
+* **deps:** Bump js-yaml from 4.2.0 to 4.3.0 ([#1293](https://github.com/[secure]/sauerteig/issues/1293)) [ci skip] ([c0b89f5](https://github.com/[secure]/sauerteig/commit/c0b89f53dfcc0179cb1cbcd065c9c30463f8c3c9))
+* **deps:** Bump mongoose from 9.7.4 to 9.8.0 ([#1283](https://github.com/[secure]/sauerteig/issues/1283)) [ci skip] ([25d441b](https://github.com/[secure]/sauerteig/commit/25d441b92adad29535c79b6fd0c226ca4882fd2b))
+* **deps:** Bump postcss from 8.5.15 to 8.5.25 ([#1290](https://github.com/[secure]/sauerteig/issues/1290)) [ci skip] ([774c20e](https://github.com/[secure]/sauerteig/commit/774c20e5c7a0c2ec8490bb85dae4ba1e27ae7688))
+* **deps:** Bump tar from 7.5.16 to 7.5.22 ([#1291](https://github.com/[secure]/sauerteig/issues/1291)) ([34cd208](https://github.com/[secure]/sauerteig/commit/34cd208727b6fd66af43ceb3452f5dbf98723590))
+* **deps:** Bump the react group across 1 directory with 2 updates ([#1279](https://github.com/[secure]/sauerteig/issues/1279)) [ci skip] ([9bc4c35](https://github.com/[secure]/sauerteig/commit/9bc4c3516b3716a0e74f422d8901acd7b1dc4714))
+
 ## [1.14.12](https://github.com/[secure]/sauerteig/compare/v1.14.11...v1.14.12) (2026-07-23)
 
 
