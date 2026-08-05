@@ -1,3 +1,11 @@
+## [1.14.14](https://github.com/[secure]/sauerteig/compare/v1.14.13...v1.14.14) (2026-08-05)
+
+
+### Bug Fixes
+
+* **deps:** Bump ip-address from 10.2.0 to 10.4.0 ([#1295](https://github.com/[secure]/sauerteig/issues/1295)) ([2bad9fb](https://github.com/[secure]/sauerteig/commit/2bad9fb1f38c62609597d8106ac08d3349c8d63a))
+* **deps:** Bump undici from 6.27.0 to 6.28.0 ([#1296](https://github.com/[secure]/sauerteig/issues/1296)) [ci skip] ([22f669c](https://github.com/[secure]/sauerteig/commit/22f669cb0294f55a63572cce1321169241ac27a8))
+
 ## [1.14.13](https://github.com/[secure]/sauerteig/compare/v1.14.12...v1.14.13) (2026-07-30)
 
 
