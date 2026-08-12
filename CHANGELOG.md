@@ -1,3 +1,11 @@
+## [1.14.16](https://github.com/[secure]/sauerteig/compare/v1.14.15...v1.14.16) (2026-08-12)
+
+
+### Bug Fixes
+
+* **deps:** Bump js-yaml from 4.3.0 to 4.3.1 ([#1313](https://github.com/[secure]/sauerteig/issues/1313)) ([665759d](https://github.com/[secure]/sauerteig/commit/665759d86be4d2187d834a8962fda719f21ae215))
+* **deps:** Bump nanoid from 3.3.16 to 3.3.18 ([#1312](https://github.com/[secure]/sauerteig/issues/1312)) [ci skip] ([520ef6f](https://github.com/[secure]/sauerteig/commit/520ef6fc9287c9d11118d6404a866946b3ea5ccf))
+
 ## [1.14.15](https://github.com/[secure]/sauerteig/compare/v1.14.14...v1.14.15) (2026-08-07)
 
 
