@@ -736,23 +736,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/eslint-config@npm:1.1.3":
-  version: 1.1.3
-  resolution: "@ffflorian/eslint-config@npm:1.1.3"
+"@ffflorian/eslint-config@npm:1.1.4":
+  version: 1.1.4
+  resolution: "@ffflorian/eslint-config@npm:1.1.4"
   dependencies:
     "@eslint/js": "npm:10.0.1"
     eslint: "npm:9.39.5"
     eslint-import-resolver-typescript: "npm:4.4.5"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-oxlint: "npm:1.77.0"
+    eslint-plugin-oxlint: "npm:1.78.0"
     eslint-plugin-perfectionist: "npm:5.10.1"
-    globals: "npm:17.9.0"
+    globals: "npm:17.11.0"
     jiti: "npm:2.7.0"
-    typescript-eslint: "npm:8.66.0"
+    typescript-eslint: "npm:8.67.0"
   peerDependencies:
     eslint: ">=8.x || <10.x"
     typescript: ">=6.0.3"
-  checksum: 10c0/6babd5b6ad1e79df2e249dfe61887343c0cb879fb2f74d5f40ba9c34c2dd2e392b58a4c90a5c7526ec63e9b14c172791ca5833b848d9f59d7dd24321c50e1aaa
+  checksum: 10c0/30183d3167800df3031bb4a43e688eea2e9be7db5df775269c8ab6b931c067f8d2a6e3b20137860e710222abbf74c9d65cd9e4fa48b46174a33dab11e0f1f644
   languageName: node
   linkType: hard
 
@@ -4913,14 +4913,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-oxlint@npm:1.77.0":
-  version: 1.77.0
-  resolution: "eslint-plugin-oxlint@npm:1.77.0"
+"eslint-plugin-oxlint@npm:1.78.0":
+  version: 1.78.0
+  resolution: "eslint-plugin-oxlint@npm:1.78.0"
   dependencies:
     jsonc-parser: "npm:^3.3.1"
   peerDependencies:
-    oxlint: ~1.77.0
-  checksum: 10c0/e88a244116de20fd532e16edba1476ef35f2d84c6c29b8ac82f990ba925e2947d744b8f2299d79b5479a04c6cea5564c2ca5619bc0ae3386e9ad9904f139bc32
+    oxlint: ~1.78.0
+  checksum: 10c0/f0fc7853efaa6c4b99e870a222fe100b6a62740cd612b0f8a4bef63b8c36d474260b16039cf7b40c7afeee58291b987a6b9f1a30d305b917efc1ddb6f8c528b2
   languageName: node
   linkType: hard
 
@@ -9970,7 +9970,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sauerteig-backend@workspace:packages/backend"
   dependencies:
-    "@ffflorian/eslint-config": "npm:1.1.3"
+    "@ffflorian/eslint-config": "npm:1.1.4"
     "@ffflorian/prettier-config": "npm:1.0.1"
     "@nestjs/common": "npm:11.1.28"
     "@nestjs/core": "npm:11.1.28"
