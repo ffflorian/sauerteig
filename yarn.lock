@@ -736,15 +736,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/eslint-config@npm:1.1.4":
-  version: 1.1.4
-  resolution: "@ffflorian/eslint-config@npm:1.1.4"
+"@ffflorian/eslint-config@npm:1.1.5":
+  version: 1.1.5
+  resolution: "@ffflorian/eslint-config@npm:1.1.5"
   dependencies:
     "@eslint/js": "npm:10.0.1"
     eslint: "npm:9.39.5"
     eslint-import-resolver-typescript: "npm:4.4.5"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-oxlint: "npm:1.78.0"
+    eslint-plugin-oxlint: "npm:1.79.0"
     eslint-plugin-perfectionist: "npm:5.10.1"
     globals: "npm:17.11.0"
     jiti: "npm:2.7.0"
@@ -752,7 +752,7 @@ __metadata:
   peerDependencies:
     eslint: ">=8.x || <10.x"
     typescript: ">=6.0.3"
-  checksum: 10c0/30183d3167800df3031bb4a43e688eea2e9be7db5df775269c8ab6b931c067f8d2a6e3b20137860e710222abbf74c9d65cd9e4fa48b46174a33dab11e0f1f644
+  checksum: 10c0/2988be0cd935b9b3f58113e9aefb4ded633b1005f6e7ebc64c9ce58083487d271c102cdaef5e1ea9e56213b0670b8030e71e35518c4bc31218d9a204d7769bd9
   languageName: node
   linkType: hard
 
@@ -4788,14 +4788,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-oxlint@npm:1.78.0":
-  version: 1.78.0
-  resolution: "eslint-plugin-oxlint@npm:1.78.0"
+"eslint-plugin-oxlint@npm:1.79.0":
+  version: 1.79.0
+  resolution: "eslint-plugin-oxlint@npm:1.79.0"
   dependencies:
     jsonc-parser: "npm:^3.3.1"
   peerDependencies:
-    oxlint: ~1.78.0
-  checksum: 10c0/f0fc7853efaa6c4b99e870a222fe100b6a62740cd612b0f8a4bef63b8c36d474260b16039cf7b40c7afeee58291b987a6b9f1a30d305b917efc1ddb6f8c528b2
+    oxlint: ~1.79.0
+  checksum: 10c0/539cefdd325359b0b0d508eaf11d72c50ca148c6ba68673afe6c25b1d1c93d616a39ab4455b0b1e0a5800a884c62619ac89ef5c81ad5c364ebee736713003d4c
   languageName: node
   linkType: hard
 
@@ -9841,7 +9841,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sauerteig-backend@workspace:packages/backend"
   dependencies:
-    "@ffflorian/eslint-config": "npm:1.1.4"
+    "@ffflorian/eslint-config": "npm:1.1.5"
     "@ffflorian/prettier-config": "npm:1.0.1"
     "@nestjs/common": "npm:11.2.1"
     "@nestjs/core": "npm:11.2.1"
