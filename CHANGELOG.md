@@ -1,3 +1,10 @@
+## [1.14.18](https://github.com/[secure]/sauerteig/compare/v1.14.17...v1.14.18) (2026-08-27)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.9.2 to 9.9.3 ([#1338](https://github.com/[secure]/sauerteig/issues/1338)) ([0dc4981](https://github.com/[secure]/sauerteig/commit/0dc4981eaa7ba7860ab4a41926f50d62e1fd944e))
+
 ## [1.14.17](https://github.com/[secure]/sauerteig/compare/v1.14.16...v1.14.17) (2026-08-20)
 
 
