@@ -1,3 +1,10 @@
+## [1.14.19](https://github.com/[secure]/sauerteig/compare/v1.14.18...v1.14.19) (2026-09-01)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion to 5.0.9 ([c56689a](https://github.com/[secure]/sauerteig/commit/c56689ae0b8d88cbfc26df8993b74d25bd44db6e))
+
 ## [1.14.18](https://github.com/[secure]/sauerteig/compare/v1.14.17...v1.14.18) (2026-08-27)
 
 
