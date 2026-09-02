@@ -1,3 +1,10 @@
+## [1.14.20](https://github.com/[secure]/sauerteig/compare/v1.14.19...v1.14.20) (2026-09-02)
+
+
+### Bug Fixes
+
+* **deps:** Bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1343](https://github.com/[secure]/sauerteig/issues/1343)) ([6652234](https://github.com/[secure]/sauerteig/commit/6652234b7b3e932e07d641e4286d8364c7b8cb67))
+
 ## [1.14.19](https://github.com/[secure]/sauerteig/compare/v1.14.18...v1.14.19) (2026-09-01)
 
 
