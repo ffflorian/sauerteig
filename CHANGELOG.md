@@ -1,3 +1,12 @@
+## [1.14.23](https://github.com/[secure]/sauerteig/compare/v1.14.22...v1.14.23) (2026-09-03)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.9.3 to 9.9.4 ([#1352](https://github.com/[secure]/sauerteig/issues/1352)) [ci skip] ([a5811a7](https://github.com/[secure]/sauerteig/commit/a5811a75a71acbca6f5d6e6573274930da5a062e))
+* **deps:** Bump nginx from 1.31.4-alpine to 1.31.5-alpine ([#1347](https://github.com/[secure]/sauerteig/issues/1347)) ([4ad586c](https://github.com/[secure]/sauerteig/commit/4ad586cfbbb0f65d60aea0479635e21985c70436))
+* **deps:** Bump node from 26.7.0-alpine to 26.8.1-alpine ([#1348](https://github.com/[secure]/sauerteig/issues/1348)) [ci skip] ([b9b502d](https://github.com/[secure]/sauerteig/commit/b9b502dc7971a40833cdf5b5a178e6d902b4c224))
+
 ## [1.14.22](https://github.com/[secure]/sauerteig/compare/v1.14.21...v1.14.22) (2026-09-03)
 
 
