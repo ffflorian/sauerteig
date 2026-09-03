@@ -1,3 +1,10 @@
+## [1.14.21](https://github.com/[secure]/sauerteig/compare/v1.14.20...v1.14.21) (2026-09-03)
+
+
+### Bug Fixes
+
+* **deps:** Bump browserslist from 4.28.5 to 4.28.8 ([#1344](https://github.com/[secure]/sauerteig/issues/1344)) ([8390205](https://github.com/[secure]/sauerteig/commit/83902054d363902425c04df17a3618c7951b182a))
+
 ## [1.14.20](https://github.com/[secure]/sauerteig/compare/v1.14.19...v1.14.20) (2026-09-02)
 
 
