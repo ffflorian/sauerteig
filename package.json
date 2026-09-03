@@ -4,7 +4,7 @@
     "@ffflorian/prettier-config": "1.0.1",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
-    "lefthook": "2.1.10",
+    "lefthook": "2.1.12",
     "prettier": "3.9.6",
     "semantic-release": "25.0.9"
   },
