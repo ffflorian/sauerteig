@@ -1,3 +1,10 @@
+## [1.14.22](https://github.com/[secure]/sauerteig/compare/v1.14.21...v1.14.22) (2026-09-03)
+
+
+### Bug Fixes
+
+* **deps:** Bump qs from 6.15.2 to 6.16.0 ([#1345](https://github.com/[secure]/sauerteig/issues/1345)) ([72123d2](https://github.com/[secure]/sauerteig/commit/72123d23f04499c801a1c494a85126819084da5c))
+
 ## [1.14.21](https://github.com/[secure]/sauerteig/compare/v1.14.20...v1.14.21) (2026-09-03)
 
 
