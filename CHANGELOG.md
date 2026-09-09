@@ -1,3 +1,10 @@
+## [1.14.25](https://github.com/[secure]/sauerteig/compare/v1.14.24...v1.14.25) (2026-09-09)
+
+
+### Bug Fixes
+
+* **deps:** Bump js-yaml from 4.3.1 to 4.3.2 ([#1361](https://github.com/[secure]/sauerteig/issues/1361)) ([630c30c](https://github.com/[secure]/sauerteig/commit/630c30c38645b3c1750dc93ff9ff062bd8bfbbf3))
+
 ## [1.14.24](https://github.com/[secure]/sauerteig/compare/v1.14.23...v1.14.24) (2026-09-09)
 
 
