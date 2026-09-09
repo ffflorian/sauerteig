@@ -1,3 +1,10 @@
+## [1.14.24](https://github.com/[secure]/sauerteig/compare/v1.14.23...v1.14.24) (2026-09-09)
+
+
+### Bug Fixes
+
+* **deps:** Bump @humanfs/node from 0.16.7 to 0.16.8 ([#1360](https://github.com/[secure]/sauerteig/issues/1360)) ([e44e3f6](https://github.com/[secure]/sauerteig/commit/e44e3f64c94896962424a33f3fdda30f9ac0fb89))
+
 ## [1.14.23](https://github.com/[secure]/sauerteig/compare/v1.14.22...v1.14.23) (2026-09-03)
 
 
