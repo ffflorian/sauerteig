@@ -59,14 +59,14 @@ This file explains how coding agents should work in this repository.
 - **Vite 8** as build tool and dev server
 - **date-fns 4** for time formatting (German locale)
 - **react-swipeable** for touch gestures
-- **vitest 4** + **@testing-library/react** for unit and component tests
+- **vitest 5** + **@testing-library/react** for unit and component tests
 
 ### Backend (`packages/backend`)
 
 - **NestJS 11** with **TypeScript 6** (strict mode)
 - **Mongoose 9** for MongoDB access
 - **web-push 3** for Web Push notifications
-- **vitest 4** for unit tests
+- **vitest 5** for unit tests
 
 ### Shared
 
