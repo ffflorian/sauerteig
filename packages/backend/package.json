@@ -13,7 +13,7 @@
     "web-push": "3.6.7"
   },
   "devDependencies": {
-    "@ffflorian/eslint-config": "1.1.6",
+    "@ffflorian/eslint-config": "1.1.7",
     "@ffflorian/prettier-config": "1.0.1",
     "@types/node": "~26",
     "@types/web-push": "3.6.4",
@@ -21,9 +21,9 @@
     "eslint": "9.39.5",
     "oxlint": "1.81.0",
     "prettier": "3.9.6",
-    "tsx": "4.23.12",
+    "tsx": "4.23.13",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.68.0",
+    "typescript-eslint": "8.69.0",
     "vite": "8.2.2",
     "vitest": "5.0.0"
   },
