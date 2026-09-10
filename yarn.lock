@@ -9492,6 +9492,7 @@ __metadata:
     tsx: "npm:4.23.12"
     typescript: "npm:6.0.3"
     typescript-eslint: "npm:8.68.0"
+    vite: "npm:8.2.2"
     vitest: "npm:5.0.0"
     web-push: "npm:3.6.7"
   languageName: unknown
