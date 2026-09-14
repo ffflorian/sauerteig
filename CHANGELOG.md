@@ -1,3 +1,10 @@
+## [1.14.27](https://github.com/[secure]/sauerteig/compare/v1.14.26...v1.14.27) (2026-09-14)
+
+
+### Bug Fixes
+
+* **deps:** Bump the nestjs group to 12.x ([#1365](https://github.com/[secure]/sauerteig/issues/1365)) ([c31e714](https://github.com/[secure]/sauerteig/commit/c31e714fd573aca9f1aca8874c819ab96ef01900))
+
 ## [1.14.26](https://github.com/[secure]/sauerteig/compare/v1.14.25...v1.14.26) (2026-09-10)
 
 
