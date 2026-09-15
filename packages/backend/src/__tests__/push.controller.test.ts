@@ -11,6 +11,8 @@ vi.mock('../config/config.js', () => ({
   VAPID_SUBJECT: 'mailto:test@example.com',
 }));
 
+const ONE_MINUTE_IN_MILLIS = 60_000;
+
 describe('PushController', () => {
   let controller: PushController;
   let mockService: {cancel: ReturnType<typeof vi.fn>; schedule: ReturnType<typeof vi.fn>};
@@ -30,7 +32,7 @@ describe('PushController', () => {
 
   it('schedule delegates to service and returns timerId', async () => {
     const dto = {
-      expiresAt: Date.now() + 60_000,
+      expiresAt: Date.now() + ONE_MINUTE_IN_MILLIS,
       label: 'Test',
       subscription: {endpoint: 'https://push.example.com', keys: {auth: 'auth', p256dh: 'p256dh'}},
     };

@@ -14,9 +14,3 @@ pre-commit:
     oxlint-backend:
       glob: 'packages/backend/**/*.{js,ts}'
       run: (cd packages/backend && npx --no oxlint -- --fix $(echo {staged_files} | sed 's|packages/backend/||g')) && git add {staged_files}
-    eslint-frontend:
-      glob: 'packages/frontend/**/*.{js,ts,jsx,tsx}'
-      run: (cd packages/frontend && npx --no eslint -- --fix $(echo {staged_files} | sed 's|packages/frontend/||g')) && git add {staged_files}
-    eslint-backend:
-      glob: 'packages/backend/**/*.{js,ts}'
-      run: (cd packages/backend && npx --no eslint -- --fix $(echo {staged_files} | sed 's|packages/backend/||g')) && git add {staged_files}
