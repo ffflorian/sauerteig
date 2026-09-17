@@ -19,7 +19,7 @@
     "@types/web-push": "3.6.4",
     "@vitest/coverage-v8": "5.0.0",
     "eslint": "10.10.0",
-    "oxlint": "1.81.0",
+    "oxlint": "1.82.0",
     "prettier": "3.9.6",
     "tsx": "4.23.13",
     "typescript": "6.0.3",
