@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@ffflorian/oxlint-config": "1.0.8",
-    "@ffflorian/prettier-config": "1.0.1",
+    "@ffflorian/prettier-config": "1.0.3",
     "@types/node": "~26",
     "@types/web-push": "3.6.4",
     "@vitest/coverage-v8": "5.0.0",
