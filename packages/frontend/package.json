@@ -19,7 +19,7 @@
     "react-swipeable": "7.0.2"
   },
   "devDependencies": {
-    "@ffflorian/oxlint-config": "1.0.5",
+    "@ffflorian/oxlint-config": "1.0.8",
     "@ffflorian/prettier-config": "1.0.1",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "7.0.1",

@@ -13,7 +13,7 @@
     "web-push": "3.6.7"
   },
   "devDependencies": {
-    "@ffflorian/oxlint-config": "1.0.5",
+    "@ffflorian/oxlint-config": "1.0.8",
     "@ffflorian/prettier-config": "1.0.1",
     "@types/node": "~26",
     "@types/web-push": "3.6.4",
