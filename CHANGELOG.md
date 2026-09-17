@@ -1,3 +1,13 @@
+## [1.14.28](https://github.com/[secure]/sauerteig/compare/v1.14.27...v1.14.28) (2026-09-17)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.9.5 to 9.10.0 ([#1386](https://github.com/[secure]/sauerteig/issues/1386)) [ci skip] ([75e544c](https://github.com/[secure]/sauerteig/commit/75e544cfe8c70352d86c5965ddbc2d9fc597fcc2))
+* **deps:** Bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1378](https://github.com/[secure]/sauerteig/issues/1378)) ([b6cdb7c](https://github.com/[secure]/sauerteig/commit/b6cdb7cc303bab09cd9cf2b29b5897eab663857b))
+* **deps:** Bump node from 26.8.2-alpine to 26.9.0-alpine ([#1379](https://github.com/[secure]/sauerteig/issues/1379)) [ci skip] ([64da96d](https://github.com/[secure]/sauerteig/commit/64da96d8062beff14ff0364fbf200f212827bfcc))
+* **deps:** Bump the react group across 1 directory with 2 updates ([#1380](https://github.com/[secure]/sauerteig/issues/1380)) [ci skip] ([7b0d680](https://github.com/[secure]/sauerteig/commit/7b0d6809e3c8d8bb7070045fb1b5fb877cb6978f))
+
 ## [1.14.27](https://github.com/[secure]/sauerteig/compare/v1.14.26...v1.14.27) (2026-09-14)
 
 
