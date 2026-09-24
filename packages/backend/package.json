@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@ffflorian/oxfmt-config": "1.2.1",
-    "@ffflorian/oxlint-config": "1.0.8",
+    "@ffflorian/oxlint-config": "1.0.9",
     "@types/node": "~26",
     "@types/web-push": "3.6.4",
     "@vitest/coverage-v8": "5.0.0",
