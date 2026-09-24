@@ -1,3 +1,13 @@
+## [1.14.29](https://github.com/[secure]/sauerteig/compare/v1.14.28...v1.14.29) (2026-09-24)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.10.0 to 9.10.1 ([#1393](https://github.com/[secure]/sauerteig/issues/1393)) [ci skip] ([8ee269b](https://github.com/[secure]/sauerteig/commit/8ee269bf11bd9fc506569e00adfa9dfb9a5fceb4))
+* **deps:** Bump nginx from `d0a6faa` to `d10753d` ([#1390](https://github.com/[secure]/sauerteig/issues/1390)) [ci skip] ([b854713](https://github.com/[secure]/sauerteig/commit/b854713c354578deb40f2549f9f8df750d94fa2e))
+* **deps:** Bump node from 26.9.0-alpine to 26.10.0-alpine ([#1389](https://github.com/[secure]/sauerteig/issues/1389)) ([624af9f](https://github.com/[secure]/sauerteig/commit/624af9fd4d1fa051c5dcc3f47263468b11da233d))
+* **deps:** Bump the nestjs group across 1 directory with 5 updates ([#1392](https://github.com/[secure]/sauerteig/issues/1392)) [ci skip] ([d1674ed](https://github.com/[secure]/sauerteig/commit/d1674ed3da1e6deb064d15740fb209b4b067d97d))
+
 ## [1.14.28](https://github.com/[secure]/sauerteig/compare/v1.14.27...v1.14.28) (2026-09-17)
 
 
