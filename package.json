@@ -1,11 +1,11 @@
 {
   "author": "Florian Imdahl <git@ffflorian.de>",
   "devDependencies": {
-    "@ffflorian/prettier-config": "1.0.3",
+    "@ffflorian/oxfmt-config": "1.2.1",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
     "lefthook": "2.1.12",
-    "prettier": "3.9.6",
+    "oxfmt": "0.70.0",
     "semantic-release": "25.0.9"
   },
   "engines": {
@@ -14,7 +14,6 @@
   "license": "GPL-3.0",
   "name": "sauerteig",
   "packageManager": "yarn@4.18.0",
-  "prettier": "@ffflorian/prettier-config",
   "private": true,
   "resolutions": {
     "strip-ansi": "^6"
@@ -24,6 +23,7 @@
     "clean": "yarn workspaces foreach --all --parallel --exclude sauerteig run clean",
     "dist": "yarn workspaces foreach --all --parallel --exclude sauerteig run dist",
     "fix": "yarn workspaces foreach --all --parallel --exclude sauerteig run fix",
+    "format": "oxfmt .",
     "lint": "yarn workspaces foreach --all --parallel --exclude sauerteig run lint",
     "test": "yarn workspaces foreach --all --parallel --exclude sauerteig run test"
   },

@@ -19,8 +19,8 @@
     "react-swipeable": "7.0.2"
   },
   "devDependencies": {
+    "@ffflorian/oxfmt-config": "1.2.1",
     "@ffflorian/oxlint-config": "1.0.8",
-    "@ffflorian/prettier-config": "1.0.3",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
@@ -34,15 +34,14 @@
     "eslint-plugin-perfectionist": "5.11.0",
     "happy-dom": "20.14.5",
     "jsdom": "30.0.1",
+    "oxfmt": "0.70.0",
     "oxlint": "1.82.0",
-    "prettier": "3.9.6",
     "typescript": "6.0.3",
     "vite": "8.3.0",
     "vite-plugin-eslint": "1.8.1",
     "vitest": "5.0.0"
   },
   "name": "sauerteig-frontend",
-  "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
@@ -50,12 +49,12 @@
     "dev": "yarn start",
     "dist": "yarn clean && yarn build",
     "fix": "yarn fix:ts && yarn fix:other",
-    "fix:other": "yarn prettier --write",
+    "fix:other": "yarn format",
     "fix:ts": "yarn lint:ts --fix",
+    "format": "oxfmt .",
     "lint": "yarn lint:other && yarn lint:ts",
-    "lint:other": "yarn prettier --check",
+    "lint:other": "yarn format --check",
     "lint:ts": "oxlint --ignore-path .gitignore .",
-    "prettier": "prettier --ignore-path ../../.prettierignore .",
     "start": "vite --open",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"

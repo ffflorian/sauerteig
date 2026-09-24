@@ -70,7 +70,7 @@ This file explains how coding agents should work in this repository.
 
 ### Shared
 
-- **ESLint** + **oxlint** for linting, **Prettier** for formatting
+- **ESLint** + **oxlint** for linting, **oxfmt** for formatting
 - **lefthook** for pre-commit hooks
 - **Semantic Release** for automated versioning and changelogs
 
@@ -156,7 +156,7 @@ Rezept.md                   # the full recipe as plain text
 - **Commits**: follow Conventional Commits (Angular preset) – `feat:`, `fix:`, `chore:`, etc. Breaking changes use `BREAKING CHANGE:` in the footer. Do not add Claude session URLs to commit messages or PR texts.
 - **Versioning**: automated via Semantic Release on push to `main`.
 - **Language**: user-facing UI content is in German. All code (including code comments), commit messages, and PR descriptions are in English.
-- **Code style**: 2-space indent, LF line endings, UTF-8 (enforced by `.editorconfig` and Prettier).
+- **Code style**: 2-space indent, LF line endings, UTF-8 (enforced by `.editorconfig` and oxfmt).
 - **TypeScript**: strict mode enabled; no `any` without justification.
 
 ## CI/CD
@@ -172,7 +172,7 @@ Rezept.md                   # the full recipe as plain text
 
 Runs sequentially on staged files:
 
-1. Prettier – formats `.js/.ts/.jsx/.tsx/.css/.json/.md/.yml`
+1. oxfmt – formats `.js/.ts/.jsx/.tsx/.css/.json/.md/.yml`
 2. oxlint – fast lint + autofix for TypeScript/JavaScript
 3. ESLint – full lint + autofix for TypeScript/JavaScript
 
