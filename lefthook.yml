@@ -1,13 +1,13 @@
 pre-commit:
   parallel: false
   commands:
-    prettier:
+    format:
       glob: '**/*.{js,ts,jsx,tsx,css,json,md,yml}'
       exclude:
         - '**/CLAUDE.md'
         - '**/CHANGELOG.md'
         - .yarnrc.yml
-      run: npx --no prettier -- --write {staged_files} && git add {staged_files}
+      run: npx --no oxfmt {staged_files} && git add {staged_files}
     oxlint-frontend:
       glob: 'packages/frontend/**/*.{js,ts,jsx,tsx}'
       run: (cd packages/frontend && npx --no oxlint -- --fix $(echo {staged_files} | sed 's|packages/frontend/||g')) && git add {staged_files}
