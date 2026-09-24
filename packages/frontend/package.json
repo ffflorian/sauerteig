@@ -29,7 +29,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.1",
-    "@vitest/coverage-v8": "5.0.0",
+    "@vitest/coverage-v8": "5.0.1",
     "eslint": "10.10.0",
     "eslint-plugin-perfectionist": "5.11.0",
     "happy-dom": "20.14.5",
@@ -39,7 +39,7 @@
     "typescript": "6.0.3",
     "vite": "8.3.0",
     "vite-plugin-eslint": "1.8.1",
-    "vitest": "5.0.0"
+    "vitest": "5.0.1"
   },
   "name": "sauerteig-frontend",
   "private": true,
