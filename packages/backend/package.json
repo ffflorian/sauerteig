@@ -13,7 +13,7 @@
     "web-push": "3.6.7"
   },
   "devDependencies": {
-    "@ffflorian/oxfmt-config": "1.2.1",
+    "@ffflorian/oxfmt-config": "1.3.0",
     "@ffflorian/oxlint-config": "1.0.9",
     "@types/node": "~26",
     "@types/web-push": "3.6.4",
