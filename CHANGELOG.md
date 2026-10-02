@@ -1,3 +1,15 @@
+## [1.14.30](https://github.com/[secure]/sauerteig/compare/v1.14.29...v1.14.30) (2026-10-02)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 5.0.9 to 5.0.12 ([#1417](https://github.com/[secure]/sauerteig/issues/1417)) [ci skip] ([264e4ba](https://github.com/[secure]/sauerteig/commit/264e4ba9e28fc2e493fdd412df036ea880468785))
+* **deps:** Bump ip-address from 10.4.0 to 10.7.3 ([#1418](https://github.com/[secure]/sauerteig/issues/1418)) [ci skip] ([2a8f937](https://github.com/[secure]/sauerteig/commit/2a8f937a3433bc5b5bf294a867721f020f52ac08))
+* **deps:** Bump mongoose from 9.10.1 to 9.10.2 ([#1413](https://github.com/[secure]/sauerteig/issues/1413)) [ci skip] ([94fc879](https://github.com/[secure]/sauerteig/commit/94fc8797e7223c87d58a485b82696ec175f3340e))
+* **deps:** Bump nginx from `d10753d` to `df221db` ([#1415](https://github.com/[secure]/sauerteig/issues/1415)) ([099eed6](https://github.com/[secure]/sauerteig/commit/099eed6ae391773e4d2eec4d951f6d82d9935b93))
+* **deps:** Bump the nestjs group across 1 directory with 4 updates ([#1406](https://github.com/[secure]/sauerteig/issues/1406)) [ci skip] ([dfb05ef](https://github.com/[secure]/sauerteig/commit/dfb05efa9cb9d8a82ca660f4909f42236db97f53))
+* **deps:** Bump undici from 6.28.0 to 6.29.0 ([#1419](https://github.com/[secure]/sauerteig/issues/1419)) [ci skip] ([cd3db8b](https://github.com/[secure]/sauerteig/commit/cd3db8bb646c4cfb6817e62f8360024f89f6f2b0))
+
 ## [1.14.29](https://github.com/[secure]/sauerteig/compare/v1.14.28...v1.14.29) (2026-09-24)
 
 
