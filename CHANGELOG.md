@@ -1,3 +1,15 @@
+## [1.14.31](https://github.com/[secure]/sauerteig/compare/v1.14.30...v1.14.31) (2026-10-08)
+
+
+### Bug Fixes
+
+* **deps:** Bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1431](https://github.com/[secure]/sauerteig/issues/1431)) ([f890400](https://github.com/[secure]/sauerteig/commit/f8904007b92a5285b34d71762394f238f918cf5f))
+* **deps:** Bump mongoose from 9.10.2 to 9.10.4 ([#1427](https://github.com/[secure]/sauerteig/issues/1427)) [ci skip] ([efb7361](https://github.com/[secure]/sauerteig/commit/efb73619f3d34edbde8908031ae2261d1630fd0d))
+* **deps:** Bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1433](https://github.com/[secure]/sauerteig/issues/1433)) [ci skip] ([1a1d449](https://github.com/[secure]/sauerteig/commit/1a1d4497d562894ff23cfe2c035a1961d4f3d31e))
+* **deps:** Bump proxy-addr from 2.0.7 to 2.0.8 ([#1434](https://github.com/[secure]/sauerteig/issues/1434)) [ci skip] ([f740def](https://github.com/[secure]/sauerteig/commit/f740def030ebc7990de950f024faf596dc7892e0))
+* **deps:** Bump source-map-js from 1.2.1 to 1.2.2 ([#1432](https://github.com/[secure]/sauerteig/issues/1432)) [ci skip] ([c20dc3d](https://github.com/[secure]/sauerteig/commit/c20dc3db4e3a089a4b32963fa2055945e1af1a38))
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1422](https://github.com/[secure]/sauerteig/issues/1422)) [ci skip] ([ab748f6](https://github.com/[secure]/sauerteig/commit/ab748f65254cc4b20515db36df98eee32103bea6))
+
 ## [1.14.30](https://github.com/[secure]/sauerteig/compare/v1.14.29...v1.14.30) (2026-10-02)
 
 
