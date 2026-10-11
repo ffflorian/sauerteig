@@ -1,3 +1,10 @@
+## [1.14.32](https://github.com/ffflorian/sauerteig/compare/v1.14.31...v1.14.32) (2026-10-11)
+
+
+### Bug Fixes
+
+* **deps:** Bump handlebars from 4.7.9 to 4.7.10 ([#1436](https://github.com/ffflorian/sauerteig/issues/1436)) ([cc29fee](https://github.com/ffflorian/sauerteig/commit/cc29feeff885f06a7eb780d812355eb58e356763))
+
 ## [1.14.31](https://github.com/ffflorian/sauerteig/compare/v1.14.30...v1.14.31) (2026-10-08)
 
 
