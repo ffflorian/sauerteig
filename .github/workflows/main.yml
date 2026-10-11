@@ -97,7 +97,7 @@ jobs:
           dockerfiles: |
             frontend:frontend.Dockerfile
             backend:backend.Dockerfile
-          git_author: 'ffflorian'
+          git_author: 'Florian Imdahl'
           git_email: 'git@ffflorian.de'
 
   # Deploy is part of this workflow because GitHub does not fire release events
