@@ -1,3 +1,11 @@
+## [1.14.33](https://github.com/ffflorian/sauerteig/compare/v1.14.32...v1.14.33) (2026-10-11)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.10.4 to 9.11.0 ([#1440](https://github.com/ffflorian/sauerteig/issues/1440)) [ci skip] ([05d0157](https://github.com/ffflorian/sauerteig/commit/05d01572584332e62215e4938df4fefbd06e77ed))
+* **deps:** Bump node from 26.10.0-alpine to 26.11.1-alpine ([#1438](https://github.com/ffflorian/sauerteig/issues/1438)) ([aa6d926](https://github.com/ffflorian/sauerteig/commit/aa6d92638bb9d81864b431111ec2cb0f2ab3acba))
+
 ## [1.14.32](https://github.com/ffflorian/sauerteig/compare/v1.14.31...v1.14.32) (2026-10-11)
 
 
