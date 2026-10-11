@@ -1,187 +1,187 @@
-## [1.14.31](https://github.com/[secure]/sauerteig/compare/v1.14.30...v1.14.31) (2026-10-08)
+## [1.14.31](https://github.com/ffflorian/sauerteig/compare/v1.14.30...v1.14.31) (2026-10-08)
 
 
 ### Bug Fixes
 
-* **deps:** Bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1431](https://github.com/[secure]/sauerteig/issues/1431)) ([f890400](https://github.com/[secure]/sauerteig/commit/f8904007b92a5285b34d71762394f238f918cf5f))
-* **deps:** Bump mongoose from 9.10.2 to 9.10.4 ([#1427](https://github.com/[secure]/sauerteig/issues/1427)) [ci skip] ([efb7361](https://github.com/[secure]/sauerteig/commit/efb73619f3d34edbde8908031ae2261d1630fd0d))
-* **deps:** Bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1433](https://github.com/[secure]/sauerteig/issues/1433)) [ci skip] ([1a1d449](https://github.com/[secure]/sauerteig/commit/1a1d4497d562894ff23cfe2c035a1961d4f3d31e))
-* **deps:** Bump proxy-addr from 2.0.7 to 2.0.8 ([#1434](https://github.com/[secure]/sauerteig/issues/1434)) [ci skip] ([f740def](https://github.com/[secure]/sauerteig/commit/f740def030ebc7990de950f024faf596dc7892e0))
-* **deps:** Bump source-map-js from 1.2.1 to 1.2.2 ([#1432](https://github.com/[secure]/sauerteig/issues/1432)) [ci skip] ([c20dc3d](https://github.com/[secure]/sauerteig/commit/c20dc3db4e3a089a4b32963fa2055945e1af1a38))
-* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1422](https://github.com/[secure]/sauerteig/issues/1422)) [ci skip] ([ab748f6](https://github.com/[secure]/sauerteig/commit/ab748f65254cc4b20515db36df98eee32103bea6))
+* **deps:** Bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1431](https://github.com/ffflorian/sauerteig/issues/1431)) ([f890400](https://github.com/ffflorian/sauerteig/commit/f8904007b92a5285b34d71762394f238f918cf5f))
+* **deps:** Bump mongoose from 9.10.2 to 9.10.4 ([#1427](https://github.com/ffflorian/sauerteig/issues/1427)) [ci skip] ([efb7361](https://github.com/ffflorian/sauerteig/commit/efb73619f3d34edbde8908031ae2261d1630fd0d))
+* **deps:** Bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1433](https://github.com/ffflorian/sauerteig/issues/1433)) [ci skip] ([1a1d449](https://github.com/ffflorian/sauerteig/commit/1a1d4497d562894ff23cfe2c035a1961d4f3d31e))
+* **deps:** Bump proxy-addr from 2.0.7 to 2.0.8 ([#1434](https://github.com/ffflorian/sauerteig/issues/1434)) [ci skip] ([f740def](https://github.com/ffflorian/sauerteig/commit/f740def030ebc7990de950f024faf596dc7892e0))
+* **deps:** Bump source-map-js from 1.2.1 to 1.2.2 ([#1432](https://github.com/ffflorian/sauerteig/issues/1432)) [ci skip] ([c20dc3d](https://github.com/ffflorian/sauerteig/commit/c20dc3db4e3a089a4b32963fa2055945e1af1a38))
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1422](https://github.com/ffflorian/sauerteig/issues/1422)) [ci skip] ([ab748f6](https://github.com/ffflorian/sauerteig/commit/ab748f65254cc4b20515db36df98eee32103bea6))
 
-## [1.14.30](https://github.com/[secure]/sauerteig/compare/v1.14.29...v1.14.30) (2026-10-02)
-
-
-### Bug Fixes
-
-* **deps:** Bump brace-expansion from 5.0.9 to 5.0.12 ([#1417](https://github.com/[secure]/sauerteig/issues/1417)) [ci skip] ([264e4ba](https://github.com/[secure]/sauerteig/commit/264e4ba9e28fc2e493fdd412df036ea880468785))
-* **deps:** Bump ip-address from 10.4.0 to 10.7.3 ([#1418](https://github.com/[secure]/sauerteig/issues/1418)) [ci skip] ([2a8f937](https://github.com/[secure]/sauerteig/commit/2a8f937a3433bc5b5bf294a867721f020f52ac08))
-* **deps:** Bump mongoose from 9.10.1 to 9.10.2 ([#1413](https://github.com/[secure]/sauerteig/issues/1413)) [ci skip] ([94fc879](https://github.com/[secure]/sauerteig/commit/94fc8797e7223c87d58a485b82696ec175f3340e))
-* **deps:** Bump nginx from `d10753d` to `df221db` ([#1415](https://github.com/[secure]/sauerteig/issues/1415)) ([099eed6](https://github.com/[secure]/sauerteig/commit/099eed6ae391773e4d2eec4d951f6d82d9935b93))
-* **deps:** Bump the nestjs group across 1 directory with 4 updates ([#1406](https://github.com/[secure]/sauerteig/issues/1406)) [ci skip] ([dfb05ef](https://github.com/[secure]/sauerteig/commit/dfb05efa9cb9d8a82ca660f4909f42236db97f53))
-* **deps:** Bump undici from 6.28.0 to 6.29.0 ([#1419](https://github.com/[secure]/sauerteig/issues/1419)) [ci skip] ([cd3db8b](https://github.com/[secure]/sauerteig/commit/cd3db8bb646c4cfb6817e62f8360024f89f6f2b0))
-
-## [1.14.29](https://github.com/[secure]/sauerteig/compare/v1.14.28...v1.14.29) (2026-09-24)
+## [1.14.30](https://github.com/ffflorian/sauerteig/compare/v1.14.29...v1.14.30) (2026-10-02)
 
 
 ### Bug Fixes
 
-* **deps:** Bump mongoose from 9.10.0 to 9.10.1 ([#1393](https://github.com/[secure]/sauerteig/issues/1393)) [ci skip] ([8ee269b](https://github.com/[secure]/sauerteig/commit/8ee269bf11bd9fc506569e00adfa9dfb9a5fceb4))
-* **deps:** Bump nginx from `d0a6faa` to `d10753d` ([#1390](https://github.com/[secure]/sauerteig/issues/1390)) [ci skip] ([b854713](https://github.com/[secure]/sauerteig/commit/b854713c354578deb40f2549f9f8df750d94fa2e))
-* **deps:** Bump node from 26.9.0-alpine to 26.10.0-alpine ([#1389](https://github.com/[secure]/sauerteig/issues/1389)) ([624af9f](https://github.com/[secure]/sauerteig/commit/624af9fd4d1fa051c5dcc3f47263468b11da233d))
-* **deps:** Bump the nestjs group across 1 directory with 5 updates ([#1392](https://github.com/[secure]/sauerteig/issues/1392)) [ci skip] ([d1674ed](https://github.com/[secure]/sauerteig/commit/d1674ed3da1e6deb064d15740fb209b4b067d97d))
+* **deps:** Bump brace-expansion from 5.0.9 to 5.0.12 ([#1417](https://github.com/ffflorian/sauerteig/issues/1417)) [ci skip] ([264e4ba](https://github.com/ffflorian/sauerteig/commit/264e4ba9e28fc2e493fdd412df036ea880468785))
+* **deps:** Bump ip-address from 10.4.0 to 10.7.3 ([#1418](https://github.com/ffflorian/sauerteig/issues/1418)) [ci skip] ([2a8f937](https://github.com/ffflorian/sauerteig/commit/2a8f937a3433bc5b5bf294a867721f020f52ac08))
+* **deps:** Bump mongoose from 9.10.1 to 9.10.2 ([#1413](https://github.com/ffflorian/sauerteig/issues/1413)) [ci skip] ([94fc879](https://github.com/ffflorian/sauerteig/commit/94fc8797e7223c87d58a485b82696ec175f3340e))
+* **deps:** Bump nginx from `d10753d` to `df221db` ([#1415](https://github.com/ffflorian/sauerteig/issues/1415)) ([099eed6](https://github.com/ffflorian/sauerteig/commit/099eed6ae391773e4d2eec4d951f6d82d9935b93))
+* **deps:** Bump the nestjs group across 1 directory with 4 updates ([#1406](https://github.com/ffflorian/sauerteig/issues/1406)) [ci skip] ([dfb05ef](https://github.com/ffflorian/sauerteig/commit/dfb05efa9cb9d8a82ca660f4909f42236db97f53))
+* **deps:** Bump undici from 6.28.0 to 6.29.0 ([#1419](https://github.com/ffflorian/sauerteig/issues/1419)) [ci skip] ([cd3db8b](https://github.com/ffflorian/sauerteig/commit/cd3db8bb646c4cfb6817e62f8360024f89f6f2b0))
 
-## [1.14.28](https://github.com/[secure]/sauerteig/compare/v1.14.27...v1.14.28) (2026-09-17)
-
-
-### Bug Fixes
-
-* **deps:** Bump mongoose from 9.9.5 to 9.10.0 ([#1386](https://github.com/[secure]/sauerteig/issues/1386)) [ci skip] ([75e544c](https://github.com/[secure]/sauerteig/commit/75e544cfe8c70352d86c5965ddbc2d9fc597fcc2))
-* **deps:** Bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1378](https://github.com/[secure]/sauerteig/issues/1378)) ([b6cdb7c](https://github.com/[secure]/sauerteig/commit/b6cdb7cc303bab09cd9cf2b29b5897eab663857b))
-* **deps:** Bump node from 26.8.2-alpine to 26.9.0-alpine ([#1379](https://github.com/[secure]/sauerteig/issues/1379)) [ci skip] ([64da96d](https://github.com/[secure]/sauerteig/commit/64da96d8062beff14ff0364fbf200f212827bfcc))
-* **deps:** Bump the react group across 1 directory with 2 updates ([#1380](https://github.com/[secure]/sauerteig/issues/1380)) [ci skip] ([7b0d680](https://github.com/[secure]/sauerteig/commit/7b0d6809e3c8d8bb7070045fb1b5fb877cb6978f))
-
-## [1.14.27](https://github.com/[secure]/sauerteig/compare/v1.14.26...v1.14.27) (2026-09-14)
+## [1.14.29](https://github.com/ffflorian/sauerteig/compare/v1.14.28...v1.14.29) (2026-09-24)
 
 
 ### Bug Fixes
 
-* **deps:** Bump the nestjs group to 12.x ([#1365](https://github.com/[secure]/sauerteig/issues/1365)) ([c31e714](https://github.com/[secure]/sauerteig/commit/c31e714fd573aca9f1aca8874c819ab96ef01900))
+* **deps:** Bump mongoose from 9.10.0 to 9.10.1 ([#1393](https://github.com/ffflorian/sauerteig/issues/1393)) [ci skip] ([8ee269b](https://github.com/ffflorian/sauerteig/commit/8ee269bf11bd9fc506569e00adfa9dfb9a5fceb4))
+* **deps:** Bump nginx from `d0a6faa` to `d10753d` ([#1390](https://github.com/ffflorian/sauerteig/issues/1390)) [ci skip] ([b854713](https://github.com/ffflorian/sauerteig/commit/b854713c354578deb40f2549f9f8df750d94fa2e))
+* **deps:** Bump node from 26.9.0-alpine to 26.10.0-alpine ([#1389](https://github.com/ffflorian/sauerteig/issues/1389)) ([624af9f](https://github.com/ffflorian/sauerteig/commit/624af9fd4d1fa051c5dcc3f47263468b11da233d))
+* **deps:** Bump the nestjs group across 1 directory with 5 updates ([#1392](https://github.com/ffflorian/sauerteig/issues/1392)) [ci skip] ([d1674ed](https://github.com/ffflorian/sauerteig/commit/d1674ed3da1e6deb064d15740fb209b4b067d97d))
 
-## [1.14.26](https://github.com/[secure]/sauerteig/compare/v1.14.25...v1.14.26) (2026-09-10)
-
-
-### Bug Fixes
-
-* **deps:** Bump mongoose from 9.9.4 to 9.9.5 ([#1367](https://github.com/[secure]/sauerteig/issues/1367)) [ci skip] ([70a7935](https://github.com/[secure]/sauerteig/commit/70a79352e2614ee441689fdc367ba25353e00ba4))
-* **deps:** Bump nginx from `34f4047` to `72ba65e` ([#1364](https://github.com/[secure]/sauerteig/issues/1364)) [ci skip] ([c358f13](https://github.com/[secure]/sauerteig/commit/c358f13c15941821fc83db81d9280dc19223a24f))
-* **deps:** Bump node from 26.8.1-alpine to 26.8.2-alpine ([#1363](https://github.com/[secure]/sauerteig/issues/1363)) ([dba1a02](https://github.com/[secure]/sauerteig/commit/dba1a02db0cf1d48f43d400ecf4afd41c0036887))
-
-## [1.14.25](https://github.com/[secure]/sauerteig/compare/v1.14.24...v1.14.25) (2026-09-09)
+## [1.14.28](https://github.com/ffflorian/sauerteig/compare/v1.14.27...v1.14.28) (2026-09-17)
 
 
 ### Bug Fixes
 
-* **deps:** Bump js-yaml from 4.3.1 to 4.3.2 ([#1361](https://github.com/[secure]/sauerteig/issues/1361)) ([630c30c](https://github.com/[secure]/sauerteig/commit/630c30c38645b3c1750dc93ff9ff062bd8bfbbf3))
+* **deps:** Bump mongoose from 9.9.5 to 9.10.0 ([#1386](https://github.com/ffflorian/sauerteig/issues/1386)) [ci skip] ([75e544c](https://github.com/ffflorian/sauerteig/commit/75e544cfe8c70352d86c5965ddbc2d9fc597fcc2))
+* **deps:** Bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1378](https://github.com/ffflorian/sauerteig/issues/1378)) ([b6cdb7c](https://github.com/ffflorian/sauerteig/commit/b6cdb7cc303bab09cd9cf2b29b5897eab663857b))
+* **deps:** Bump node from 26.8.2-alpine to 26.9.0-alpine ([#1379](https://github.com/ffflorian/sauerteig/issues/1379)) [ci skip] ([64da96d](https://github.com/ffflorian/sauerteig/commit/64da96d8062beff14ff0364fbf200f212827bfcc))
+* **deps:** Bump the react group across 1 directory with 2 updates ([#1380](https://github.com/ffflorian/sauerteig/issues/1380)) [ci skip] ([7b0d680](https://github.com/ffflorian/sauerteig/commit/7b0d6809e3c8d8bb7070045fb1b5fb877cb6978f))
 
-## [1.14.24](https://github.com/[secure]/sauerteig/compare/v1.14.23...v1.14.24) (2026-09-09)
-
-
-### Bug Fixes
-
-* **deps:** Bump @humanfs/node from 0.16.7 to 0.16.8 ([#1360](https://github.com/[secure]/sauerteig/issues/1360)) ([e44e3f6](https://github.com/[secure]/sauerteig/commit/e44e3f64c94896962424a33f3fdda30f9ac0fb89))
-
-## [1.14.23](https://github.com/[secure]/sauerteig/compare/v1.14.22...v1.14.23) (2026-09-03)
+## [1.14.27](https://github.com/ffflorian/sauerteig/compare/v1.14.26...v1.14.27) (2026-09-14)
 
 
 ### Bug Fixes
 
-* **deps:** Bump mongoose from 9.9.3 to 9.9.4 ([#1352](https://github.com/[secure]/sauerteig/issues/1352)) [ci skip] ([a5811a7](https://github.com/[secure]/sauerteig/commit/a5811a75a71acbca6f5d6e6573274930da5a062e))
-* **deps:** Bump nginx from 1.31.4-alpine to 1.31.5-alpine ([#1347](https://github.com/[secure]/sauerteig/issues/1347)) ([4ad586c](https://github.com/[secure]/sauerteig/commit/4ad586cfbbb0f65d60aea0479635e21985c70436))
-* **deps:** Bump node from 26.7.0-alpine to 26.8.1-alpine ([#1348](https://github.com/[secure]/sauerteig/issues/1348)) [ci skip] ([b9b502d](https://github.com/[secure]/sauerteig/commit/b9b502dc7971a40833cdf5b5a178e6d902b4c224))
+* **deps:** Bump the nestjs group to 12.x ([#1365](https://github.com/ffflorian/sauerteig/issues/1365)) ([c31e714](https://github.com/ffflorian/sauerteig/commit/c31e714fd573aca9f1aca8874c819ab96ef01900))
 
-## [1.14.22](https://github.com/[secure]/sauerteig/compare/v1.14.21...v1.14.22) (2026-09-03)
+## [1.14.26](https://github.com/ffflorian/sauerteig/compare/v1.14.25...v1.14.26) (2026-09-10)
 
 
 ### Bug Fixes
 
-* **deps:** Bump qs from 6.15.2 to 6.16.0 ([#1345](https://github.com/[secure]/sauerteig/issues/1345)) ([72123d2](https://github.com/[secure]/sauerteig/commit/72123d23f04499c801a1c494a85126819084da5c))
+* **deps:** Bump mongoose from 9.9.4 to 9.9.5 ([#1367](https://github.com/ffflorian/sauerteig/issues/1367)) [ci skip] ([70a7935](https://github.com/ffflorian/sauerteig/commit/70a79352e2614ee441689fdc367ba25353e00ba4))
+* **deps:** Bump nginx from `34f4047` to `72ba65e` ([#1364](https://github.com/ffflorian/sauerteig/issues/1364)) [ci skip] ([c358f13](https://github.com/ffflorian/sauerteig/commit/c358f13c15941821fc83db81d9280dc19223a24f))
+* **deps:** Bump node from 26.8.1-alpine to 26.8.2-alpine ([#1363](https://github.com/ffflorian/sauerteig/issues/1363)) ([dba1a02](https://github.com/ffflorian/sauerteig/commit/dba1a02db0cf1d48f43d400ecf4afd41c0036887))
 
-## [1.14.21](https://github.com/[secure]/sauerteig/compare/v1.14.20...v1.14.21) (2026-09-03)
-
-
-### Bug Fixes
-
-* **deps:** Bump browserslist from 4.28.5 to 4.28.8 ([#1344](https://github.com/[secure]/sauerteig/issues/1344)) ([8390205](https://github.com/[secure]/sauerteig/commit/83902054d363902425c04df17a3618c7951b182a))
-
-## [1.14.20](https://github.com/[secure]/sauerteig/compare/v1.14.19...v1.14.20) (2026-09-02)
+## [1.14.25](https://github.com/ffflorian/sauerteig/compare/v1.14.24...v1.14.25) (2026-09-09)
 
 
 ### Bug Fixes
 
-* **deps:** Bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1343](https://github.com/[secure]/sauerteig/issues/1343)) ([6652234](https://github.com/[secure]/sauerteig/commit/6652234b7b3e932e07d641e4286d8364c7b8cb67))
+* **deps:** Bump js-yaml from 4.3.1 to 4.3.2 ([#1361](https://github.com/ffflorian/sauerteig/issues/1361)) ([630c30c](https://github.com/ffflorian/sauerteig/commit/630c30c38645b3c1750dc93ff9ff062bd8bfbbf3))
 
-## [1.14.19](https://github.com/[secure]/sauerteig/compare/v1.14.18...v1.14.19) (2026-09-01)
-
-
-### Bug Fixes
-
-* **deps:** Bump brace-expansion to 5.0.9 ([c56689a](https://github.com/[secure]/sauerteig/commit/c56689ae0b8d88cbfc26df8993b74d25bd44db6e))
-
-## [1.14.18](https://github.com/[secure]/sauerteig/compare/v1.14.17...v1.14.18) (2026-08-27)
+## [1.14.24](https://github.com/ffflorian/sauerteig/compare/v1.14.23...v1.14.24) (2026-09-09)
 
 
 ### Bug Fixes
 
-* **deps:** Bump mongoose from 9.9.2 to 9.9.3 ([#1338](https://github.com/[secure]/sauerteig/issues/1338)) ([0dc4981](https://github.com/[secure]/sauerteig/commit/0dc4981eaa7ba7860ab4a41926f50d62e1fd944e))
+* **deps:** Bump @humanfs/node from 0.16.7 to 0.16.8 ([#1360](https://github.com/ffflorian/sauerteig/issues/1360)) ([e44e3f6](https://github.com/ffflorian/sauerteig/commit/e44e3f64c94896962424a33f3fdda30f9ac0fb89))
 
-## [1.14.17](https://github.com/[secure]/sauerteig/compare/v1.14.16...v1.14.17) (2026-08-20)
-
-
-### Bug Fixes
-
-* **deps:** Bump mongoose from 9.9.1 to 9.9.2 ([#1327](https://github.com/[secure]/sauerteig/issues/1327)) [ci skip] ([c6e2c49](https://github.com/[secure]/sauerteig/commit/c6e2c4924e95b4357fbacdc73da3b51716eaca79))
-* **deps:** Bump nginx from 1.31.3-alpine to 1.31.4-alpine ([#1325](https://github.com/[secure]/sauerteig/issues/1325)) ([e4db9ed](https://github.com/[secure]/sauerteig/commit/e4db9ed3d86f2669c4ab96bee7cdbbe27fcdf928))
-* **deps:** Bump the nestjs group with 3 updates ([#1324](https://github.com/[secure]/sauerteig/issues/1324)) [ci skip] ([7150a47](https://github.com/[secure]/sauerteig/commit/7150a4787b8a600bd311e2037185c16930a1920b))
-
-## [1.14.16](https://github.com/[secure]/sauerteig/compare/v1.14.15...v1.14.16) (2026-08-12)
+## [1.14.23](https://github.com/ffflorian/sauerteig/compare/v1.14.22...v1.14.23) (2026-09-03)
 
 
 ### Bug Fixes
 
-* **deps:** Bump js-yaml from 4.3.0 to 4.3.1 ([#1313](https://github.com/[secure]/sauerteig/issues/1313)) ([665759d](https://github.com/[secure]/sauerteig/commit/665759d86be4d2187d834a8962fda719f21ae215))
-* **deps:** Bump nanoid from 3.3.16 to 3.3.18 ([#1312](https://github.com/[secure]/sauerteig/issues/1312)) [ci skip] ([520ef6f](https://github.com/[secure]/sauerteig/commit/520ef6fc9287c9d11118d6404a866946b3ea5ccf))
+* **deps:** Bump mongoose from 9.9.3 to 9.9.4 ([#1352](https://github.com/ffflorian/sauerteig/issues/1352)) [ci skip] ([a5811a7](https://github.com/ffflorian/sauerteig/commit/a5811a75a71acbca6f5d6e6573274930da5a062e))
+* **deps:** Bump nginx from 1.31.4-alpine to 1.31.5-alpine ([#1347](https://github.com/ffflorian/sauerteig/issues/1347)) ([4ad586c](https://github.com/ffflorian/sauerteig/commit/4ad586cfbbb0f65d60aea0479635e21985c70436))
+* **deps:** Bump node from 26.7.0-alpine to 26.8.1-alpine ([#1348](https://github.com/ffflorian/sauerteig/issues/1348)) [ci skip] ([b9b502d](https://github.com/ffflorian/sauerteig/commit/b9b502dc7971a40833cdf5b5a178e6d902b4c224))
 
-## [1.14.15](https://github.com/[secure]/sauerteig/compare/v1.14.14...v1.14.15) (2026-08-07)
-
-
-### Bug Fixes
-
-* **deps:** Bump mongoose from 9.8.0 to 9.9.1 ([#1300](https://github.com/[secure]/sauerteig/issues/1300)) [ci skip] ([f5162ea](https://github.com/[secure]/sauerteig/commit/f5162ea787eab498ca20e1fcda526a1fbfe12e8c))
-* **deps:** Bump node from 26.5.0-alpine to 26.7.0-alpine ([#1301](https://github.com/[secure]/sauerteig/issues/1301)) ([c1f8ba5](https://github.com/[secure]/sauerteig/commit/c1f8ba57290635018defde244eefc910e294378f))
-
-## [1.14.14](https://github.com/[secure]/sauerteig/compare/v1.14.13...v1.14.14) (2026-08-05)
+## [1.14.22](https://github.com/ffflorian/sauerteig/compare/v1.14.21...v1.14.22) (2026-09-03)
 
 
 ### Bug Fixes
 
-* **deps:** Bump ip-address from 10.2.0 to 10.4.0 ([#1295](https://github.com/[secure]/sauerteig/issues/1295)) ([2bad9fb](https://github.com/[secure]/sauerteig/commit/2bad9fb1f38c62609597d8106ac08d3349c8d63a))
-* **deps:** Bump undici from 6.27.0 to 6.28.0 ([#1296](https://github.com/[secure]/sauerteig/issues/1296)) [ci skip] ([22f669c](https://github.com/[secure]/sauerteig/commit/22f669cb0294f55a63572cce1321169241ac27a8))
+* **deps:** Bump qs from 6.15.2 to 6.16.0 ([#1345](https://github.com/ffflorian/sauerteig/issues/1345)) ([72123d2](https://github.com/ffflorian/sauerteig/commit/72123d23f04499c801a1c494a85126819084da5c))
 
-## [1.14.13](https://github.com/[secure]/sauerteig/compare/v1.14.12...v1.14.13) (2026-07-30)
-
-
-### Bug Fixes
-
-* **deps:** Bump brace-expansion from 1.1.16 to 1.1.18 ([#1292](https://github.com/[secure]/sauerteig/issues/1292)) [ci skip] ([0665302](https://github.com/[secure]/sauerteig/commit/0665302908c980ff5ba00860d17c6ea3255cf69d))
-* **deps:** Bump js-yaml from 4.2.0 to 4.3.0 ([#1293](https://github.com/[secure]/sauerteig/issues/1293)) [ci skip] ([c0b89f5](https://github.com/[secure]/sauerteig/commit/c0b89f53dfcc0179cb1cbcd065c9c30463f8c3c9))
-* **deps:** Bump mongoose from 9.7.4 to 9.8.0 ([#1283](https://github.com/[secure]/sauerteig/issues/1283)) [ci skip] ([25d441b](https://github.com/[secure]/sauerteig/commit/25d441b92adad29535c79b6fd0c226ca4882fd2b))
-* **deps:** Bump postcss from 8.5.15 to 8.5.25 ([#1290](https://github.com/[secure]/sauerteig/issues/1290)) [ci skip] ([774c20e](https://github.com/[secure]/sauerteig/commit/774c20e5c7a0c2ec8490bb85dae4ba1e27ae7688))
-* **deps:** Bump tar from 7.5.16 to 7.5.22 ([#1291](https://github.com/[secure]/sauerteig/issues/1291)) ([34cd208](https://github.com/[secure]/sauerteig/commit/34cd208727b6fd66af43ceb3452f5dbf98723590))
-* **deps:** Bump the react group across 1 directory with 2 updates ([#1279](https://github.com/[secure]/sauerteig/issues/1279)) [ci skip] ([9bc4c35](https://github.com/[secure]/sauerteig/commit/9bc4c3516b3716a0e74f422d8901acd7b1dc4714))
-
-## [1.14.12](https://github.com/[secure]/sauerteig/compare/v1.14.11...v1.14.12) (2026-07-23)
+## [1.14.21](https://github.com/ffflorian/sauerteig/compare/v1.14.20...v1.14.21) (2026-09-03)
 
 
 ### Bug Fixes
 
-* **deps:** Bump helmet from 8.2.0 to 8.3.0 ([#1273](https://github.com/[secure]/sauerteig/issues/1273)) ([8d07470](https://github.com/[secure]/sauerteig/commit/8d07470513ba6d0f8c1ed80df8d3bb3911ebe264))
-* **deps:** Bump nginx from `2776cd5` to `4a73073` ([#1271](https://github.com/[secure]/sauerteig/issues/1271)) [ci skip] ([0334f63](https://github.com/[secure]/sauerteig/commit/0334f631575a1a6bbcf0457249a8993ec4fb2bee))
+* **deps:** Bump browserslist from 4.28.5 to 4.28.8 ([#1344](https://github.com/ffflorian/sauerteig/issues/1344)) ([8390205](https://github.com/ffflorian/sauerteig/commit/83902054d363902425c04df17a3618c7951b182a))
 
-## [1.14.11](https://github.com/[secure]/sauerteig/compare/v1.14.10...v1.14.11) (2026-07-22)
-
-
-### Bug Fixes
-
-* **deps:** Bump body-parser from 2.2.2 to 2.3.0 ([#1266](https://github.com/[secure]/sauerteig/issues/1266)) ([9404ea6](https://github.com/[secure]/sauerteig/commit/9404ea69df86f6a9a50bdc827e4642144fc66d73))
-
-## [1.14.10](https://github.com/[secure]/sauerteig/compare/v1.14.9...v1.14.10) (2026-07-22)
+## [1.14.20](https://github.com/ffflorian/sauerteig/compare/v1.14.19...v1.14.20) (2026-09-02)
 
 
 ### Bug Fixes
 
-* **deps:** Bump brace-expansion from 1.1.15 to 1.1.16 ([#1265](https://github.com/[secure]/sauerteig/issues/1265)) ([4ce89d5](https://github.com/[secure]/sauerteig/commit/4ce89d55dbe2bbc06348b91e89de3fe4213437e9))
+* **deps:** Bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1343](https://github.com/ffflorian/sauerteig/issues/1343)) ([6652234](https://github.com/ffflorian/sauerteig/commit/6652234b7b3e932e07d641e4286d8364c7b8cb67))
+
+## [1.14.19](https://github.com/ffflorian/sauerteig/compare/v1.14.18...v1.14.19) (2026-09-01)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion to 5.0.9 ([c56689a](https://github.com/ffflorian/sauerteig/commit/c56689ae0b8d88cbfc26df8993b74d25bd44db6e))
+
+## [1.14.18](https://github.com/ffflorian/sauerteig/compare/v1.14.17...v1.14.18) (2026-08-27)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.9.2 to 9.9.3 ([#1338](https://github.com/ffflorian/sauerteig/issues/1338)) ([0dc4981](https://github.com/ffflorian/sauerteig/commit/0dc4981eaa7ba7860ab4a41926f50d62e1fd944e))
+
+## [1.14.17](https://github.com/ffflorian/sauerteig/compare/v1.14.16...v1.14.17) (2026-08-20)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.9.1 to 9.9.2 ([#1327](https://github.com/ffflorian/sauerteig/issues/1327)) [ci skip] ([c6e2c49](https://github.com/ffflorian/sauerteig/commit/c6e2c4924e95b4357fbacdc73da3b51716eaca79))
+* **deps:** Bump nginx from 1.31.3-alpine to 1.31.4-alpine ([#1325](https://github.com/ffflorian/sauerteig/issues/1325)) ([e4db9ed](https://github.com/ffflorian/sauerteig/commit/e4db9ed3d86f2669c4ab96bee7cdbbe27fcdf928))
+* **deps:** Bump the nestjs group with 3 updates ([#1324](https://github.com/ffflorian/sauerteig/issues/1324)) [ci skip] ([7150a47](https://github.com/ffflorian/sauerteig/commit/7150a4787b8a600bd311e2037185c16930a1920b))
+
+## [1.14.16](https://github.com/ffflorian/sauerteig/compare/v1.14.15...v1.14.16) (2026-08-12)
+
+
+### Bug Fixes
+
+* **deps:** Bump js-yaml from 4.3.0 to 4.3.1 ([#1313](https://github.com/ffflorian/sauerteig/issues/1313)) ([665759d](https://github.com/ffflorian/sauerteig/commit/665759d86be4d2187d834a8962fda719f21ae215))
+* **deps:** Bump nanoid from 3.3.16 to 3.3.18 ([#1312](https://github.com/ffflorian/sauerteig/issues/1312)) [ci skip] ([520ef6f](https://github.com/ffflorian/sauerteig/commit/520ef6fc9287c9d11118d6404a866946b3ea5ccf))
+
+## [1.14.15](https://github.com/ffflorian/sauerteig/compare/v1.14.14...v1.14.15) (2026-08-07)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.8.0 to 9.9.1 ([#1300](https://github.com/ffflorian/sauerteig/issues/1300)) [ci skip] ([f5162ea](https://github.com/ffflorian/sauerteig/commit/f5162ea787eab498ca20e1fcda526a1fbfe12e8c))
+* **deps:** Bump node from 26.5.0-alpine to 26.7.0-alpine ([#1301](https://github.com/ffflorian/sauerteig/issues/1301)) ([c1f8ba5](https://github.com/ffflorian/sauerteig/commit/c1f8ba57290635018defde244eefc910e294378f))
+
+## [1.14.14](https://github.com/ffflorian/sauerteig/compare/v1.14.13...v1.14.14) (2026-08-05)
+
+
+### Bug Fixes
+
+* **deps:** Bump ip-address from 10.2.0 to 10.4.0 ([#1295](https://github.com/ffflorian/sauerteig/issues/1295)) ([2bad9fb](https://github.com/ffflorian/sauerteig/commit/2bad9fb1f38c62609597d8106ac08d3349c8d63a))
+* **deps:** Bump undici from 6.27.0 to 6.28.0 ([#1296](https://github.com/ffflorian/sauerteig/issues/1296)) [ci skip] ([22f669c](https://github.com/ffflorian/sauerteig/commit/22f669cb0294f55a63572cce1321169241ac27a8))
+
+## [1.14.13](https://github.com/ffflorian/sauerteig/compare/v1.14.12...v1.14.13) (2026-07-30)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 1.1.16 to 1.1.18 ([#1292](https://github.com/ffflorian/sauerteig/issues/1292)) [ci skip] ([0665302](https://github.com/ffflorian/sauerteig/commit/0665302908c980ff5ba00860d17c6ea3255cf69d))
+* **deps:** Bump js-yaml from 4.2.0 to 4.3.0 ([#1293](https://github.com/ffflorian/sauerteig/issues/1293)) [ci skip] ([c0b89f5](https://github.com/ffflorian/sauerteig/commit/c0b89f53dfcc0179cb1cbcd065c9c30463f8c3c9))
+* **deps:** Bump mongoose from 9.7.4 to 9.8.0 ([#1283](https://github.com/ffflorian/sauerteig/issues/1283)) [ci skip] ([25d441b](https://github.com/ffflorian/sauerteig/commit/25d441b92adad29535c79b6fd0c226ca4882fd2b))
+* **deps:** Bump postcss from 8.5.15 to 8.5.25 ([#1290](https://github.com/ffflorian/sauerteig/issues/1290)) [ci skip] ([774c20e](https://github.com/ffflorian/sauerteig/commit/774c20e5c7a0c2ec8490bb85dae4ba1e27ae7688))
+* **deps:** Bump tar from 7.5.16 to 7.5.22 ([#1291](https://github.com/ffflorian/sauerteig/issues/1291)) ([34cd208](https://github.com/ffflorian/sauerteig/commit/34cd208727b6fd66af43ceb3452f5dbf98723590))
+* **deps:** Bump the react group across 1 directory with 2 updates ([#1279](https://github.com/ffflorian/sauerteig/issues/1279)) [ci skip] ([9bc4c35](https://github.com/ffflorian/sauerteig/commit/9bc4c3516b3716a0e74f422d8901acd7b1dc4714))
+
+## [1.14.12](https://github.com/ffflorian/sauerteig/compare/v1.14.11...v1.14.12) (2026-07-23)
+
+
+### Bug Fixes
+
+* **deps:** Bump helmet from 8.2.0 to 8.3.0 ([#1273](https://github.com/ffflorian/sauerteig/issues/1273)) ([8d07470](https://github.com/ffflorian/sauerteig/commit/8d07470513ba6d0f8c1ed80df8d3bb3911ebe264))
+* **deps:** Bump nginx from `2776cd5` to `4a73073` ([#1271](https://github.com/ffflorian/sauerteig/issues/1271)) [ci skip] ([0334f63](https://github.com/ffflorian/sauerteig/commit/0334f631575a1a6bbcf0457249a8993ec4fb2bee))
+
+## [1.14.11](https://github.com/ffflorian/sauerteig/compare/v1.14.10...v1.14.11) (2026-07-22)
+
+
+### Bug Fixes
+
+* **deps:** Bump body-parser from 2.2.2 to 2.3.0 ([#1266](https://github.com/ffflorian/sauerteig/issues/1266)) ([9404ea6](https://github.com/ffflorian/sauerteig/commit/9404ea69df86f6a9a50bdc827e4642144fc66d73))
+
+## [1.14.10](https://github.com/ffflorian/sauerteig/compare/v1.14.9...v1.14.10) (2026-07-22)
+
+
+### Bug Fixes
+
+* **deps:** Bump brace-expansion from 1.1.15 to 1.1.16 ([#1265](https://github.com/ffflorian/sauerteig/issues/1265)) ([4ce89d5](https://github.com/ffflorian/sauerteig/commit/4ce89d55dbe2bbc06348b91e89de3fe4213437e9))
 
 ## [1.14.9](https://github.com/ffflorian/sauerteig/compare/v1.14.8...v1.14.9) (2026-07-16)
 
