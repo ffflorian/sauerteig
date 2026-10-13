@@ -1,3 +1,10 @@
+## [1.14.34](https://github.com/ffflorian/sauerteig/compare/v1.14.33...v1.14.34) (2026-10-13)
+
+
+### Bug Fixes
+
+* Disable absolute redirects in nginx config ([c69cf3e](https://github.com/ffflorian/sauerteig/commit/c69cf3e93eb167618e979afb5de488e2fca074b6))
+
 ## [1.14.33](https://github.com/ffflorian/sauerteig/compare/v1.14.32...v1.14.33) (2026-10-11)
 
 
