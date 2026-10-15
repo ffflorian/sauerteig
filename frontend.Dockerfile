@@ -31,7 +31,7 @@ COPY packages/frontend/ packages/frontend/
 RUN yarn workspace sauerteig-frontend build
 
 # Serve
-FROM nginx:1.31.6-alpine@sha256:df221db836e1754089190208cee7eeda94f233197056426eda74a43ab1abeac2
+FROM nginx:1.31.7-alpine@sha256:42c36dfd0b3503b7966771550a91521262b4750665929821abf5069715610e20
 
 COPY packages/frontend/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/packages/frontend/dist /usr/share/nginx/html
