@@ -1,3 +1,12 @@
+## [1.14.35](https://github.com/ffflorian/sauerteig/compare/v1.14.34...v1.14.35) (2026-10-15)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.11.0 to 9.11.1 ([#1449](https://github.com/ffflorian/sauerteig/issues/1449)) [ci skip] ([0ea2311](https://github.com/ffflorian/sauerteig/commit/0ea2311cdf7698ded8208c47344dea1c386afe63))
+* **deps:** Bump nginx from 1.31.6-alpine to 1.31.7-alpine ([#1448](https://github.com/ffflorian/sauerteig/issues/1448)) [ci skip] ([021ea00](https://github.com/ffflorian/sauerteig/commit/021ea00c9381f189e59abfe72fb1349fdaf74fea))
+* **deps:** Bump node from 26.11.1-alpine to 26.12.0-alpine ([#1447](https://github.com/ffflorian/sauerteig/issues/1447)) ([38cc929](https://github.com/ffflorian/sauerteig/commit/38cc929ad43aadc9558c7e7b25e73b393a7b1bf0))
+
 ## [1.14.34](https://github.com/ffflorian/sauerteig/compare/v1.14.33...v1.14.34) (2026-10-13)
 
 
