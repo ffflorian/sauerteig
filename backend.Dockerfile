@@ -1,5 +1,5 @@
 # Build
-FROM node:26.12.0-alpine@sha256:6f08a523443ddedf52941874c203475b0ad503e859ad70cb26ab8be9a517dbd5 AS builder
+FROM node:26.12.1-alpine@sha256:40cd011b55415bc894e45b02fdd5a5dfde056921b7d23a64c74f80497af48797 AS builder
 
 ENV NPM_CONFIG_UPDATE_NOTIFIER=false
 
@@ -20,7 +20,7 @@ COPY packages/backend/ packages/backend/
 RUN yarn workspace sauerteig-backend build
 
 # Run
-FROM node:26.12.0-alpine@sha256:6f08a523443ddedf52941874c203475b0ad503e859ad70cb26ab8be9a517dbd5
+FROM node:26.12.1-alpine@sha256:40cd011b55415bc894e45b02fdd5a5dfde056921b7d23a64c74f80497af48797
 
 ARG VERSION
 ARG COMMIT
