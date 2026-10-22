@@ -1,3 +1,12 @@
+## [1.14.38](https://github.com/ffflorian/sauerteig/compare/v1.14.37...v1.14.38) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.11.1 to 9.11.2 ([#1469](https://github.com/ffflorian/sauerteig/issues/1469)) [ci skip] ([b6da6b3](https://github.com/ffflorian/sauerteig/commit/b6da6b33c67dc44ca0adefa9fc2d6479c7f11975))
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1462](https://github.com/ffflorian/sauerteig/issues/1462)) [ci skip] ([f22444f](https://github.com/ffflorian/sauerteig/commit/f22444f39e7aa3f9526f275a357144573d3f577b))
+* **deps:** Bump the react group across 1 directory with 2 updates ([#1460](https://github.com/ffflorian/sauerteig/issues/1460)) [ci skip] ([6f6c8e2](https://github.com/ffflorian/sauerteig/commit/6f6c8e202fb1da92d912abed59ee98d44991d2de))
+
 ## [1.14.37](https://github.com/ffflorian/sauerteig/compare/v1.14.36...v1.14.37) (2026-10-22)
 
 
