@@ -1,3 +1,15 @@
+## [1.14.39](https://github.com/ffflorian/sauerteig/compare/v1.14.38...v1.14.39) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** Bump body-parser from 2.3.0 to 2.4.0 ([#1481](https://github.com/ffflorian/sauerteig/issues/1481)) [ci skip] ([906694c](https://github.com/ffflorian/sauerteig/commit/906694cbf070c841e88030d11decf8f7c26e789c))
+* **deps:** Bump mongoose from 9.11.2 to 9.11.4 ([#1475](https://github.com/ffflorian/sauerteig/issues/1475)) [ci skip] ([744130b](https://github.com/ffflorian/sauerteig/commit/744130ba641103ed2d4e215ed6417dcd7ac31b0e))
+* **deps:** Bump node from 26.12.1-alpine to 26.13.0-alpine ([#1472](https://github.com/ffflorian/sauerteig/issues/1472)) ([6f20c00](https://github.com/ffflorian/sauerteig/commit/6f20c0074d6f6e6736a0f5ce698de796f861b73a))
+* **deps:** Bump qs from 6.16.0 to 6.17.1 ([#1480](https://github.com/ffflorian/sauerteig/issues/1480)) [ci skip] ([dd3297d](https://github.com/ffflorian/sauerteig/commit/dd3297d94a93266a08837d0c43c4752c457e2784))
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1473](https://github.com/ffflorian/sauerteig/issues/1473)) [ci skip] ([79eb1fe](https://github.com/ffflorian/sauerteig/commit/79eb1feaee09677f870cab8e0e4de6f3cb9cfb47))
+* **deps:** Bump undici from 6.29.0 to 6.29.1 ([#1479](https://github.com/ffflorian/sauerteig/issues/1479)) [ci skip] ([09fe9eb](https://github.com/ffflorian/sauerteig/commit/09fe9eb1875478427fad2839b28974faf1b1cffb))
+
 ## [1.14.38](https://github.com/ffflorian/sauerteig/compare/v1.14.37...v1.14.38) (2026-10-22)
 
 
