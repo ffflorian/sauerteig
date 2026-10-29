@@ -1,3 +1,10 @@
+## [1.14.40](https://github.com/ffflorian/sauerteig/compare/v1.14.39...v1.14.40) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** Bump nginx from `e2d97c2` to `785835e` ([#1471](https://github.com/ffflorian/sauerteig/issues/1471)) ([15f3bfd](https://github.com/ffflorian/sauerteig/commit/15f3bfd0cdba7c47c9f8229160b493321fd84a14))
+
 ## [1.14.39](https://github.com/ffflorian/sauerteig/compare/v1.14.38...v1.14.39) (2026-10-29)
 
 
