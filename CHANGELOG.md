@@ -1,3 +1,10 @@
+## [1.14.41](https://github.com/ffflorian/sauerteig/compare/v1.14.40...v1.14.41) (2026-11-05)
+
+
+### Bug Fixes
+
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1483](https://github.com/ffflorian/sauerteig/issues/1483)) ([0e48441](https://github.com/ffflorian/sauerteig/commit/0e4844189804fd3953b9b615f644408a597f26c8))
+
 ## [1.14.40](https://github.com/ffflorian/sauerteig/compare/v1.14.39...v1.14.40) (2026-10-29)
 
 
