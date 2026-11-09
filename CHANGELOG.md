@@ -1,3 +1,10 @@
+## [1.14.42](https://github.com/ffflorian/sauerteig/compare/v1.14.41...v1.14.42) (2026-11-09)
+
+
+### Bug Fixes
+
+* **deps:** Bump node and run apk upgrade ([12244eb](https://github.com/ffflorian/sauerteig/commit/12244eb190f413993f1680c392757c2be3ceb1d0))
+
 ## [1.14.41](https://github.com/ffflorian/sauerteig/compare/v1.14.40...v1.14.41) (2026-11-05)
 
 
