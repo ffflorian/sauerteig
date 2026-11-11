@@ -1,3 +1,24 @@
+## [1.14.43](https://github.com/ffflorian/sauerteig/compare/v1.14.42...v1.14.43) (2026-11-11)
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.11.4 to 9.12.0 ([#1491](https://github.com/ffflorian/sauerteig/issues/1491)) ([ef7a811](https://github.com/ffflorian/sauerteig/commit/ef7a811c7e35610a62cc64a5699327d8cba1a195))
+* **deps:** Bump the nestjs group across 1 directory with 3 updates ([#1490](https://github.com/ffflorian/sauerteig/issues/1490)) [ci skip] ([0c4da74](https://github.com/ffflorian/sauerteig/commit/0c4da7430c924785eca20aa02efefb2b05cd7b9d))
+
+### Continuous Integration
+
+* **deps:** Bump ffflorian/actions from 1.30.12 to 1.30.14 ([#1487](https://github.com/ffflorian/sauerteig/issues/1487)) [ci skip] ([01be6cc](https://github.com/ffflorian/sauerteig/commit/01be6cc20677e720948d7c4d80ac7a1ded980dc4))
+
+### Miscellaneous Chores
+
+* **deps-dev:** Bump @ffflorian/oxlint-config from 1.0.15 to 1.0.16 ([#1494](https://github.com/ffflorian/sauerteig/issues/1494)) [ci skip] ([5758b89](https://github.com/ffflorian/sauerteig/commit/5758b89121ba5fceea493754f2ee7dab99b1879e))
+* **deps-dev:** Bump @vitejs/plugin-react from 6.1.2 to 6.2.1 ([#1493](https://github.com/ffflorian/sauerteig/issues/1493)) [ci skip] ([cb04323](https://github.com/ffflorian/sauerteig/commit/cb04323712c4905db8a3306c7404c883df838338))
+* **deps-dev:** Bump jsdom from 30.1.3 to 31.0.0 ([#1495](https://github.com/ffflorian/sauerteig/issues/1495)) [ci skip] ([9a99826](https://github.com/ffflorian/sauerteig/commit/9a99826c84c3b1efb12f62f561f6386a313a11ea))
+* **deps-dev:** Bump the oxc group across 1 directory with 2 updates ([#1488](https://github.com/ffflorian/sauerteig/issues/1488)) [ci skip] ([3fde355](https://github.com/ffflorian/sauerteig/commit/3fde355143bcf7ee7b7dff2049b4e8a9ed2d9040))
+* **deps-dev:** Bump the vitest group across 1 directory with 2 updates ([#1489](https://github.com/ffflorian/sauerteig/issues/1489)) [ci skip] ([e48994f](https://github.com/ffflorian/sauerteig/commit/e48994ffa8abbe144c19bb15ac74ee84781ca10b))
+* **deps-dev:** Bump vite from 8.3.5 to 8.3.6 ([#1492](https://github.com/ffflorian/sauerteig/issues/1492)) [ci skip] ([57b101a](https://github.com/ffflorian/sauerteig/commit/57b101afaf894eec827fb9be9b5254a638fd4d27))
+* Update Docker dependencies daily [ci skip] ([25e5147](https://github.com/ffflorian/sauerteig/commit/25e5147f46badab6fec94005beedc3e4b83423a2))
+
 ## [1.14.42](https://github.com/ffflorian/sauerteig/compare/v1.14.41...v1.14.42) (2026-11-09)
 
 
