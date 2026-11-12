@@ -1,3 +1,14 @@
+## [1.14.44](https://github.com/ffflorian/sauerteig/compare/v1.14.43...v1.14.44) (2026-11-12)
+
+### Bug Fixes
+
+* **deps:** Bump the nestjs group with 5 updates ([#1497](https://github.com/ffflorian/sauerteig/issues/1497)) [ci skip] ([e37c100](https://github.com/ffflorian/sauerteig/commit/e37c10060ed286fdbd208cf0919c0ae4d1555ce0))
+* **deps:** Bump web-push from 3.6.7 to 4.0.0 ([#1498](https://github.com/ffflorian/sauerteig/issues/1498)) ([5afc578](https://github.com/ffflorian/sauerteig/commit/5afc57829b3cfc1b0d9974cc654529bd3aa312e1))
+
+### Miscellaneous Chores
+
+* **deps-dev:** Bump the oxc group with 2 updates ([#1496](https://github.com/ffflorian/sauerteig/issues/1496)) [ci skip] ([29d64ad](https://github.com/ffflorian/sauerteig/commit/29d64ade7fa02b5d1651358f48a08ed5aeaa2ba6))
+
 ## [1.14.43](https://github.com/ffflorian/sauerteig/compare/v1.14.42...v1.14.43) (2026-11-11)
 
 ### Bug Fixes
