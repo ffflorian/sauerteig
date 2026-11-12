@@ -582,9 +582,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@nestjs/common@npm:12.3.3"
+"@nestjs/common@npm:12.4.0":
+  version: 12.4.0
+  resolution: "@nestjs/common@npm:12.4.0"
   dependencies:
     "@standard-schema/spec": "npm:1.1.0"
     file-type: "npm:22.3.0"
@@ -602,13 +602,13 @@ __metadata:
       optional: true
     class-validator:
       optional: true
-  checksum: 10c0/4d7eac54e9642f40ddb944b199f703f4ecd2b6c2ba3f3c5e880bce1aebc60de7213e05aa5343bf8acb10685cc6c28e7c0c0687137c6cb516631373f3c3c5b83f
+  checksum: 10c0/7e4e44962ff00b625ae8d586f2fcfe54b1687d2307cc7fb904c68881bd56e7593646ee5c0769b074d04950062477e01a890e08b10d2277ee96e218382335b8b7
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@nestjs/core@npm:12.3.3"
+"@nestjs/core@npm:12.4.0":
+  version: 12.4.0
+  resolution: "@nestjs/core@npm:12.4.0"
   dependencies:
     fast-safe-stringify: "npm:2.1.1"
     iterare: "npm:1.2.1"
@@ -629,25 +629,25 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: 10c0/1cf7f1b68d54ba8496ff3ad2c7f5eafe78fa9b6a3da4ef5c93b764d0507494402921d06bafc6885097f2489f3d01737a3429466e8dab8ca555707b23d7a30636
+  checksum: 10c0/a5561cf2bd93bf15775060109605b89bff5daa25cc61a60dc28d3ed99ed2c6727430583d991ac1ba91bf68465d999767f9499a9512f7ec77cda580ee5153e39b
   languageName: node
   linkType: hard
 
-"@nestjs/mongoose@npm:12.0.0":
-  version: 12.0.0
-  resolution: "@nestjs/mongoose@npm:12.0.0"
+"@nestjs/mongoose@npm:12.0.1":
+  version: 12.0.1
+  resolution: "@nestjs/mongoose@npm:12.0.1"
   peerDependencies:
     "@nestjs/common": ^11.0.0 || ^12.0.0
     "@nestjs/core": ^11.0.0 || ^12.0.0
     mongoose: ^7.0.0 || ^8.0.0 || ^9.0.0
     rxjs: ^7.0.0
-  checksum: 10c0/6449c89f56751579b0250e79c7d412e9c0a4e4c42001f6248b1cd8fa6c4ac6709d4ed7a35c6d28307241afb40783b9796e156b91c18c86e22847a6dd8ebbd1f0
+  checksum: 10c0/06397973825097828a9c9c6ae50b72c0137b5537243338e9c215ba7180ced9d7c0467c0a8b09ecb35b79735ce6062895283281cba08a15c65f2dcd3f331334b3
   languageName: node
   linkType: hard
 
-"@nestjs/platform-express@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@nestjs/platform-express@npm:12.3.3"
+"@nestjs/platform-express@npm:12.4.0":
+  version: 12.4.0
+  resolution: "@nestjs/platform-express@npm:12.4.0"
   dependencies:
     cors: "npm:2.8.6"
     express: "npm:5.3.0"
@@ -657,19 +657,20 @@ __metadata:
   peerDependencies:
     "@nestjs/common": ^12.0.0
     "@nestjs/core": ^12.0.0
-  checksum: 10c0/8c8cedbda63b0e9e39f94a1f369396172b79c01e93b178e83bc89281fcc04d9de222628ebfe28e3949c711ab359daa1ed45f235aa256ad56023d48ad546f37e4
+    rxjs: ^7.1.0
+  checksum: 10c0/4f70ab2a114bdfdced060515bbcfd2fcef53c5285fae7f304db3f8ba61d0cb62911e220115605e624cbb88b165875a3d97186780a17f7cc0985df8a9ba2ff1c7
   languageName: node
   linkType: hard
 
-"@nestjs/schedule@npm:12.0.2":
-  version: 12.0.2
-  resolution: "@nestjs/schedule@npm:12.0.2"
+"@nestjs/schedule@npm:12.0.3":
+  version: 12.0.3
+  resolution: "@nestjs/schedule@npm:12.0.3"
   dependencies:
     cron: "npm:4.4.0"
   peerDependencies:
     "@nestjs/common": ^11.0.0 || ^12.0.0
     "@nestjs/core": ^11.0.0 || ^12.0.0
-  checksum: 10c0/c253910c01d8e9ff88e7490c278ecc175ac1485052a885c881ca00c95922659f286b1f58ba007e9038416c8fc37c3a775f8fd5c8c16f11b40f29079f76a0a88e
+  checksum: 10c0/f3baa4b93c8f780fa02b2130f07e15d0d74c659c0ac7e5c91e96408fbd4d858fc54709b475d45855b2f9165f1d07510a9a84440e0948f275ae2bcafec18875f7
   languageName: node
   linkType: hard
 
@@ -6923,11 +6924,11 @@ __metadata:
   dependencies:
     "@ffflorian/oxfmt-config": "npm:1.3.0"
     "@ffflorian/oxlint-config": "npm:1.0.16"
-    "@nestjs/common": "npm:12.3.3"
-    "@nestjs/core": "npm:12.3.3"
-    "@nestjs/mongoose": "npm:12.0.0"
-    "@nestjs/platform-express": "npm:12.3.3"
-    "@nestjs/schedule": "npm:12.0.2"
+    "@nestjs/common": "npm:12.4.0"
+    "@nestjs/core": "npm:12.4.0"
+    "@nestjs/mongoose": "npm:12.0.1"
+    "@nestjs/platform-express": "npm:12.4.0"
+    "@nestjs/schedule": "npm:12.0.3"
     "@nestjs/throttler": "npm:6.7.1"
     "@types/node": "npm:~26"
     "@types/web-push": "npm:3.6.4"
