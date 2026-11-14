@@ -1,3 +1,13 @@
+## [1.14.46](https://github.com/ffflorian/sauerteig/compare/v1.14.45...v1.14.46) (2026-11-14)
+
+### Bug Fixes
+
+* **docker:** use nginx alpine-slim base image for frontend ([#1500](https://github.com/ffflorian/sauerteig/issues/1500)) ([4f84046](https://github.com/ffflorian/sauerteig/commit/4f84046bb14735f14727be15cd7c7d4158512e41))
+
+### Miscellaneous Chores
+
+* Switch around ci skipping words in publish config ([7c8fadb](https://github.com/ffflorian/sauerteig/commit/7c8fadbfaa0c0c8228b0a1041a9e6bd817c6d9dd))
+
 ## [1.14.45](https://github.com/ffflorian/sauerteig/compare/v1.14.44...v1.14.45) (2026-11-14)
 
 ### Bug Fixes
