@@ -36,8 +36,8 @@ ENV VERSION=$VERSION
 WORKDIR /app
 
 # Do not install yarn here: Alpine's yarn package pulls in Alpine's own nodejs
-# hadolint ignore=DL3018
-RUN apk upgrade --no-cache && apk add --no-cache curl
+# hadolint ignore=DL3017
+RUN apk upgrade --no-cache
 
 COPY package.json ./
 COPY packages/backend/package.json packages/backend/package.json
