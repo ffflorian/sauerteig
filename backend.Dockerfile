@@ -19,6 +19,9 @@ COPY packages/backend/ packages/backend/
 
 RUN yarn workspace sauerteig-backend build
 
+# Keep only production dependencies for the runtime image
+RUN yarn workspaces focus sauerteig-backend --production && yarn cache clean && mkdir -p packages/backend/node_modules
+
 # Run
 FROM node:26.13.0-alpine@sha256:8996bb5821d62a8fd9bb27c1cb07462f3fdce6e47d640c6a881ead0b064ce216
 
@@ -32,16 +35,15 @@ ENV VERSION=$VERSION
 
 WORKDIR /app
 
+# Do not install yarn here: Alpine's yarn package pulls in Alpine's own nodejs
 # hadolint ignore=DL3018
-RUN apk upgrade --no-cache && apk add --no-cache curl yarn
+RUN apk upgrade --no-cache && apk add --no-cache curl
 
-COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn/ .yarn/
+COPY package.json ./
 COPY packages/backend/package.json packages/backend/package.json
 COPY packages/frontend/package.json packages/frontend/package.json
-
-RUN yarn workspaces focus sauerteig-backend --production && yarn cache clean
-
+COPY --from=builder /app/node_modules node_modules
+COPY --from=builder /app/packages/backend/node_modules packages/backend/node_modules
 COPY --from=builder /app/packages/backend/dist packages/backend/dist
 
 EXPOSE 3000
