@@ -1,3 +1,9 @@
+## [1.14.45](https://github.com/ffflorian/sauerteig/compare/v1.14.44...v1.14.45) (2026-11-14)
+
+### Bug Fixes
+
+* **docker:** drop Alpine yarn from runtime image ([#1499](https://github.com/ffflorian/sauerteig/issues/1499)) ([94ae077](https://github.com/ffflorian/sauerteig/commit/94ae07701ea2f02f99ec76080975681fa956ac42))
+
 ## [1.14.44](https://github.com/ffflorian/sauerteig/compare/v1.14.43...v1.14.44) (2026-11-12)
 
 ### Bug Fixes
