@@ -1,3 +1,9 @@
+## [1.14.48](https://github.com/ffflorian/sauerteig/compare/v1.14.47...v1.14.48) (2026-11-15)
+
+### Bug Fixes
+
+* **docker:** remove npm from runtime image ([#1504](https://github.com/ffflorian/sauerteig/issues/1504)) ([26437b2](https://github.com/ffflorian/sauerteig/commit/26437b248629eaf21ad56f0a4fa914600498f4a6))
+
 ## [1.14.47](https://github.com/ffflorian/sauerteig/compare/v1.14.46...v1.14.47) (2026-11-15)
 
 ### Bug Fixes
