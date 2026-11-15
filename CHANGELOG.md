@@ -1,3 +1,14 @@
+## [1.14.47](https://github.com/ffflorian/sauerteig/compare/v1.14.46...v1.14.47) (2026-11-15)
+
+### Bug Fixes
+
+* **deps:** Bump node from 26.13.0-alpine to 26.13.1-alpine ([#1503](https://github.com/ffflorian/sauerteig/issues/1503)) ([2b458a5](https://github.com/ffflorian/sauerteig/commit/2b458a5d46777567e9d2f97b7864ff42560fdc31))
+* **deps:** Update yarn lockfile [ci skip] ([63800d6](https://github.com/ffflorian/sauerteig/commit/63800d67027ea767af650395affed58e576f45b3))
+
+### Miscellaneous Chores
+
+* **docker:** remove curl from runtime image ([#1502](https://github.com/ffflorian/sauerteig/issues/1502)) ([7e93444](https://github.com/ffflorian/sauerteig/commit/7e9344412da988b07fe53bb0e9336eb3b9102595))
+
 ## [1.14.46](https://github.com/ffflorian/sauerteig/compare/v1.14.45...v1.14.46) (2026-11-14)
 
 ### Bug Fixes
