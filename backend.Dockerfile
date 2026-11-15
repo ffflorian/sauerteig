@@ -36,8 +36,9 @@ ENV VERSION=$VERSION
 WORKDIR /app
 
 # Do not install yarn here: Alpine's yarn package pulls in Alpine's own nodejs
+# npm is not used at runtime and ships its own dependencies (e.g. undici)
 # hadolint ignore=DL3017
-RUN apk upgrade --no-cache
+RUN apk upgrade --no-cache && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
 
 COPY package.json ./
 COPY packages/backend/package.json packages/backend/package.json
