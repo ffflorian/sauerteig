@@ -1,3 +1,9 @@
+## [1.14.49](https://github.com/ffflorian/sauerteig/compare/v1.14.48...v1.14.49) (2026-11-18)
+
+### Bug Fixes
+
+* **deps:** bump nginx to 1.31.9 ([bb142d6](https://github.com/ffflorian/sauerteig/commit/bb142d6ab7658d83c89ecceff55571d9d6af1e50))
+
 ## [1.14.48](https://github.com/ffflorian/sauerteig/compare/v1.14.47...v1.14.48) (2026-11-15)
 
 ### Bug Fixes
