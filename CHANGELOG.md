@@ -1,3 +1,21 @@
+## [1.14.50](https://github.com/ffflorian/sauerteig/compare/v1.14.49...v1.14.50) (2026-11-19)
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.12.0 to 9.12.1 ([#1513](https://github.com/ffflorian/sauerteig/issues/1513)) [ci skip] ([a0f1a75](https://github.com/ffflorian/sauerteig/commit/a0f1a755181e0e5b2d91841ca81a36cc0acdd6fa))
+* **deps:** Bump the nestjs group across 1 directory with 4 updates ([#1506](https://github.com/ffflorian/sauerteig/issues/1506)) ([4624553](https://github.com/ffflorian/sauerteig/commit/462455308c61e49c294cb7c70db3472f521658d0))
+
+### Miscellaneous Chores
+
+* **deps-dev:** Bump @ffflorian/oxfmt-config from 1.3.0 to 1.3.1 ([#1508](https://github.com/ffflorian/sauerteig/issues/1508)) [ci skip] ([d6e0db7](https://github.com/ffflorian/sauerteig/commit/d6e0db7dbbdc408540e61b1f6989867722562010))
+* **deps-dev:** Bump @ffflorian/oxlint-config from 1.0.16 to 1.0.17 ([#1512](https://github.com/ffflorian/sauerteig/issues/1512)) [ci skip] ([4758c07](https://github.com/ffflorian/sauerteig/commit/4758c07aff5a7bc5f4a8376b908111e8d233cfa5))
+* **deps-dev:** Bump @testing-library/user-event from 14.6.8 to 14.6.10 ([#1511](https://github.com/ffflorian/sauerteig/issues/1511)) [ci skip] ([f44ef9a](https://github.com/ffflorian/sauerteig/commit/f44ef9ab7c211fe9a7748e29356eaba9562500d8))
+* **deps-dev:** Bump @vitejs/plugin-react from 6.2.1 to 6.3.0 ([#1509](https://github.com/ffflorian/sauerteig/issues/1509)) [ci skip] ([7a5b3c8](https://github.com/ffflorian/sauerteig/commit/7a5b3c806797f2ce04a8b33b4a7a2ecfc30436fe))
+* **deps-dev:** Bump eslint from 10.14.0 to 10.15.0 ([#1514](https://github.com/ffflorian/sauerteig/issues/1514)) [ci skip] ([d86a4bd](https://github.com/ffflorian/sauerteig/commit/d86a4bdfe0267f6033ca7a3d8b92dceeb3d538c4))
+* **deps-dev:** Bump jsdom from 31.0.0 to 31.0.1 ([#1507](https://github.com/ffflorian/sauerteig/issues/1507)) [ci skip] ([2e96e98](https://github.com/ffflorian/sauerteig/commit/2e96e986ac8e2f6f039d4f377060da92ddb11df7))
+* **deps-dev:** Bump the oxc group across 1 directory with 2 updates ([#1505](https://github.com/ffflorian/sauerteig/issues/1505)) [ci skip] ([b31736a](https://github.com/ffflorian/sauerteig/commit/b31736a3333f1bd0b3726dbd7b9373f9865b1209))
+* **deps-dev:** Bump vite from 8.3.6 to 8.3.8 ([#1510](https://github.com/ffflorian/sauerteig/issues/1510)) [ci skip] ([ae9e16d](https://github.com/ffflorian/sauerteig/commit/ae9e16d27635389f692234789fe96d758d4b09f0))
+
 ## [1.14.49](https://github.com/ffflorian/sauerteig/compare/v1.14.48...v1.14.49) (2026-11-18)
 
 ### Bug Fixes
