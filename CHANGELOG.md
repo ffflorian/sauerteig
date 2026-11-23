@@ -1,3 +1,9 @@
+## [1.14.51](https://github.com/ffflorian/sauerteig/compare/v1.14.50...v1.14.51) (2026-11-23)
+
+### Bug Fixes
+
+* **deps:** Bump nginx from `0b98e1d` to `5bfced7` ([#1515](https://github.com/ffflorian/sauerteig/issues/1515)) ([b4c1cf0](https://github.com/ffflorian/sauerteig/commit/b4c1cf09f81a423f50f63859f50f81d2703713d0))
+
 ## [1.14.50](https://github.com/ffflorian/sauerteig/compare/v1.14.49...v1.14.50) (2026-11-19)
 
 ### Bug Fixes
