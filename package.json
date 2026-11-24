@@ -27,6 +27,7 @@
     "lint": "yarn workspaces foreach --all --parallel --exclude sauerteig run lint",
     "test": "yarn workspaces foreach --all --parallel --exclude sauerteig run test"
   },
+  "type": "module",
   "version": "1.0.1",
   "workspaces": [
     "packages/*"
