@@ -1,3 +1,13 @@
+## [1.14.52](https://github.com/ffflorian/sauerteig/compare/v1.14.51...v1.14.52) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** Bump nginx to 1.31.10 ([6177d55](https://github.com/ffflorian/sauerteig/commit/6177d5526dd629dfbc79411f3163e2483fbec91e))
+
+### Miscellaneous Chores
+
+* Add module type to package.json ([13adeca](https://github.com/ffflorian/sauerteig/commit/13adeca5032902aff7a0a54791e9297678e45b6c))
+
 ## [1.14.51](https://github.com/ffflorian/sauerteig/compare/v1.14.50...v1.14.51) (2026-11-23)
 
 ### Bug Fixes
