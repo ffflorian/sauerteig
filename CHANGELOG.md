@@ -1,3 +1,21 @@
+## [1.14.53](https://github.com/ffflorian/sauerteig/compare/v1.14.52...v1.14.53) (2026-11-26)
+
+### Bug Fixes
+
+* **deps:** Bump mongoose from 9.12.1 to 9.12.3 ([#1519](https://github.com/ffflorian/sauerteig/issues/1519)) [ci skip] ([d56bf69](https://github.com/ffflorian/sauerteig/commit/d56bf69024abd0b4ee197ab156ce0cc8286b2419))
+* **deps:** Bump the nestjs group across 1 directory with 4 updates ([#1518](https://github.com/ffflorian/sauerteig/issues/1518)) ([cee9ced](https://github.com/ffflorian/sauerteig/commit/cee9ced3ba1fdd21a92289d64a29018d87dda0c2))
+
+### Miscellaneous Chores
+
+* **deps-dev:** Bump @ffflorian/oxfmt-config from 1.3.1 to 1.5.0 ([#1523](https://github.com/ffflorian/sauerteig/issues/1523)) [ci skip] ([0516ab2](https://github.com/ffflorian/sauerteig/commit/0516ab2eb45c71eef4c1a7481ce7618378f76ce8))
+* **deps-dev:** Bump @ffflorian/oxlint-config from 1.0.17 to 1.2.1 ([#1524](https://github.com/ffflorian/sauerteig/issues/1524)) [ci skip] ([99edafe](https://github.com/ffflorian/sauerteig/commit/99edafe557b0253384f9970ad4aaab378c789859))
+* **deps-dev:** Bump @testing-library/jest-dom from 7.0.1 to 8.0.0 ([#1522](https://github.com/ffflorian/sauerteig/issues/1522)) [ci skip] ([d2d5ecd](https://github.com/ffflorian/sauerteig/commit/d2d5ecdbb9eb517dcc2d258af97d3883e6a32fd4))
+* **deps-dev:** Bump @testing-library/user-event ([#1525](https://github.com/ffflorian/sauerteig/issues/1525)) [ci skip] ([6b3dba9](https://github.com/ffflorian/sauerteig/commit/6b3dba96adfe6f92bee6f1d4dbe0faa041753cfa))
+* **deps-dev:** Bump eslint-plugin-perfectionist from 5.13.0 to 5.14.0 ([#1521](https://github.com/ffflorian/sauerteig/issues/1521)) [ci skip] ([243f6d6](https://github.com/ffflorian/sauerteig/commit/243f6d6aa781f18a1f047a32c58c8a18cfa6102d))
+* **deps-dev:** Bump semantic-release from 25.0.9 to 26.0.1 ([#1520](https://github.com/ffflorian/sauerteig/issues/1520)) [ci skip] ([cc5823c](https://github.com/ffflorian/sauerteig/commit/cc5823c7b97895cd9d46f2c30bbfe0820cdc4939))
+* **deps-dev:** Bump the oxc group with 2 updates ([#1516](https://github.com/ffflorian/sauerteig/issues/1516)) [ci skip] ([0ff1323](https://github.com/ffflorian/sauerteig/commit/0ff13238fa5177c74ae875b361984f39e26b0fec))
+* **deps-dev:** Bump the vitest group with 2 updates ([#1517](https://github.com/ffflorian/sauerteig/issues/1517)) [ci skip] ([ef75bc3](https://github.com/ffflorian/sauerteig/commit/ef75bc31506066b48b4d95ffa5d554581ac8560f))
+
 ## [1.14.52](https://github.com/ffflorian/sauerteig/compare/v1.14.51...v1.14.52) (2026-11-24)
 
 ### Bug Fixes
